@@ -1,0 +1,48 @@
+.section {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  padding: 80px 0;
+}
+.title { color: var(--white) !important; }
+.sub { color: var(--gray-400) !important; }
+.orangeBadge {
+  display: inline-block;
+  background: rgba(249,115,22,.2);
+  color: var(--primary);
+  font-size: .75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+.card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+.card:hover {
+  background: rgba(255,255,255,.08);
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+.stars { color: #fbbf24; font-size: 1rem; margin-bottom: 12px; }
+.text { color: var(--gray-300); font-size: .92rem; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+.author { display: flex; align-items: center; gap: 12px; }
+.avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--primary);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; color: var(--white); font-size: 1rem;
+  flex-shrink: 0;
+}
+.name { font-weight: 600; color: var(--white); font-size: .92rem; }
+.role { color: var(--gray-400); font-size: .8rem; }
