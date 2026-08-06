@@ -1,24 +1,23 @@
 import Link from 'next/link';
+import { GraduationCap, Share2, Globe, MessageCircle, Mail } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const subjectLinks = [
-  'Maths Tutor', 'Physics Tutor', 'Chemistry Tutor', 'Biology Tutor',
-  'English Tutor', 'Hindi Tutor', 'Science Tutor', 'Economics Tutor',
+  'Physics Specialist', 'Chemistry Specialist', 'Mathematics Specialist', 'Biology Specialist',
+  'PCM Combo Course', 'PCB Combo Course',
 ];
 const classLinks = [
-  'Class I–V Tutor', 'Class VI–VIII Tutor', 'Class IX–X Tutor',
-  'Class XI–XII Tutor', 'Graduation Tutor', 'CBSE Tutor', 'ICSE Tutor', 'IELTS / TOEFL',
+  'Class 11 Science', 'Class 12 Science', 'NEET UG Mentorship',
+  'JEE Main Prep', 'JEE Advanced Prep', 'CBSE Board Prep',
 ];
 const companyLinks = [
-  { label: 'About Us', href: '#' },
-  { label: 'Become a Tutor', href: '/for-tutors' },
-  { label: 'How It Works', href: '#' },
-  { label: 'Contact Us', href: '#' },
-  { label: 'Privacy Policy', href: '#' },
-  { label: 'Terms of Service', href: '#' },
-  { label: 'Refund Policy', href: '#' },
-  { label: 'Blog', href: '#' },
+  { label: 'Home', href: '/' },
+  { label: 'Courses', href: '/courses' },
+  { label: 'Join as Faculty', href: '/join-faculty' },
+  { label: 'Contact Us', href: '/contact' },
+  { label: 'About Us', href: '/about' },
 ];
+
 
 export default function Footer() {
   return (
@@ -26,17 +25,18 @@ export default function Footer() {
       <div className="container">
         <div className={styles.top}>
           <div className={styles.brand}>
-            <Link href="/" className={styles.logo}>🎓 My<span>Tutor</span></Link>
+            <Link href="/" className={styles.logo} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+              <GraduationCap size={28} color="#f97316" />
+              <span>My<span>Tutor</span></span>
+            </Link>
             <p>
-              My Tutor is a premium platform connecting students with qualified,
-              background-verified home tutors across India. Expert guidance, trusted
-              tutors, guaranteed results.
+              My Tutor is a premium mentorship platform for Class 11th, 12th, NEET & JEE aspirants across India. Expert faculty, personalized 1-on-1 guidance, guaranteed rank improvement.
             </p>
             <div className={styles.socialLinks}>
-              <a href="#" aria-label="Facebook" className={styles.socialBtn}>📘</a>
-              <a href="#" aria-label="Instagram" className={styles.socialBtn}>📸</a>
-              <a href="#" aria-label="Twitter" className={styles.socialBtn}>🐦</a>
-              <a href="#" aria-label="YouTube" className={styles.socialBtn}>▶️</a>
+              <a href="#" aria-label="Website" className={styles.socialBtn}><Globe size={16} /></a>
+              <a href="#" aria-label="WhatsApp" className={styles.socialBtn}><MessageCircle size={16} /></a>
+              <a href="#" aria-label="Mail" className={styles.socialBtn}><Mail size={16} /></a>
+              <a href="#" aria-label="Share" className={styles.socialBtn}><Share2 size={16} /></a>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.col}>
-            <h4>Classes</h4>
+            <h4>Courses</h4>
             <ul>
               {classLinks.map((c) => (
                 <li key={c}><a href="#">{c}</a></li>
@@ -71,7 +71,7 @@ export default function Footer() {
         <hr className={styles.divider} />
 
         <div className={styles.bottom}>
-          <p>© 2024 My Tutor. All rights reserved. | Built with ❤️ in India</p>
+          <p>© 2026 My Tutor. All rights reserved. Specialized 1-on-1 Mentorship.</p>
           <div className={styles.bottomLinks}>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms</a>
@@ -82,3 +82,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+

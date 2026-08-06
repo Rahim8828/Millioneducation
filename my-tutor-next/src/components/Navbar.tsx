@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { GraduationCap, Phone } from 'lucide-react';
 import styles from './Navbar.module.css';
 
 export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
@@ -15,17 +16,19 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
   }, []);
 
   const studentLinks = [
-    { href: '#categories', label: 'Find Tutor' },
-    { href: '#how-it-works', label: 'How It Works' },
-    { href: '#testimonials', label: 'Reviews' },
-    { href: '#faq', label: 'FAQ' },
+    { href: '/', label: 'Home' },
+    { href: '/courses', label: 'Courses' },
+    { href: '/join-faculty', label: 'Join as Faculty' },
+    { href: '/contact', label: 'Contact Us' },
+    { href: '/about', label: 'About Us' },
   ];
 
   const tutorLinks = [
-    { href: '#benefits', label: 'Benefits' },
-    { href: '#features', label: 'Features' },
-    { href: '#testimonials', label: 'Reviews' },
-    { href: '#faq', label: 'FAQ' },
+    { href: '/', label: 'Home' },
+    { href: '/courses', label: 'Courses' },
+    { href: '/join-faculty#features', label: 'Features' },
+    { href: '/contact', label: 'Contact Us' },
+    { href: '/about', label: 'About Us' },
   ];
 
   const links = tutorPage ? tutorLinks : studentLinks;
@@ -33,24 +36,27 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`} id="navbar">
       <div className={styles.navInner}>
-        <Link href="/" className={styles.logo}>
-          🎓 My<span>Tutor</span>
+        <Link href="/" className={styles.logo} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+          <GraduationCap size={28} color="#f97316" />
+          <span>My<span>Tutor</span></span>
         </Link>
 
         <div className={styles.navLinks}>
           {links.map((l) => (
-            <a key={l.href} href={l.href} className={styles.navLink}>
+            <Link key={l.href} href={l.href} className={styles.navLink}>
               {l.label}
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className={styles.navCta}>
-          <a href="tel:+919876543210" className={styles.phone}>📞 +91 98765 43210</a>
+          <a href="tel:+919876543210" className={styles.phone} style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+            <Phone size={14} color="#f97316" /> +91 98765 43210
+          </a>
           {tutorPage ? (
-            <Link href="/" className={styles.ctaBtn}>Find a Tutor</Link>
+            <Link href="/courses" className={styles.ctaBtn}>Explore Courses</Link>
           ) : (
-            <Link href="/for-tutors" className={styles.ctaBtn}>Become a Tutor</Link>
+            <Link href="/join-faculty" className={styles.ctaBtn}>Join as Faculty</Link>
           )}
         </div>
 
@@ -66,18 +72,22 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
       {menuOpen && (
         <div className={styles.mobileMenu}>
           {links.map((l) => (
-            <a key={l.href} href={l.href} className={styles.mobileLink} onClick={() => setMenuOpen(false)}>
+            <Link key={l.href} href={l.href} className={styles.mobileLink} onClick={() => setMenuOpen(false)}>
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a href="tel:+919876543210" className={styles.mobileLink}>📞 +91 98765 43210</a>
+          <a href="tel:+919876543210" className={styles.mobileLink} style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+            <Phone size={14} /> +91 98765 43210
+          </a>
           {tutorPage ? (
             <Link href="/" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>Find a Tutor</Link>
           ) : (
-            <Link href="/for-tutors" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>Become a Tutor</Link>
+            <Link href="/for-tutors" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>Join as Faculty</Link>
           )}
         </div>
       )}
     </nav>
   );
 }
+
+

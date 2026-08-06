@@ -1,12 +1,13 @@
+import { UserCheck, Target, ShieldCheck, Globe, RefreshCw, Lock } from 'lucide-react';
 import styles from './WhyChooseUs.module.css';
 
 const reasons = [
-  { icon: '👨‍🏫', title: 'Dedicated Tutors', desc: 'Every tutor on our platform is dedicated, passionate, and committed to helping your child achieve their academic goals.' },
-  { icon: '🎯', title: 'Hassle-Free Tutor Selection', desc: 'We make finding the right tutor effortless. Browse, compare and connect — all within minutes.' },
-  { icon: '✅', title: 'Verified Tutors', desc: 'All tutors are thoroughly background-verified by our team. We ensure a safe and reliable tutoring experience.' },
-  { icon: '🌐', title: 'Offline & Online', desc: 'Choose between home tutoring at your doorstep or convenient online classes — whichever works best for you.' },
-  { icon: '🔄', title: 'Tutor Replacement', desc: 'Not happy with your tutor? We offer seamless tutor replacement at no additional cost, ensuring your satisfaction.' },
-  { icon: '🛡️', title: 'Safe & Secure', desc: "Your child's safety is our top priority. Every tutor undergoes strict background checks before joining our platform." },
+  { icon: UserCheck, title: 'Expert Faculty', desc: 'Subject specialists experienced in CBSE/State Boards, NEET, and JEE coaching.' },
+  { icon: Target, title: 'Focused Mentorship', desc: 'Customized learning strategy focused on concept building, PYQs, and rank improvement.' },
+  { icon: ShieldCheck, title: 'Verified Tutors', desc: 'All tutors undergo rigorous academic & background checks before mentoring students.' },
+  { icon: Globe, title: 'Home & Live Online', desc: 'Choose 1-on-1 home tuition at your residence or interactive live online sessions.' },
+  { icon: RefreshCw, title: 'Tutor Replacement', desc: 'Seamless faculty replacement at no extra cost if you feel the compatibility isn\'t perfect.' },
+  { icon: Lock, title: 'Progress Tracking', desc: 'Regular mock test analysis, weekly assignments, and monthly parent feedback sessions.' },
 ];
 
 export default function WhyChooseUs() {
@@ -16,18 +17,24 @@ export default function WhyChooseUs() {
         <div style={{ textAlign: 'center' }}>
           <div className="badge">Why My Tutor?</div>
         </div>
-        <h2 className="sectionTitle">Here&apos;s what makes us a trusted partner in your child&apos;s learning journey</h2>
-        <p className="sectionSub">Thousands of families trust My Tutor to find the perfect tutor for their children. Here&apos;s why.</p>
+        <h2 className="sectionTitle">Trusted Partner for 11th, 12th, NEET & JEE Success</h2>
+        <p className="sectionSub">Empowering science stream students with dedicated 1-on-1 personal mentorship.</p>
         <div className={styles.grid}>
-          {reasons.map((r) => (
-            <div key={r.title} className={styles.card}>
-              <div className={styles.icon}>{r.icon}</div>
-              <h3>{r.title}</h3>
-              <p>{r.desc}</p>
-            </div>
-          ))}
+          {reasons.map((r) => {
+            const IconComponent = r.icon;
+            return (
+              <div key={r.title} className={styles.card}>
+                <div className={styles.icon}>
+                  <IconComponent size={24} color="#f97316" />
+                </div>
+                <h3>{r.title}</h3>
+                <p>{r.desc}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
+

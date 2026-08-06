@@ -1,21 +1,34 @@
 import type { Metadata } from 'next';
+import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-main',
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-display',
+});
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | My Tutor',
-    default: 'My Tutor — Find the Right Home Tutor Made Easy',
+    template: '%s | My Tutor Mumbai',
+    default: 'My Tutor — 1-on-1 Mentorship for 11th, 12th, NEET & JEE in Mumbai',
   },
   description:
-    'My Tutor connects students with the best home tutors near you. Find verified tutors for every subject, class and exam board across India.',
+    'My Tutor connects Science stream students in Mumbai with verified 1-on-1 home tutors and live online mentors for Class 11, 12, NEET UG, and JEE Main & Advanced.',
   keywords: [
-    'home tutor',
-    'home tuition',
-    'tutor near me',
-    'online tutor',
-    'private tutor India',
-    'CBSE tutor',
-    'maths tutor',
+    'home tutor Mumbai',
+    '11th PCM tutor',
+    '12th PCB tutor',
+    'NEET mentor Mumbai',
+    'JEE Advanced tutor',
+    'private tutor Mumbai',
   ],
 };
 
@@ -25,8 +38,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body>{children}</body>
     </html>
   );
 }
+

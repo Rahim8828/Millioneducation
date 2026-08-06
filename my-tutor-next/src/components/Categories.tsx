@@ -1,21 +1,35 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { 
+  Atom, 
+  FlaskConical, 
+  Calculator, 
+  Dna, 
+  GraduationCap, 
+  Stethoscope, 
+  Cpu, 
+  Home, 
+  Laptop, 
+  Target, 
+  BookOpenCheck, 
+  Award 
+} from 'lucide-react';
 import styles from './Categories.module.css';
 
 const categories = [
-  { icon: '🧒', name: 'Class I – V', sub: 'Primary Tutor' },
-  { icon: '📚', name: 'Class VI – VIII', sub: 'Middle School' },
-  { icon: '📝', name: 'Class IX – X', sub: 'Board Exam Prep' },
-  { icon: '🔬', name: 'Class XI – XII', sub: 'Senior Secondary' },
-  { icon: '🎓', name: 'Graduation+', sub: 'College Level' },
-  { icon: '🗣️', name: 'Spoken English', sub: 'Communication' },
-  { icon: '🏠', name: 'Home Tutoring', sub: 'At Your Doorstep' },
-  { icon: '🌐', name: 'Online Classes', sub: 'Live & Recorded' },
-  { icon: '📋', name: 'CBSE / ICSE', sub: 'Board Specialist' },
-  { icon: '🌍', name: 'IELTS / TOEFL', sub: 'English Proficiency' },
-  { icon: '🏛️', name: 'State Board', sub: 'All State Boards' },
-  { icon: '🏆', name: 'Every Board', sub: 'IB / Cambridge' },
+  { icon: Atom, name: 'Physics Mentorship', sub: '11th, 12th, JEE & NEET' },
+  { icon: FlaskConical, name: 'Chemistry Specialization', sub: 'Organic, Inorganic & Physical' },
+  { icon: Calculator, name: 'Mathematics Coaching', sub: 'Calculus, Algebra & Coordinate' },
+  { icon: Dna, name: 'Biology NCERT Mastery', sub: 'Botany & Zoology for NEET' },
+  { icon: GraduationCap, name: 'Class 11 Science (PCM/PCB)', sub: 'Strong Foundation Building' },
+  { icon: BookOpenCheck, name: 'Class 12 Board Prep', sub: '100% NCERT + CBSE Focus' },
+  { icon: Stethoscope, name: 'NEET UG One-to-One', sub: 'PYQs & Mock Test Strategy' },
+  { icon: Cpu, name: 'JEE Main & Advanced', sub: 'Advanced Problem Solving' },
+  { icon: Home, name: 'Home Tuition Mode', sub: 'Personalized Doorstep Learning' },
+  { icon: Laptop, name: 'Online Live Classes', sub: 'Interactive 1-on-1 Sessions' },
+  { icon: Target, name: 'Chapter-wise Courses', sub: 'Targeted Weak Area Improvement' },
+  { icon: Award, name: 'Full Syllabus Revision', sub: 'Test Series & Doubt Clearing' },
 ];
 
 export default function Categories() {
@@ -36,23 +50,28 @@ export default function Categories() {
     <section className={`${styles.section} sectionPadding`} id="categories">
       <div className="container">
         <div style={{ textAlign: 'center' }}>
-          <div className="badge">All Levels Covered</div>
+          <div className="badge">Focused Specializations</div>
         </div>
-        <h2 className="sectionTitle">From ABCs to Entrance Exams — We&apos;ve Got It All</h2>
+        <h2 className="sectionTitle">Exclusively Focused on 11th, 12th, NEET & JEE</h2>
         <p className="sectionSub">
-          Whether your child needs foundation-level support or competitive exam preparation,
-          our tutors cover every stage.
+          Personalized mentorship tailored specifically for Science stream excellence and top entrance exam ranks.
         </p>
         <div className={styles.grid} ref={cardsRef}>
-          {categories.map((c) => (
-            <div key={c.name} className={`${styles.card} animateEl`} data-card>
-              <span className={styles.icon}>{c.icon}</span>
-              <div className={styles.name}>{c.name}</div>
-              <div className={styles.sub}>{c.sub}</div>
-            </div>
-          ))}
+          {categories.map((c) => {
+            const IconComponent = c.icon;
+            return (
+              <div key={c.name} className={`${styles.card} animateEl`} data-card>
+                <span className={styles.icon}>
+                  <IconComponent size={28} color="#f97316" />
+                </span>
+                <div className={styles.name}>{c.name}</div>
+                <div className={styles.sub}>{c.sub}</div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
+

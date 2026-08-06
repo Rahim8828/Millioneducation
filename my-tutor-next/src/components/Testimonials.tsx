@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import styles from './Testimonials.module.css';
 
 interface Testimonial {
@@ -9,18 +10,18 @@ interface Testimonial {
 }
 
 const studentTestis: Testimonial[] = [
-  { stars: 5, text: '"My daughter was struggling with Maths in Class X. After joining My Tutor, her grades improved from 52% to 89% in just 3 months. The tutor was amazing!"', name: 'Priya Sharma', role: 'Parent, Jaipur', avatar: 'P' },
-  { stars: 5, text: '"I needed a Physics tutor for JEE preparation urgently. My Tutor connected me with an IIT graduate within 24 hours. Excellent service!"', name: 'Rahul Gupta', role: 'Student, Delhi', avatar: 'R' },
-  { stars: 5, text: '"The platform is very user-friendly. We got a verified tutor for our son within 2 days. The free demo class helped us decide. Highly recommend My Tutor!"', name: 'Anita Verma', role: 'Parent, Mumbai', avatar: 'A' },
-  { stars: 5, text: '"My Tutor helped me find an excellent English tutor for my IELTS preparation. I scored 8.0 bands. The tutor replacement feature gave me confidence from day one."', name: 'Sneha Patel', role: 'Student, Ahmedabad', avatar: 'S' },
-  { stars: 5, text: '"Very professional and trustworthy service. The tutor they provided for my Class XII daughter was extremely knowledgeable and patient. Results improved significantly!"', name: 'Manish Kumar', role: 'Parent, Bangalore', avatar: 'M' },
-  { stars: 5, text: '"Got a Chemistry tutor for NEET prep in Hyderabad within 48 hours. The tutor was well-prepared, experienced and the classes were very interactive and helpful!"', name: 'Kavya Reddy', role: 'Student, Hyderabad', avatar: 'K' },
+  { stars: 5, text: '"My son needed intense 1-on-1 Physics & Maths coaching for JEE Main. The mentor provided by My Tutor in Andheri was an IITian who transformed his problem-solving speed completely!"', name: 'Priya Sharma', role: 'Parent, Andheri West, Mumbai', avatar: 'P' },
+  { stars: 5, text: '"I took the NEET Premium Mentorship for Class 12 Biology & Chemistry. The regular PYQ practice and mock test reviews were instrumental in securing my NEET rank."', name: 'Rahul Gupta', role: 'NEET Aspirant, Bandra, Mumbai', avatar: 'R' },
+  { stars: 5, text: '"Finding a dedicated Home Tutor for Class 11 PCM in Powai was seamless. The free demo class convinced us immediately, and the weekly progress reports keep us updated."', name: 'Anita Verma', role: 'Parent, Powai, Mumbai', avatar: 'A' },
+  { stars: 5, text: '"The 1-on-1 Chemistry doubt sessions helped me convert my weakest subject into my highest scoring one in CBSE Class 12 Board exams!"', name: 'Sneha Patel', role: 'Class 12 Student, Thane, Mumbai', avatar: 'S' },
+  { stars: 5, text: '"Extremely satisfied with the personalized study plan for JEE Advanced Mathematics. Top-notch faculty with deep concept clarity in South Mumbai."', name: 'Manish Kumar', role: 'Parent, South Mumbai', avatar: 'M' },
+  { stars: 5, text: '"Got a dedicated 1-on-1 NEET Biology mentor in Navi Mumbai. The NCERT mastery approach and chapter-wise tests gave me huge confidence."', name: 'Kavya Reddy', role: 'NEET Aspirant, Navi Mumbai', avatar: 'K' },
 ];
 
 const tutorTestis: Testimonial[] = [
-  { stars: 5, text: '"It is an amazing platform. Good platform for tutors looking for students. I got students from Bikaner city too. Thankyou for giving me an opportunity. Thank you My Tutor."', name: 'Shalini J.', role: 'Maths Tutor, Jaipur', avatar: 'S' },
-  { stars: 5, text: '"Joined My Tutor 6 months ago. Now I have 8 regular students and earn ₹35,000+ per month. The onboarding was super quick and the team is always helpful. Highly recommend!"', name: 'Rahul Mehta', role: 'Physics Tutor, Delhi', avatar: 'R' },
-  { stars: 5, text: '"After completing my B.Ed I was struggling to find students. My Tutor changed everything. I now teach 10+ students and have a stable monthly income. Best decision ever!"', name: 'Ananya Singh', role: 'English Tutor, Lucknow', avatar: 'A' },
+  { stars: 5, text: '"Mentoring Class 11 & 12 JEE aspirants through My Tutor in Mumbai has been deeply rewarding. The platform connects me with serious, dedicated students."', name: 'Dr. Shalini J.', role: 'Senior Physics Mentor, Mumbai', avatar: 'S' },
+  { stars: 5, text: '"As a NEET Biology specialist, My Tutor gave me direct access to 1-on-1 mentorship leads across Mumbai. Highly professional organization!"', name: 'Rahul Mehta', role: 'NEET Biology Faculty, Mumbai', avatar: 'R' },
+  { stars: 5, text: '"Teaching 1-on-1 Mathematics for Class 12 Boards and JEE Main in Mumbai has given me a flexible, fulfilling career with excellent income stability."', name: 'Ananya Singh', role: 'Maths Specialist, Mumbai', avatar: 'A' },
 ];
 
 export default function Testimonials({ variant = 'student' }: { variant?: 'student' | 'tutor' }) {
@@ -30,18 +31,22 @@ export default function Testimonials({ variant = 'student' }: { variant?: 'stude
     <section className={styles.section} id="testimonials">
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: 8 }}>
-          <span className={styles.orangeBadge}>{variant === 'tutor' ? 'Tutor Stories' : 'Student Reviews'}</span>
+          <span className={styles.orangeBadge}>{variant === 'tutor' ? 'Faculty Stories' : 'Student Success Stories'}</span>
         </div>
         <h2 className={`sectionTitle ${styles.title}`}>
-          Hear How My Tutor Helped Their {variant === 'tutor' ? 'Tutoring' : 'Learning'} Journey
+          {variant === 'tutor' ? 'Transforming Education Through 1-on-1 Mentorship' : 'Proven Results in 11th, 12th, NEET & JEE'}
         </h2>
         <p className={`sectionSub ${styles.sub}`}>
-          Real stories from {variant === 'tutor' ? 'tutors who transformed their careers' : 'students and parents who found success'} with My Tutor.
+          Real feedback from {variant === 'tutor' ? 'specialist faculty members' : 'students & parents who achieved top ranks'} with My Tutor.
         </p>
         <div className={styles.grid}>
           {testis.map((t) => (
             <div key={t.name} className={styles.card}>
-              <div className={styles.stars}>{'⭐'.repeat(t.stars)}</div>
+              <div className={styles.stars}>
+                {Array.from({ length: t.stars }).map((_, i) => (
+                  <Star key={i} size={16} color="#f59e0b" fill="#f59e0b" style={{ marginRight: 2, display: 'inline-block' }} />
+                ))}
+              </div>
               <p className={styles.text}>{t.text}</p>
               <div className={styles.author}>
                 <div className={styles.avatar}>{t.avatar}</div>
@@ -57,3 +62,4 @@ export default function Testimonials({ variant = 'student' }: { variant?: 'stude
     </section>
   );
 }
+

@@ -6,9 +6,9 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import HowItWorks from '@/components/HowItWorks';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
-import MediaLogos from '@/components/MediaLogos';
 import CityLinks from '@/components/CityLinks';
 import Footer from '@/components/Footer';
+import Courses from '@/components/Courses';
 
 export default function Home() {
   return (
@@ -18,12 +18,13 @@ export default function Home() {
       <StatsBar dark={true} />
       <Categories />
       <WhyChooseUs />
+      <Courses />
       <HowItWorks variant="student" />
       <Testimonials variant="student" />
       <FAQ variant="student" />
-      <MediaLogos />
       <CityLinks />
       <Footer />
     </main>
   );
 }
+

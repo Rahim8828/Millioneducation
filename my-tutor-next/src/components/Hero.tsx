@@ -2,14 +2,15 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { Sparkles, Star, CheckCircle2, BookOpen, GraduationCap } from 'lucide-react';
 import styles from './Hero.module.css';
 
-const subjectTags = ['Maths', 'Science', 'English', 'Hindi', 'Physics', 'Chemistry'];
-const classTags = ['Class I – V', 'Class VI – VIII', 'Class IX – X', 'Class XI – XII'];
+const subjectTags = ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'PCM Combo', 'PCB Combo'];
+const classTags = ['Class 11 Science', 'Class 12 Science', 'NEET Mentorship', 'JEE Main & Advanced'];
 
 export default function Hero() {
-  const [activeSubject, setActiveSubject] = useState('Maths');
-  const [activeClass, setActiveClass] = useState('Class IX – X');
+  const [activeSubject, setActiveSubject] = useState('Physics');
+  const [activeClass, setActiveClass] = useState('Class 11 Science');
 
   return (
     <section className={styles.hero}>
@@ -17,16 +18,18 @@ export default function Hero() {
         <div className={styles.inner}>
           {/* Text Side */}
           <div className={styles.text}>
-            <div className="badge">🇮🇳 Trusted by 10,000+ Families Across India</div>
+            <div className="badge">
+              <Sparkles size={14} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />
+              Specialized 1-on-1 Mentorship & Tuitions
+            </div>
             <h1>
-              Finding the right<br />
-              <em>home-tutor</em><br />
-              made easy
+              Personalized Mentorship for<br />
+              <em>11th, 12th, NEET & JEE</em><br />
+              From Basics to Rank
             </h1>
             <p className={styles.sub}>
-              Master any subject with top tutors from various cities. Your Teaching
-              Transcends Geographical Limits, Nurturing Young Minds with Insights from
-              Across India.
+              Master Physics, Chemistry, Mathematics & Biology with dedicated top faculty.
+              Home Tuitions & Online 1-on-1 Classes tailored for Board Excellence & Competitive Entrance Ranks.
             </p>
 
             <div className={styles.tagGroup}>
@@ -45,7 +48,7 @@ export default function Hero() {
             </div>
 
             <div className={styles.tagGroup}>
-              <div className={styles.tagLabel}>Classes</div>
+              <div className={styles.tagLabel}>Courses</div>
               <div className={styles.tags}>
                 {classTags.map((t) => (
                   <button
@@ -59,8 +62,8 @@ export default function Hero() {
               </div>
             </div>
 
-            <Link href="/for-tutors" className={styles.cta}>
-              📚 Book a Free Demo Class
+            <Link href="#courses" className={styles.cta}>
+              <BookOpen size={18} /> Book a Free Demo Class
             </Link>
           </div>
 
@@ -75,23 +78,27 @@ export default function Hero() {
               ].map((src, i) => (
                 <div key={i} className={`${styles.imgCard} ${i % 2 === 1 ? styles.imgCardOffset : ''}`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={src} alt="Tutor teaching" loading="lazy" />
+                  <img src={src} alt="Personalized Tuition" loading="lazy" />
                 </div>
               ))}
             </div>
 
             <div className={`${styles.floatCard} ${styles.floatCard1}`}>
-              <div className={styles.fcIcon}>⭐</div>
+              <div className={styles.fcIcon}>
+                <Star size={20} color="#f97316" fill="#f97316" />
+              </div>
               <div>
                 <div className={styles.fcLabel}>Avg. Rating</div>
                 <div className={styles.fcValue}>4.9 / 5.0</div>
               </div>
             </div>
             <div className={`${styles.floatCard} ${styles.floatCard2}`}>
-              <div className={styles.fcIcon}>✅</div>
+              <div className={styles.fcIcon}>
+                <CheckCircle2 size={20} color="#22c55e" />
+              </div>
               <div>
-                <div className={styles.fcLabel}>Verified Tutors</div>
-                <div className={styles.fcValue}>26,000+</div>
+                <div className={styles.fcLabel}>Top Faculty</div>
+                <div className={styles.fcValue}>Verified Mentors</div>
               </div>
             </div>
           </div>
@@ -100,3 +107,4 @@ export default function Hero() {
     </section>
   );
 }
+

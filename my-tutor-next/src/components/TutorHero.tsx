@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
+import { Award, CheckCircle2, Send } from 'lucide-react';
 import styles from './TutorHero.module.css';
 
 export default function TutorHero() {
@@ -43,29 +44,31 @@ export default function TutorHero() {
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.text}>
-            <div className={styles.earnBadge}>💰 Earn ₹20,000 – ₹50,000 / Month</div>
+            <div className={styles.earnBadge}>
+              <Award size={16} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />
+              High-Earning Mentorship Opportunities
+            </div>
             <h1>
-              Find Home Tuition Jobs<br />
-              Near You —<br />
-              <span>Earn Big. Teach Smart.</span>
+              Find 1-on-1 Tuition Jobs<br />
+              For 11th, 12th, NEET & JEE —<br />
+              <span>Teach Smart. Inspire Ranks.</span>
             </h1>
             <p>
-              Open Earning Opportunities by Educating Students Coming from Various Cities.
-              Your Teaching Transcends Geographical Limits, Nurturing Young Minds with Insights from Across India.
+              Connect with high-aspiring Science stream students looking for dedicated 1-on-1 Home Tuitions & Online Mentorship in Physics, Chemistry, Maths & Biology.
             </p>
             <div className={styles.chips}>
-              <div className={styles.chip}><span className={styles.check}>✔</span> Quick Onboarding</div>
-              <div className={styles.chip}><span className={styles.check}>✔</span> Zero Member Fee</div>
-              <div className={styles.chip}><span className={styles.check}>✔</span> Verified Students</div>
-              <div className={styles.chip}><span className={styles.check}>✔</span> Easy Verification</div>
-              <div className={styles.chip}><span className={styles.check}>✔</span> Guaranteed Classes</div>
+              <div className={styles.chip}><CheckCircle2 size={16} color="#22c55e" /> Quick Onboarding</div>
+              <div className={styles.chip}><CheckCircle2 size={16} color="#22c55e" /> Zero Membership Fee</div>
+              <div className={styles.chip}><CheckCircle2 size={16} color="#22c55e" /> Verified Science Students</div>
+              <div className={styles.chip}><CheckCircle2 size={16} color="#22c55e" /> Verified Credentials</div>
+              <div className={styles.chip}><CheckCircle2 size={16} color="#22c55e" /> Flexible Hours</div>
             </div>
           </div>
 
           {/* Form Card */}
           <div className={styles.formCard}>
-            <h2>Join as a Tutor</h2>
-            <p>Fill the form below and start teaching today</p>
+            <h2>Join as a Faculty Mentor</h2>
+            <p>Fill the form below and start mentoring today</p>
             <form onSubmit={handleSubmit}>
               <div className={styles.group}>
                 <label>Full Name *</label>
@@ -108,55 +111,52 @@ export default function TutorHero() {
                   onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                   required
                 >
-                  <option value="">Select your area / location</option>
-                  <option>Indiranagar, Bangalore</option>
-                  <option>Koramangala, Bangalore</option>
-                  <option>HSR Layout, Bangalore</option>
-                  <option>Whitefield, Bangalore</option>
-                  <option>South Delhi</option>
-                  <option>North Delhi</option>
+                  <option value="">Select your area in Mumbai</option>
                   <option>Andheri, Mumbai</option>
                   <option>Bandra, Mumbai</option>
-                  <option>Malviya Nagar, Jaipur</option>
-                  <option>Vaishali Nagar, Jaipur</option>
-                  <option>Banjara Hills, Hyderabad</option>
-                  <option>Other</option>
+                  <option>Borivali, Mumbai</option>
+                  <option>Powai, Mumbai</option>
+                  <option>Juhu, Mumbai</option>
+                  <option>Dadar / South Mumbai</option>
+                  <option>Thane, Mumbai</option>
+                  <option>Navi Mumbai</option>
+                  <option>Ghatkopar, Mumbai</option>
+                  <option>Other Mumbai Location</option>
                 </select>
               </div>
 
               <div className={styles.group}>
-                <label>Qualification *</label>
+                <label>Qualification / Expertise *</label>
                 <select
                   value={formData.qualification}
                   onChange={(e) => setFormData({ ...formData, qualification: e.target.value })}
                   required
                 >
-                  <option value="">Select your highest qualification</option>
-                  <option>12th Pass</option>
-                  <option>B.A. / B.Sc. / B.Com (Pursuing)</option>
-                  <option>B.A. / B.Sc. / B.Com (Graduate)</option>
-                  <option>B.Tech / B.E.</option>
-                  <option>M.A. / M.Sc. / M.Com</option>
+                  <option value="">Select highest qualification</option>
+                  <option>B.Tech / B.E. (IIT/NIT/Top College)</option>
                   <option>M.Tech / M.E.</option>
-                  <option>B.Ed. / M.Ed.</option>
-                  <option>PhD</option>
+                  <option>M.Sc Physics / Chemistry / Maths / Bio</option>
+                  <option>MBBS / BDS (Medical Specialist)</option>
+                  <option>PhD in Science / Maths</option>
+                  <option>B.Ed. / Experienced Faculty</option>
                   <option>Other</option>
                 </select>
               </div>
 
               <div className={styles.group}>
-                <label>Expected Fees (per month) *</label>
+                <label>Target Subjects *</label>
                 <select
                   value={formData.fees}
                   onChange={(e) => setFormData({ ...formData, fees: e.target.value })}
                   required
                 >
-                  <option value="">Select fee range</option>
-                  <option>₹5,000 – ₹10,000</option>
-                  <option>₹10,000 – ₹20,000</option>
-                  <option>₹20,000 – ₹30,000</option>
-                  <option>₹30,000 – ₹50,000</option>
-                  <option>₹50,000+</option>
+                  <option value="">Select primary domain</option>
+                  <option>Physics (11th, 12th, JEE/NEET)</option>
+                  <option>Chemistry (11th, 12th, JEE/NEET)</option>
+                  <option>Mathematics (11th, 12th, JEE)</option>
+                  <option>Biology (11th, 12th, NEET)</option>
+                  <option>PCM Full Combo</option>
+                  <option>PCB Full Combo</option>
                 </select>
               </div>
 
@@ -180,8 +180,8 @@ export default function TutorHero() {
                 {status === 'submitting'
                   ? 'Submitting...'
                   : status === 'success'
-                  ? '✅ Application Submitted!'
-                  : 'Join as a Tutor 🚀'}
+                  ? 'Application Submitted!'
+                  : 'Join as a Faculty Mentor'}
               </button>
             </form>
           </div>
@@ -190,3 +190,4 @@ export default function TutorHero() {
     </section>
   );
 }
+
