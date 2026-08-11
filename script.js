@@ -241,3 +241,44 @@ function showToast(message, type = 'success') {
     setTimeout(function () { toast.remove(); }, 300);
   }, 4000);
 }
+
+// ---- Course Tab & View Switching ----
+function switchCourseTab(cls) {
+  const tab11 = document.getElementById('tab-class11');
+  const tab12 = document.getElementById('tab-class12');
+  const banner = document.getElementById('course-banner');
+
+  if (cls === 'class11') {
+    if (tab11) tab11.classList.add('active');
+    if (tab12) tab12.classList.remove('active');
+    if (banner) {
+      banner.innerHTML = '<h3>📘 CLASS 11 — Physics, Chemistry & Mathematics</h3><p>Uniform structured tenure modules for Class 11th Science board & foundational preparation. Core concepts, problem solving, and chapter tests.</p>';
+    }
+  } else {
+    if (tab12) tab12.classList.add('active');
+    if (tab11) tab11.classList.remove('active');
+    if (banner) {
+      banner.innerHTML = '<h3>📗 CLASS 12 — Physics, Chemistry & Biology</h3><p>Board-focused excellence curriculum designed for maximum board scoring. (Same subject structure — Board-focused academic rigor).</p>';
+    }
+  }
+}
+
+function toggleCourseView(mode) {
+  const cardsView = document.getElementById('course-cards-view');
+  const tableView = document.getElementById('course-table-view');
+  const cardsBtn = document.getElementById('view-cards-btn');
+  const tableBtn = document.getElementById('view-table-btn');
+
+  if (mode === 'cards') {
+    if (cardsView) cardsView.style.display = 'grid';
+    if (tableView) tableView.style.display = 'none';
+    if (cardsBtn) cardsBtn.classList.add('active');
+    if (tableBtn) tableBtn.classList.remove('active');
+  } else {
+    if (cardsView) cardsView.style.display = 'none';
+    if (tableView) tableView.style.display = 'block';
+    if (tableBtn) tableBtn.classList.add('active');
+    if (cardsBtn) cardsBtn.classList.remove('active');
+  }
+}
+

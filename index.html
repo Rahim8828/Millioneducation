@@ -15,6 +15,7 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">🎓 My<span>Tutor</span></a>
     <div class="nav-links">
+      <a href="#courses">Courses</a>
       <a href="#categories">Find Tutor</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#testimonials">Reviews</a>
@@ -29,6 +30,7 @@
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
+    <a href="#courses">Courses</a>
     <a href="#categories">Find Tutor</a>
     <a href="#how-it-works">How It Works</a>
     <a href="#testimonials">Reviews</a>
@@ -200,6 +202,298 @@
         <div class="cat-sub">IB / Cambridge</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ========== COURSES SECTION ========== -->
+<section class="section-padding courses-section" id="courses">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="badge">🎓 Structured Academic Batches</div>
+    </div>
+    <h2 class="section-title">Class 11th & 12th Academic Programs</h2>
+    <p class="section-sub">Flexible, high-impact 1-on-1 tuition modules engineered for top board performance and concept mastery.</p>
+
+    <!-- Delivery Modes Highlights -->
+    <div class="courses-modes-bar">
+      <div class="mode-pill">
+        <span class="mode-icon">💻</span>
+        <div>
+          <strong>Single Subject — Online</strong>
+          <small>Live 1-on-1 Interactive</small>
+        </div>
+      </div>
+      <div class="mode-pill">
+        <span class="mode-icon">🏠</span>
+        <div>
+          <strong>Single Subject — Offline</strong>
+          <small>At-Home Tutor Visit</small>
+        </div>
+      </div>
+      <div class="mode-pill">
+        <span class="mode-icon">🎒</span>
+        <div>
+          <strong>Complete (3-Subj Bundle)</strong>
+          <small>Physics + Chemistry + Math/Bio</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Class Tabs & View Switcher -->
+    <div class="course-controls">
+      <div class="course-tabs">
+        <button class="course-tab-btn active" id="tab-class11" onclick="switchCourseTab('class11')">
+          📘 CLASS 11 (Physics + Chemistry + Math)
+        </button>
+        <button class="course-tab-btn" id="tab-class12" onclick="switchCourseTab('class12')">
+          📗 CLASS 12 (Physics + Chemistry + Biology)
+        </button>
+      </div>
+      <div class="view-toggle">
+        <button class="view-btn active" id="view-cards-btn" onclick="toggleCourseView('cards')">📱 Grid Cards</button>
+        <button class="view-btn" id="view-table-btn" onclick="toggleCourseView('table')">📊 Matrix Table</button>
+      </div>
+    </div>
+
+    <!-- Dynamic Banner -->
+    <div class="course-class-banner" id="course-banner">
+      <h3>📘 CLASS 11 — Physics, Chemistry & Mathematics</h3>
+      <p>Uniform structured tenure modules for Class 11th Science board & foundational preparation. Core concepts, problem solving, and chapter tests.</p>
+    </div>
+
+    <!-- CARDS CONTAINER -->
+    <div class="course-grid" id="course-cards-view">
+      <!-- 1. Full Year -->
+      <div class="course-card featured" data-animate>
+        <span class="card-badge">Most Popular</span>
+        <div class="card-head">
+          <h3>Full Year Batch</h3>
+        </div>
+        <div class="card-metrics">
+          <div class="metric"><span class="m-label">Lectures</span><strong>96 Lec (1.5 hr/lec)</strong></div>
+          <div class="metric"><span class="m-label">Duration</span><strong>Full Academic Year</strong></div>
+        </div>
+        <p class="card-desc">Complete year-long curriculum coverage with step-by-step concept building, NCERT line-by-line discussion, and regular unit tests.</p>
+        <div class="card-modes">
+          <h4>Available Modes:</h4>
+          <ul>
+            <li><span class="check">✔</span> Single Subj — Online</li>
+            <li><span class="check">✔</span> Single Subj — Offline</li>
+            <li><span class="check">✔</span> Complete (3-Subj Bundle)</li>
+          </ul>
+        </div>
+        <div class="card-ideal"><strong>Ideal For:</strong> Early starters aiming for comprehensive 100% board preparation.</div>
+      </div>
+
+      <!-- 2. Semester -->
+      <div class="course-card" data-animate>
+        <div class="card-head">
+          <h3>Semester Batch</h3>
+          <span class="bonus-tag">⚡ +10% Content Depth</span>
+        </div>
+        <div class="card-metrics">
+          <div class="metric"><span class="m-label">Lectures</span><strong>48 Lec (2 hr/lec)</strong></div>
+          <div class="metric"><span class="m-label">Duration</span><strong>Semester Pace</strong></div>
+        </div>
+        <p class="card-desc">Accelerated term-wise preparation structured to cover half-yearly and term exam modules rapidly with targeted problem solving.</p>
+        <div class="card-modes">
+          <h4>Available Modes:</h4>
+          <ul>
+            <li><span class="check">✔</span> Single Subj — Online</li>
+            <li><span class="check">✔</span> Single Subj — Offline</li>
+            <li><span class="check">✔</span> Complete (3-Subj Bundle)</li>
+          </ul>
+        </div>
+        <div class="card-ideal"><strong>Ideal For:</strong> Students seeking targeted semester-wise completion.</div>
+      </div>
+
+      <!-- 3. Crash Course 3Mo -->
+      <div class="course-card featured" data-animate>
+        <span class="card-badge">Exam Special</span>
+        <div class="card-head">
+          <h3>Crash Course (3 Months)</h3>
+          <span class="bonus-tag">⚡ +20% Intensive Focus</span>
+        </div>
+        <div class="card-metrics">
+          <div class="metric"><span class="m-label">Lectures</span><strong>24 Lec (2 hr/lec)</strong></div>
+          <div class="metric"><span class="m-label">Duration</span><strong>90 Days Fast-Track</strong></div>
+        </div>
+        <p class="card-desc">Intensive 90-day revision program focusing on high-weightage topics, key derivations, numericals, and sample paper solving.</p>
+        <div class="card-modes">
+          <h4>Available Modes:</h4>
+          <ul>
+            <li><span class="check">✔</span> Single Subj — Online</li>
+            <li><span class="check">✔</span> Single Subj — Offline</li>
+            <li><span class="check">✔</span> Complete (3-Subj Bundle)</li>
+          </ul>
+        </div>
+        <div class="card-ideal"><strong>Ideal For:</strong> Final quarter exam revision and score enhancement.</div>
+      </div>
+
+      <!-- 4. Ultra Crash -->
+      <div class="course-card" data-animate>
+        <div class="card-head">
+          <h3>Ultra Crash (30 Days)</h3>
+          <span class="bonus-tag">⚡ +20% Rapid Sprint</span>
+        </div>
+        <div class="card-metrics">
+          <div class="metric"><span class="m-label">Lectures</span><strong>8 Lec (2 hr/lec)</strong></div>
+          <div class="metric"><span class="m-label">Duration</span><strong>30 Days Sprint</strong></div>
+        </div>
+        <p class="card-desc">Fast-track 30-day emergency sprint covering essential formulas, quick concept summaries, and previous years board questions.</p>
+        <div class="card-modes">
+          <h4>Available Modes:</h4>
+          <ul>
+            <li><span class="check">✔</span> Single Subj — Online</li>
+            <li><span class="check">✔</span> Single Subj — Offline</li>
+            <li><span class="check">✔</span> Complete (3-Subj Bundle)</li>
+          </ul>
+        </div>
+        <div class="card-ideal"><strong>Ideal For:</strong> Last-minute 30-day exam preparation & confidence boost.</div>
+      </div>
+
+      <!-- 5. Board Repeater -->
+      <div class="course-card" data-animate>
+        <div class="card-head">
+          <h3>Board Repeater (Full Year)</h3>
+          <span class="bonus-tag">⚡ +10% Extra Depth</span>
+        </div>
+        <div class="card-metrics">
+          <div class="metric"><span class="m-label">Lectures</span><strong>96 Lec (1.5 hr/lec)</strong></div>
+          <div class="metric"><span class="m-label">Duration</span><strong>Full Academic Year</strong></div>
+        </div>
+        <p class="card-desc">Specialized full-year course for score improvement and repeaters focusing on weak-area rectifications and structured practice.</p>
+        <div class="card-modes">
+          <h4>Available Modes:</h4>
+          <ul>
+            <li><span class="check">✔</span> Single Subj — Online</li>
+            <li><span class="check">✔</span> Single Subj — Offline</li>
+            <li><span class="check">✔</span> Complete (3-Subj Bundle)</li>
+          </ul>
+        </div>
+        <div class="card-ideal"><strong>Ideal For:</strong> Improvement candidates aiming for 90%+ in board exams.</div>
+      </div>
+
+      <!-- 6. Compartment Crash -->
+      <div class="course-card" data-animate>
+        <div class="card-head">
+          <h3>Compartment Crash</h3>
+          <span class="bonus-tag">⚡ +25% Target Resolution</span>
+        </div>
+        <div class="card-metrics">
+          <div class="metric"><span class="m-label">Lectures</span><strong>18 Lec (2 hr/lec)</strong></div>
+          <div class="metric"><span class="m-label">Duration</span><strong>Targeted Modules</strong></div>
+        </div>
+        <p class="card-desc">High-priority single subject crash course designed exclusively to help students clear compartment / supplementary board exams.</p>
+        <div class="card-modes">
+          <h4>Available Modes:</h4>
+          <ul>
+            <li><span class="check">✔</span> Single Subj — Online</li>
+            <li><span class="check">✔</span> Single Subj — Offline</li>
+            <li><span class="na-tag">✖ Single Subject Only</span></li>
+          </ul>
+        </div>
+        <div class="card-ideal"><strong>Ideal For:</strong> Students preparing for single-subject compartment board exams.</div>
+      </div>
+
+      <!-- 7. Weekend -->
+      <div class="course-card" data-animate>
+        <div class="card-head">
+          <h3>Weekend / Part-Time</h3>
+        </div>
+        <div class="card-metrics">
+          <div class="metric"><span class="m-label">Lectures</span><strong>40 Lec (1.5 hr/lec)</strong></div>
+          <div class="metric"><span class="m-label">Duration</span><strong>Sat & Sun Only</strong></div>
+        </div>
+        <p class="card-desc">Flexible weekend-only schedule tailored for students with packed weekday school schedules needing weekend guidance.</p>
+        <div class="card-modes">
+          <h4>Available Modes:</h4>
+          <ul>
+            <li><span class="check">✔</span> Single Subj — Online</li>
+            <li><span class="check">✔</span> Single Subj — Offline</li>
+            <li><span class="check">✔</span> Complete (3-Subj Bundle)</li>
+          </ul>
+        </div>
+        <div class="card-ideal"><strong>Ideal For:</strong> Students needing weekend-only focused 1-on-1 home/online tuition.</div>
+      </div>
+    </div>
+
+    <!-- TABLE CONTAINER (Hidden by default) -->
+    <div class="course-table-wrapper" id="course-table-view" style="display:none;">
+      <table class="course-table">
+        <thead>
+          <tr>
+            <th>Tenure / Batch Program</th>
+            <th>Lectures & Duration</th>
+            <th>Single Subj — Online</th>
+            <th>Single Subj — Offline</th>
+            <th>Complete (3-Subj Bundle)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Full Year Batch</strong></td>
+            <td>96 Lec (1.5 hr)</td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+          </tr>
+          <tr>
+            <td><strong>Semester Batch</strong> <span class="bonus-pill">+10% Depth</span></td>
+            <td>48 Lec (2 hr)</td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+          </tr>
+          <tr>
+            <td><strong>Crash Course — 3mo</strong> <span class="bonus-pill">+20% Focus</span></td>
+            <td>24 Lec (2 hr)</td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+          </tr>
+          <tr>
+            <td><strong>Ultra Crash — 30 din</strong> <span class="bonus-pill">+20% Sprint</span></td>
+            <td>8 Lec (2 hr)</td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+          </tr>
+          <tr>
+            <td><strong>Board Repeater — Full Year</strong> <span class="bonus-pill">+10% Depth</span></td>
+            <td>96 Lec (1.5 hr)</td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+          </tr>
+          <tr>
+            <td><strong>Compartment Crash</strong> <span class="bonus-pill">+25% Focus</span></td>
+            <td>18 Lec (2 hr)</td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-no">✖ Single Subj Only</span></td>
+          </tr>
+          <tr>
+            <td><strong>Weekend / Part-Time</strong></td>
+            <td>40 Lec (1.5 hr)</td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+            <td><span class="status-yes">✔ Available</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bottom Action & Info -->
+    <div class="course-bottom-box">
+      <div class="course-note">
+        💡 <strong>Note:</strong> Lecture counts apply uniformly across Physics, Chemistry, Mathematics & Biology. Custom timing schedules and faculty assignment are finalized after a FREE 1-on-1 academic consultation session.
+      </div>
+      <div style="text-align:center;margin-top:20px;">
+        <a href="for-tutors.html" class="btn btn-primary" style="padding:14px 28px;">📚 Book a Free Demo Class</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
