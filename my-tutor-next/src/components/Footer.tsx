@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { GraduationCap, Share2, Globe, MessageCircle, Mail } from 'lucide-react';
+import { GraduationCap, Share2, Globe, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const subjectLinks = [
@@ -32,6 +32,19 @@ export default function Footer() {
             <p>
               Million Education is a premium mentorship platform for Class 11th, 12th, NEET & JEE aspirants across India. Expert faculty, personalized 1-on-1 guidance, guaranteed rank improvement.
             </p>
+            <div className={styles.contactInfo}>
+              <div className={styles.contactItem}>
+                <Phone size={16} />
+                <div>
+                  <a href="tel:+919004826378">+91 9004826378</a>
+                  <a href="tel:+919152152155">+91 9152152155</a>
+                </div>
+              </div>
+              <div className={styles.contactItem}>
+                <MapPin size={16} />
+                <p>Pearl Majestic, Aqsa Masjid Rd, Shastri Nagar, Jogeshwari West, Mumbai, Maharashtra 400102</p>
+              </div>
+            </div>
             <div className={styles.socialLinks}>
               <a href="#" aria-label="Website" className={styles.socialBtn}><Globe size={16} /></a>
               <a href="#" aria-label="WhatsApp" className={styles.socialBtn}><MessageCircle size={16} /></a>

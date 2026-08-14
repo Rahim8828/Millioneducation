@@ -30,6 +30,37 @@
   gap: 12px;
   margin-top: 20px;
 }
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+.contactItem {
+  display: flex;
+  gap: 12px;
+  font-size: .88rem;
+  color: var(--gray-400);
+}
+.contactItem svg {
+  flex-shrink: 0;
+  color: var(--primary);
+  margin-top: 2px;
+}
+.contactItem a,
+.contactItem p {
+  margin: 0;
+  line-height: 1.5;
+}
+.contactItem a {
+  color: var(--gray-400);
+  text-decoration: none;
+  transition: var(--transition);
+  display: block;
+}
+.contactItem a:hover {
+  color: var(--primary);
+}
 .socialBtn {
   width: 36px;
   height: 36px;

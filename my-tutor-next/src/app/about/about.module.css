@@ -80,3 +80,60 @@
   font-size: 1rem;
   line-height: 1.7;
 }
+
+.contactSection {
+  background: var(--gray-900);
+  color: var(--white);
+}
+
+.contactTitle {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.contactCard {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.contactCard:hover {
+  background: rgba(249, 115, 22, 0.1);
+  border-color: var(--primary);
+}
+
+.contactCard h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.contactCard p {
+  color: var(--gray-300);
+  font-size: 0.95rem;
+  margin: 8px 0;
+}
+
+.contactCard a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.contactCard a:hover {
+  color: #fb923c;
+  text-decoration: underline;
+}

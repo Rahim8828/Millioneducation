@@ -72,7 +72,8 @@ export default function ContactPage() {
                   <div className={styles.iconBox}><Phone size={20} color="#f97316" /></div>
                   <div>
                     <h4>Call / WhatsApp</h4>
-                    <p>+91 98765 43210</p>
+                    <p><a href="tel:+919004826378">+91 9004826378</a></p>
+                    <p><a href="tel:+919152152155">+91 9152152155</a></p>
                   </div>
                 </div>
 
@@ -87,8 +88,8 @@ export default function ContactPage() {
                 <div className={styles.infoItem}>
                   <div className={styles.iconBox}><MapPin size={20} color="#f97316" /></div>
                   <div>
-                    <h4>Service Location</h4>
-                    <p>Mumbai (Andheri, Bandra, Powai, Thane, Navi Mumbai, South Mumbai & all MMR regions)</p>
+                    <h4>Address</h4>
+                    <p>Pearl Majestic, Aqsa Masjid Rd, Shastri Nagar, Jogeshwari West, Mumbai, Maharashtra 400102</p>
                   </div>
                 </div>
 

@@ -57,6 +57,28 @@ export default function AboutPage() {
 
       <WhyChooseUs />
 
+      {/* Contact Info Section */}
+      <section className={`${styles.contactSection} sectionPadding`}>
+        <div className="container">
+          <h2 className={styles.contactTitle}>Get in Touch</h2>
+          <div className={styles.contactGrid}>
+            <div className={styles.contactCard}>
+              <h3>📞 Call / WhatsApp</h3>
+              <p><a href="tel:+919004826378">+91 9004826378</a></p>
+              <p><a href="tel:+919152152155">+91 9152152155</a></p>
+            </div>
+            <div className={styles.contactCard}>
+              <h3>📧 Email</h3>
+              <p><a href="mailto:support@millioneducation.com">support@millioneducation.com</a></p>
+            </div>
+            <div className={styles.contactCard}>
+              <h3>📍 Address</h3>
+              <p>Pearl Majestic, Aqsa Masjid Rd, Shastri Nagar, Jogeshwari West, Mumbai, Maharashtra 400102</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

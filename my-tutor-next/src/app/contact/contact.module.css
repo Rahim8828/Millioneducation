@@ -95,6 +95,18 @@
   font-size: 0.95rem;
 }
 
+.infoItem a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.infoItem a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
 .formSide {
   background: var(--white);
   border-radius: var(--radius-lg);
