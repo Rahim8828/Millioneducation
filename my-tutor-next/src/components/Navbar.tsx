@@ -38,7 +38,7 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
       <div className={styles.navInner}>
         <Link href="/" className={styles.logo} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
           <GraduationCap size={28} color="#f97316" />
-          <span>My<span>Tutor</span></span>
+          <span>Million<span>Education</span></span>
         </Link>
 
         <div className={styles.navLinks}>

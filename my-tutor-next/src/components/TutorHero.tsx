@@ -168,7 +168,7 @@ export default function TutorHero() {
                   onChange={(e) => setFormData({ ...formData, notify: e.target.checked })}
                 />
                 <label htmlFor="notify">
-                  I Agree To Receive Updates And Important Notifications From My Tutor Via RCS, SMS, And WhatsApp.
+                  I Agree To Receive Updates And Important Notifications From Million Education Via RCS, SMS, And WhatsApp.
                 </label>
               </div>
 

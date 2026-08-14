@@ -27,10 +27,10 @@ export default function Footer() {
           <div className={styles.brand}>
             <Link href="/" className={styles.logo} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
               <GraduationCap size={28} color="#f97316" />
-              <span>My<span>Tutor</span></span>
+              <span>Million<span>Education</span></span>
             </Link>
             <p>
-              My Tutor is a premium mentorship platform for Class 11th, 12th, NEET & JEE aspirants across India. Expert faculty, personalized 1-on-1 guidance, guaranteed rank improvement.
+              Million Education is a premium mentorship platform for Class 11th, 12th, NEET & JEE aspirants across India. Expert faculty, personalized 1-on-1 guidance, guaranteed rank improvement.
             </p>
             <div className={styles.socialLinks}>
               <a href="#" aria-label="Website" className={styles.socialBtn}><Globe size={16} /></a>
@@ -71,7 +71,7 @@ export default function Footer() {
         <hr className={styles.divider} />
 
         <div className={styles.bottom}>
-          <p>© 2026 My Tutor. All rights reserved. Specialized 1-on-1 Mentorship.</p>
+          <p>© 2026 Million Education. All rights reserved. Specialized 1-on-1 Mentorship.</p>
           <div className={styles.bottomLinks}>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms</a>

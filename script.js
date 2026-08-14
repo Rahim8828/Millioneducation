@@ -1,5 +1,5 @@
 /* =========================================
-   MY TUTOR — JavaScript
+   MILLION EDUCATION — JavaScript
    ========================================= */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
         submitBtn.textContent = '✅ Application Submitted!';
         submitBtn.style.background = '#22c55e';
         tutorForm.reset();
-        showToast('🎉 Welcome to My Tutor! Our team will call you within 24 hours.', 'success');
+        showToast('🎉 Welcome to Million Education! Our team will call you within 24 hours.', 'success');
         setTimeout(function () {
           submitBtn.textContent = 'Join as a Tutor 🚀';
           submitBtn.style.background = '';

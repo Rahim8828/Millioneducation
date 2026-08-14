@@ -15,7 +15,7 @@ export default function WhyChooseUs() {
     <section className={`${styles.section} sectionPadding`}>
       <div className="container">
         <div style={{ textAlign: 'center' }}>
-          <div className="badge">Why My Tutor?</div>
+          <div className="badge">Why Million Education?</div>
         </div>
         <h2 className="sectionTitle">Trusted Partner for 11th, 12th, NEET & JEE Success</h2>
         <p className="sectionSub">Empowering science stream students with dedicated 1-on-1 personal mentorship.</p>

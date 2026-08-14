@@ -15,10 +15,10 @@ export default function TutorFeatures() {
     <section className={`${styles.section} sectionPadding`} id="features">
       <div className="container">
         <div style={{ textAlign: 'center' }}>
-          <div className="badge">Why My Tutor?</div>
+          <div className="badge">Why Million Education?</div>
         </div>
         <h2 className="sectionTitle">Everything You Need to Succeed as a Specialist Mentor</h2>
-        <p className="sectionSub">We make your tutoring journey smooth, profitable and rewarding from day one.</p>
+        <p className="sectionSub">We make your teaching journey smooth, profitable and rewarding from day one.</p>
         <div className={styles.grid}>
           {features.map((f) => {
             const IconComponent = f.icon;

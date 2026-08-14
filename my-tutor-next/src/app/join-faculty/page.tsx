@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Join as Faculty — 11th, 12th, NEET & JEE Mentors in Mumbai',
-  description: 'Join My Tutor as a specialist faculty mentor in Mumbai. Teach Class 11th, 12th Science, NEET & JEE aspirants 1-on-1 at home or online.',
+  description: 'Join Million Education as a specialist faculty mentor in Mumbai. Teach Class 11th, 12th Science, NEET & JEE aspirants 1-on-1 at home or online.',
 };
 
 export default function JoinFacultyPage() {

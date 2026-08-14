@@ -80,7 +80,7 @@ export default function ContactPage() {
                   <div className={styles.iconBox}><Mail size={20} color="#f97316" /></div>
                   <div>
                     <h4>Email Support</h4>
-                    <p>support@mytutor.com</p>
+                    <p>support@millioneducation.com</p>
                   </div>
                 </div>
 

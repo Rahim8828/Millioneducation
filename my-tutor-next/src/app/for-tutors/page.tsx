@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Become a Tutor — Earn ₹20K–50K/Month',
-  description: 'Join My Tutor as a home tutor. Earn ₹20,000–₹50,000 per month teaching students near you. Quick onboarding, verified students, zero membership fee.',
+  description: 'Join Million Education as a home tutor. Earn ₹20,000–₹50,000 per month teaching students near you. Quick onboarding, verified students, zero membership fee.',
 };
 
 export default function ForTutors() {

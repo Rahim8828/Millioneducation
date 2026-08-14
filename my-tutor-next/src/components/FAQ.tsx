@@ -19,7 +19,7 @@ const tutorFaqs: FAQItem[] = [
   { q: 'What qualifications do I need to teach 11th, 12th, NEET or JEE?', a: 'We require strong subject knowledge in Physics, Chemistry, Maths or Biology. B.Tech/M.Tech, M.Sc, B.Ed, or competitive exam crackers (IIT/NEET qualifiers) are preferred.' },
   { q: 'Can I teach both Home Tuitions and Online Classes?', a: 'Yes, you can choose your preferred teaching mode — Home Tuition, Live 1-on-1 Online, or both — based on your convenience.' },
   { q: 'How do I receive student leads for NEET/JEE coaching?', a: 'Once verified by our academic team, you will receive direct 1-on-1 student mentorship requirements matching your expertise and location.' },
-  { q: 'Is registration free for faculty members?', a: 'Yes, registration on My Tutor is 100% free with zero membership fees.' },
+  { q: 'Is registration free for faculty members?', a: 'Yes, registration on Million Education is 100% free with zero membership fees.' },
 ];
 
 export default function FAQ({ variant = 'student' }: { variant?: 'student' | 'tutor' }) {
@@ -33,7 +33,7 @@ export default function FAQ({ variant = 'student' }: { variant?: 'student' | 'tu
           <div className="badge">Got Questions?</div>
         </div>
         <h2 className="sectionTitle">Frequently Asked Questions</h2>
-        <p className="sectionSub">Everything you need to know about {variant === 'tutor' ? 'joining My Tutor as a faculty mentor' : 'our 11th, 12th, NEET & JEE 1-on-1 programs'}.</p>
+        <p className="sectionSub">Everything you need to know about {variant === 'tutor' ? 'joining Million Education as a faculty mentor' : 'our 11th, 12th, NEET & JEE 1-on-1 programs'}.</p>
         <div className={styles.list}>
           {faqs.map((f, i) => (
             <div key={i} className={`${styles.item} ${openIndex === i ? styles.open : ''}`}>
