@@ -9,6 +9,8 @@ import FAQ from '@/components/FAQ';
 import CityLinks from '@/components/CityLinks';
 import Footer from '@/components/Footer';
 import Courses from '@/components/Courses';
+import CourseNEET from '@/components/CourseNEET';
+import CourseJEE from '@/components/CourseJEE';
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
       <Categories />
       <WhyChooseUs />
       <Courses />
+      <CourseNEET />
+      <CourseJEE />
       <HowItWorks variant="student" />
       <Testimonials variant="student" />
       <FAQ variant="student" />
