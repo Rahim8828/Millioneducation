@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd million-education-next && npm run build",
+  "outputDirectory": "million-education-next/.next",
+  "devCommand": "cd million-education-next && npm run dev",
+  "installCommand": "cd million-education-next && npm install",
+  "framework": "nextjs",
+  "projectSettings": {
+    "rootDirectory": "million-education-next"
+  }
+}
