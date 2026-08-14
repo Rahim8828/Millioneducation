@@ -341,7 +341,7 @@ export default function CourseJEE() {
           </div>
           
           <div className={styles.actionCta}>
-            <a href="tel:+919876543210" className="btn btn-primary" style={{ padding: '14px 28px' }}>
+            <a href="tel:+919004826378" className="btn btn-primary" style={{ padding: '14px 28px' }}>
               🎓 Book JEE Strategy Session & Demo
             </a>
           </div>

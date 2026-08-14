@@ -68,6 +68,8 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
         </button>
       </div>
 
+      {menuOpen && <div className={`${styles.mobileBackdrop} ${menuOpen ? styles.open : ''}`} onClick={() => setMenuOpen(false)} />}
+
       {menuOpen && (
         <div className={styles.mobileMenu}>
           {links.map((l) => (
