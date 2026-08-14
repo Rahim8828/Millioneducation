@@ -124,15 +124,69 @@ input, select, textarea { font-family: inherit; outline: none; border: none; }
   transform: translateY(-2px);
 }
 
-/* Accessibility: Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+/* Accessibility: Min Touch Target (WCAG 2.5.5) */
+@media (pointer: coarse) {
+  button, 
+  input[type="submit"], 
+  input[type="button"], 
+  input[type="reset"],
+  a.btn,
+  .btnPrimary,
+  .btnOutline,
+  .navLink,
+  .mobileLink {
+    min-height: 44px;
+    min-width: 44px;
   }
-  html { scroll-behavior: auto; }
+  
+  /* Interactive elements */
+  a[href],
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Form labels and inputs */
+  .group label {
+    min-height: 20px;
+  }
+  
+  /* Card hover states - better touch feedback */
+  .card:hover,
+  .featureCard:hover {
+    transform: none;
+  }
+  
+  .card:active,
+  .featureCard:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Keyboard navigation accessibility */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary);
+  color: var(--white);
+  padding: 8px 16px;
+  z-index: 10000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 /* Scroll animations */

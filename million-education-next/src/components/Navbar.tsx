@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { GraduationCap, Phone } from 'lucide-react';
+import { GraduationCap, Phone, MessageCircle, Mail } from 'lucide-react';
 import styles from './Navbar.module.css';
 
 export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
@@ -49,6 +49,12 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
         </div>
 
         <div className={styles.navCta}>
+          <a href="https://wa.me/919004826378" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="WhatsApp">
+            <MessageCircle size={18} />
+          </a>
+          <a href="mailto:support@millioneducation.com" className={styles.socialIcon} aria-label="Email">
+            <Mail size={18} />
+          </a>
           <a href="tel:+919004826378" className={styles.phone} style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
             <Phone size={14} color="#f97316" /> +91 9004826378
           </a>
@@ -77,6 +83,14 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
               {l.label}
             </Link>
           ))}
+          <div className={styles.mobileSocial}>
+            <a href="https://wa.me/919004826378" target="_blank" rel="noopener noreferrer" className={styles.mobileSocialIcon} aria-label="WhatsApp">
+              <MessageCircle size={20} />
+            </a>
+            <a href="mailto:support@millioneducation.com" className={styles.mobileSocialIcon} aria-label="Email">
+              <Mail size={20} />
+            </a>
+          </div>
           {tutorPage ? (
             <Link href="/" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>Find a Tutor</Link>
           ) : (

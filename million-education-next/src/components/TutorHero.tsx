@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import { Award, CheckCircle2, Send } from 'lucide-react';
+import { Award, CheckCircle2, Send, Loader2 } from 'lucide-react';
 import styles from './TutorHero.module.css';
 
 export default function TutorHero() {
@@ -36,7 +36,7 @@ export default function TutorHero() {
         notify: true,
       });
       setTimeout(() => setStatus('idle'), 4000);
-    }, 1200);
+    }, 1500);
   };
 
   return (
@@ -78,6 +78,7 @@ export default function TutorHero() {
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                   required
+                  disabled={status === 'submitting' || status === 'success'}
                 />
               </div>
 
@@ -90,6 +91,7 @@ export default function TutorHero() {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     required
+                    disabled={status === 'submitting' || status === 'success'}
                   />
                 </div>
                 <div className={styles.group}>
@@ -100,6 +102,7 @@ export default function TutorHero() {
                     value={formData.city}
                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                     required
+                    disabled={status === 'submitting' || status === 'success'}
                   />
                 </div>
               </div>
@@ -110,6 +113,7 @@ export default function TutorHero() {
                   value={formData.location}
                   onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                   required
+                  disabled={status === 'submitting' || status === 'success'}
                 >
                   <option value="">Select your area in Mumbai</option>
                   <option>Andheri, Mumbai</option>
@@ -131,6 +135,7 @@ export default function TutorHero() {
                   value={formData.qualification}
                   onChange={(e) => setFormData({ ...formData, qualification: e.target.value })}
                   required
+                  disabled={status === 'submitting' || status === 'success'}
                 >
                   <option value="">Select highest qualification</option>
                   <option>B.Tech / B.E. (IIT/NIT/Top College)</option>
@@ -149,6 +154,7 @@ export default function TutorHero() {
                   value={formData.fees}
                   onChange={(e) => setFormData({ ...formData, fees: e.target.value })}
                   required
+                  disabled={status === 'submitting' || status === 'success'}
                 >
                   <option value="">Select primary domain</option>
                   <option>Physics (11th, 12th, JEE/NEET)</option>
@@ -166,6 +172,7 @@ export default function TutorHero() {
                   id="notify"
                   checked={formData.notify}
                   onChange={(e) => setFormData({ ...formData, notify: e.target.checked })}
+                  disabled={status === 'submitting' || status === 'success'}
                 />
                 <label htmlFor="notify">
                   I Agree To Receive Updates And Important Notifications From Million Education Via RCS, SMS, And WhatsApp.
@@ -177,11 +184,22 @@ export default function TutorHero() {
                 className={styles.submitBtn}
                 disabled={status !== 'idle'}
               >
-                {status === 'submitting'
-                  ? 'Submitting...'
-                  : status === 'success'
-                  ? 'Application Submitted!'
-                  : 'Join as a Faculty Mentor'}
+                {status === 'submitting' ? (
+                  <>
+                    <Loader2 size={18} className={styles.spinner} />
+                    Submitting Application...
+                  </>
+                ) : status === 'success' ? (
+                  <>
+                    <CheckCircle2 size={18} />
+                    Application Submitted!
+                  </>
+                ) : (
+                  <>
+                    <Send size={18} />
+                    Join as a Faculty Mentor
+                  </>
+                )}
               </button>
             </form>
           </div>
@@ -190,4 +208,3 @@ export default function TutorHero() {
     </section>
   );
 }
-
