@@ -13,17 +13,6 @@
   transition: var(--transition);
 }
 .card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
-.num {
-  width: 48px; height: 48px;
-  border-radius: 50%;
-  background: var(--primary);
-  color: var(--white);
-  font-weight: 800;
-  font-size: 1.1rem;
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 16px;
-  box-shadow: var(--shadow-orange);
-}
 .icon { font-size: 2rem; margin-bottom: 12px; }
 .card h3 { font-weight: 700; margin-bottom: 8px; }
 .card p { font-size: .88rem; color: var(--gray-500); }

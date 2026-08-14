@@ -46,7 +46,6 @@ export default function HowItWorks({ variant = 'student' }: { variant?: 'student
             const IconComponent = s.icon;
             return (
               <div key={s.num} className={styles.card}>
-                <div className={styles.num}>{s.num}</div>
                 <div className={styles.icon}>
                   <IconComponent size={24} color="#f97316" />
                 </div>

@@ -36,9 +36,8 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`} id="navbar">
       <div className={styles.navInner}>
-        <Link href="/" className={styles.logo} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-          <GraduationCap size={28} color="#f97316" />
-          <span>Million<span>Education</span></span>
+        <Link href="/" className={styles.logo}>
+          <span>Million <span>Education</span></span>
         </Link>
 
         <div className={styles.navLinks}>
@@ -50,8 +49,8 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
         </div>
 
         <div className={styles.navCta}>
-          <a href="tel:+919876543210" className={styles.phone} style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-            <Phone size={14} color="#f97316" /> +91 98765 43210
+          <a href="tel:+919004826378" className={styles.phone} style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+            <Phone size={14} color="#f97316" /> +91 9004826378
           </a>
           {tutorPage ? (
             <Link href="/courses" className={styles.ctaBtn}>Explore Courses</Link>
@@ -76,9 +75,6 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
               {l.label}
             </Link>
           ))}
-          <a href="tel:+919876543210" className={styles.mobileLink} style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-            <Phone size={14} /> +91 98765 43210
-          </a>
           {tutorPage ? (
             <Link href="/" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>Find a Tutor</Link>
           ) : (

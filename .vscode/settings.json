@@ -1,4 +1,9 @@
 {
-    "kiroAgent.configureMCP": "Disabled",
-    "typescript.autoClosingTags": false
+    "typescript.autoClosingTags": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

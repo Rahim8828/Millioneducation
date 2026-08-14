@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "million-education-next",
+      "name": "Million Education Next"
+    }
+  ],
+  "settings": {
+    "typescript.autoClosingTags": false,
+    "kiroAgent.configureMCP": "Disabled",
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true
+  }
+}

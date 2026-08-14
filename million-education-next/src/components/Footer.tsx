@@ -25,9 +25,8 @@ export default function Footer() {
       <div className="container">
         <div className={styles.top}>
           <div className={styles.brand}>
-            <Link href="/" className={styles.logo} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-              <GraduationCap size={28} color="#f97316" />
-              <span>Million<span>Education</span></span>
+            <Link href="/" className={styles.logo}>
+              <span>Million <span>Education</span></span>
             </Link>
             <p>
               Million Education is a premium mentorship platform for Class 11th, 12th, NEET & JEE aspirants across India. Expert faculty, personalized 1-on-1 guidance, guaranteed rank improvement.
@@ -86,9 +85,10 @@ export default function Footer() {
         <div className={styles.bottom}>
           <p>© 2026 Million Education. All rights reserved. Specialized 1-on-1 Mentorship.</p>
           <div className={styles.bottomLinks}>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms</a>
-            <a href="#">Contact</a>
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/terms-of-service">Terms of Service</Link>
+            <Link href="/refund-policy">Refund Policy</Link>
+            <Link href="/contact">Contact</Link>
           </div>
         </div>
       </div>
