@@ -81,7 +81,7 @@ export default function PhysicsPage() {
               </ul>
 
               <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', color: 'var(--gray-900)', marginTop: '32px', marginBottom: '16px' }}>
-                What You'll Learn
+                What You&apos;ll Learn
               </h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '24px' }}>
                 {['Mechanics & Waves', 'Thermodynamics', 'Electromagnetism', 'Optics & Modern Physics', 'Nuclear Physics', 'Error Analysis'].map((topic, i) => (

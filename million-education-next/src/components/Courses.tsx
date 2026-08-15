@@ -138,6 +138,19 @@ const batchData: BatchOption[] = [
 export default function Courses() {
   const [activeClass, setActiveClass] = useState<'class11' | 'class12'>('class11');
   const [viewMode, setViewMode] = useState<'cards' | 'table'>('cards');
+  const [expandedBatches, setExpandedBatches] = useState<Set<string>>(
+    new Set(['full-year', 'semester', 'crash-3mo'])
+  );
+
+  const toggleBatchExpand = (id: string) => {
+    const newExpanded = new Set(expandedBatches);
+    if (newExpanded.has(id)) {
+      newExpanded.delete(id);
+    } else {
+      newExpanded.add(id);
+    }
+    setExpandedBatches(newExpanded);
+  };
 
   return (
     <section className={`${styles.section} sectionPadding`} id="courses">
@@ -236,7 +249,11 @@ export default function Courses() {
         {/* CARDS VIEW */}
         {viewMode === 'cards' && (
           <div className={styles.grid}>
-            {batchData.map((batch) => (
+            {batchData.map((batch) => {
+              const isExpanded = expandedBatches.has(batch.id);
+              const isHidden = batch.id !== 'full-year' && batch.id !== 'semester' && batch.id !== 'crash-3mo' && !isExpanded;
+              
+              return isHidden ? null : (
               <div key={batch.id} className={`${styles.card} ${batch.badge ? styles.cardFeatured : ''}`}>
                 {batch.badge && <span className={styles.cardTag}>{batch.badge}</span>}
                 
@@ -276,7 +293,41 @@ export default function Courses() {
                   <strong>Ideal For:</strong> {batch.recommendedFor}
                 </div>
               </div>
-            ))}
+              );
+            })}
+          </div>
+        )}
+
+        {/* Show More Button */}
+        {viewMode === 'cards' && batchData.length > 3 && (
+          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+            <button
+              onClick={() => {
+                const allIds = new Set(batchData.map(b => b.id));
+                if (expandedBatches.size === allIds.size) {
+                  // Collapse to default
+                  setExpandedBatches(new Set(['full-year', 'semester', 'crash-3mo']));
+                } else {
+                  // Expand all
+                  setExpandedBatches(allIds);
+                }
+              }}
+              style={{
+                background: '#2563EB',
+                color: 'white',
+                border: 'none',
+                padding: '10px 24px',
+                borderRadius: '8px',
+                fontSize: '0.95rem',
+                fontWeight: '600',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.background = '#1d4ed8')}
+              onMouseOut={(e) => (e.currentTarget.style.background = '#2563EB')}
+            >
+              {expandedBatches.size === batchData.length ? '▲ Show Less Options' : '▼ Show More Options'}
+            </button>
           </div>
         )}
 
