@@ -52,15 +52,37 @@ export default function Hero() {
             <div className={styles.tagGroup}>
               <div className={styles.tagLabel}>Courses</div>
               <div className={styles.tags}>
-                {classTags.map((t) => (
-                  <button
-                    key={t}
-                    className={`${styles.tag} ${activeClass === t ? styles.active : ''}`}
-                    onClick={() => setActiveClass(t)}
-                  >
-                    {t}
-                  </button>
-                ))}
+                {classTags.map((t) => {
+                  let sectionId = null;
+                  if (t === 'Class 11 Science' || t === 'Class 12 Science') {
+                    sectionId = 'courses';
+                  } else if (t === 'NEET Coaching Program') {
+                    sectionId = 'neet-courses';
+                  } else if (t === 'JEE Main & Advanced') {
+                    sectionId = 'jee-courses';
+                  }
+
+                  return (
+                    <button
+                      key={t}
+                      className={`${styles.tag} ${activeClass === t ? styles.active : ''}`}
+                      onClick={() => {
+                        setActiveClass(t);
+                        // Scroll to respective course section
+                        if (sectionId) {
+                          const section = document.getElementById(sectionId);
+                          if (section) {
+                            setTimeout(() => {
+                              section.scrollIntoView({ behavior: 'smooth' });
+                            }, 100);
+                          }
+                        }
+                      }}
+                    >
+                      {t}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 

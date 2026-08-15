@@ -92,10 +92,6 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
               {l.label}
             </Link>
           ))}
-          <a href="https://wa.me/919004826378" target="_blank" rel="noopener noreferrer" className={styles.whatsappBtn} aria-label="WhatsApp">
-            <WhatsAppIcon size={20} />
-            <span>Chat on WhatsApp</span>
-          </a>
           {tutorPage ? (
             <Link href="/" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>Find a Tutor</Link>
           ) : (

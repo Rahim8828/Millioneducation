@@ -1,0 +1,83 @@
+.stickyContainer {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.contactBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  font-size: 0;
+}
+
+.contactBtn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.callBtn {
+  background: linear-gradient(135deg, #2563EB 0%, #1d4ed8 100%);
+}
+
+.callBtn:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+}
+
+.whatsappBtn {
+  background: linear-gradient(135deg, #25d366 0%, #20a853 100%);
+}
+
+.whatsappBtn:hover {
+  background: linear-gradient(135deg, #20a853 0%, #1a8a44 100%);
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.contactBtn:hover .tooltip {
+  opacity: 1;
+}
+
+/* Mobile Optimization */
+@media (max-width: 640px) {
+  .stickyContainer {
+    bottom: 20px;
+    right: 12px;
+    gap: 8px;
+  }
+
+  .contactBtn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tooltip {
+    display: none;
+  }
+}

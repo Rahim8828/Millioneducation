@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
+import StickyContact from '@/components/StickyContact';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -39,7 +40,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <StickyContact />
+      </body>
     </html>
   );
 }

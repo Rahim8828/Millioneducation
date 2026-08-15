@@ -165,22 +165,14 @@
     width: 18px;
   }
   .ctaBtn { display: none; }
-  .whatsappBtn {
-    display: flex;
-    align-items: center;
+  .mobileMenu .ctaBtn {
+    display: inline-flex;
+    width: 100%;
     justify-content: center;
-    width: 24px;
-    height: 24px;
-    padding: 1px;
-    border-radius: 3px;
-    font-size: 0;
-    background: #25D366;
+    padding: 14px 16px;
+    margin-top: 8px;
   }
-  .whatsappBtn span {
+  .whatsappBtn {
     display: none;
-  }
-  .whatsappBtn svg {
-    width: 20px;
-    height: 20px;
   }
 }
