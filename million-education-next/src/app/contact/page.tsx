@@ -69,7 +69,7 @@ export default function ContactPage() {
 
               <div className={styles.infoList}>
                 <div className={styles.infoItem}>
-                  <div className={styles.iconBox}><Phone size={20} color="#f97316" /></div>
+                  <div className={styles.iconBox}><Phone size={20} color="#2563EB" /></div>
                   <div>
                     <h4>Call / WhatsApp</h4>
                     <p><a href="tel:+919004826378">+91 9004826378</a></p>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className={styles.infoItem}>
-                  <div className={styles.iconBox}><Mail size={20} color="#f97316" /></div>
+                  <div className={styles.iconBox}><Mail size={20} color="#2563EB" /></div>
                   <div>
                     <h4>Email Support</h4>
                     <p>support@millioneducation.com</p>
@@ -86,7 +86,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className={styles.infoItem}>
-                  <div className={styles.iconBox}><MapPin size={20} color="#f97316" /></div>
+                  <div className={styles.iconBox}><MapPin size={20} color="#2563EB" /></div>
                   <div>
                     <h4>Address</h4>
                     <p>Pearl Majestic, Aqsa Masjid Rd, Shastri Nagar, Jogeshwari West, Mumbai, Maharashtra 400102</p>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className={styles.infoItem}>
-                  <div className={styles.iconBox}><Clock size={20} color="#f97316" /></div>
+                  <div className={styles.iconBox}><Clock size={20} color="#2563EB" /></div>
                   <div>
                     <h4>Counselling Hours</h4>
                     <p>Monday – Saturday: 9:00 AM – 8:00 PM</p>
@@ -162,7 +162,7 @@ export default function ContactPage() {
                         <option>Class 11 Science (PCB)</option>
                         <option>Class 12 Science (PCM)</option>
                         <option>Class 12 Science (PCB)</option>
-                        <option>NEET Premium Mentorship</option>
+                        <option>NEET Premium Coaching Program</option>
                         <option>JEE Main & Advanced</option>
                       </select>
                     </div>

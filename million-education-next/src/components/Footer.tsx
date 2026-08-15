@@ -7,7 +7,7 @@ const subjectLinks = [
   'PCM Combo Course', 'PCB Combo Course',
 ];
 const classLinks = [
-  'Class 11 Science', 'Class 12 Science', 'NEET UG Mentorship',
+  'Class 11 Science', 'Class 12 Science', 'NEET UG Coaching',
   'JEE Main Prep', 'JEE Advanced Prep', 'CBSE Board Prep',
 ];
 const companyLinks = [
@@ -29,7 +29,7 @@ export default function Footer() {
               <span>Million <span>Education</span></span>
             </Link>
             <p>
-              Million Education is a premium mentorship platform for Class 11th, 12th, NEET & JEE aspirants across India. Expert faculty, personalized 1-on-1 guidance, guaranteed rank improvement.
+              Million Education is a premium coaching platform for Class 11th, 12th, NEET & JEE aspirants across India. Expert faculty, personalized 1-on-1 guidance, guaranteed rank improvement.
             </p>
             <div className={styles.contactInfo}>
               <div className={styles.contactItem}>
@@ -83,7 +83,7 @@ export default function Footer() {
         <hr className={styles.divider} />
 
         <div className={styles.bottom}>
-          <p>© 2026 Million Education. All rights reserved. Specialized 1-on-1 Mentorship.</p>
+          <p>© 2026 Million Education. All rights reserved. Specialized 1-on-1 Personal Coaching.</p>
           <div className={styles.bottomLinks}>
             <Link href="/privacy-policy">Privacy Policy</Link>
             <Link href="/terms-of-service">Terms of Service</Link>

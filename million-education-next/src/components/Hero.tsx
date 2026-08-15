@@ -1,17 +1,18 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import { Sparkles, Star, CheckCircle2, BookOpen, GraduationCap } from 'lucide-react';
+import { Sparkles, Star, CheckCircle2, BookOpen } from 'lucide-react';
+import BookDemoModal from './BookDemoModal';
 import styles from './Hero.module.css';
 
 const subjectTags = ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'PCM Combo', 'PCB Combo'];
-const classTags = ['Class 11 Science', 'Class 12 Science', 'NEET Mentorship', 'JEE Main & Advanced'];
+const classTags = ['Class 11 Science', 'Class 12 Science', 'NEET Coaching Program', 'JEE Main & Advanced'];
 
 export default function Hero() {
   const [activeSubject, setActiveSubject] = useState('Physics');
   const [activeClass, setActiveClass] = useState('Class 11 Science');
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
   return (
     <section className={styles.hero}>
@@ -21,10 +22,10 @@ export default function Hero() {
           <div className={styles.text}>
             <div className="badge">
               <Sparkles size={14} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />
-              Specialized 1-on-1 Mentorship & Tuitions
+              Specialized 1-on-1 Personal Coaching Program & Tuitions
             </div>
             <h1>
-              Personalized Mentorship for<br />
+              Personal Coaching Program for<br />
               <em>11th, 12th, NEET & JEE</em><br />
               From Basics to Rank
             </h1>
@@ -63,9 +64,9 @@ export default function Hero() {
               </div>
             </div>
 
-            <Link href="#courses" className={styles.cta}>
+            <button onClick={() => setIsDemoModalOpen(true)} className={styles.cta}>
               <BookOpen size={18} /> Book a Free Demo Class
-            </Link>
+            </button>
           </div>
 
           {/* Visual Side */}
@@ -75,7 +76,7 @@ export default function Hero() {
                 { src: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&q=80', alt: 'Physics tutoring session' },
                 { src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&q=80', alt: 'Chemistry class' },
                 { src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80', alt: 'Mathematics education' },
-                { src: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&q=80', alt: 'Biology mentorship' },
+                { src: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&q=80', alt: 'Biology coaching program' },
               ].map((img, i) => (
                 <div key={i} className={`${styles.imgCard} ${i % 2 === 1 ? styles.imgCardOffset : ''}`}>
                   <Image 
@@ -92,7 +93,7 @@ export default function Hero() {
 
             <div className={`${styles.floatCard} ${styles.floatCard1}`}>
               <div className={styles.fcIcon}>
-                <Star size={20} color="#f97316" fill="#f97316" />
+                <Star size={20} color="#2563EB" fill="#2563EB" />
               </div>
               <div>
                 <div className={styles.fcLabel}>Avg. Rating</div>
@@ -111,6 +112,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      
+      <BookDemoModal isOpen={isDemoModalOpen} onClose={() => setIsDemoModalOpen(false)} />
     </section>
   );
 }

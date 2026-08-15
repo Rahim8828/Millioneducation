@@ -152,29 +152,29 @@ export default function CourseNEET() {
             NEET UG Preparation Programs
           </div>
         </div>
-        <h2 className="sectionTitle">NEET UG 1-on-1 Mentorship Programs</h2>
+        <h2 className="sectionTitle">NEET UG 1-on-1 Personal Coaching Programs</h2>
         <p className="sectionSub">
-          Science-focused, rank-engineered mentorship for NEET aspirants. Expert guidance in Physics, Chemistry & Biology with emphasis on conceptual mastery and competitive exam strategy.
+          Science-focused, rank-engineered personal coaching for NEET aspirants. Expert guidance in Physics, Chemistry & Biology with emphasis on conceptual mastery and competitive exam strategy.
         </p>
 
         {/* Delivery Modes Highlight */}
         <div className={styles.modesContainer}>
           <div className={styles.modeBadge}>
-            <Laptop size={18} color="#f97316" />
+            <Laptop size={18} color="#2563EB" />
             <div>
               <strong>Online Interactive</strong>
               <span>Live 1-on-1 Sessions</span>
             </div>
           </div>
           <div className={styles.modeBadge}>
-            <Home size={18} color="#f97316" />
+            <Home size={18} color="#2563EB" />
             <div>
-              <strong>Home Mentorship</strong>
+              <strong>Home Coaching Program</strong>
               <span>At-Residence Tutor</span>
             </div>
           </div>
           <div className={styles.modeBadge}>
-            <UserCheck size={18} color="#f97316" />
+            <UserCheck size={18} color="#2563EB" />
             <div>
               <strong>Complete (3-Subject)</strong>
               <span>Physics + Chemistry + Biology</span>
@@ -224,14 +224,14 @@ export default function CourseNEET() {
 
                 <div className={styles.metricsRow}>
                   <div className={styles.metricItem}>
-                    <Clock size={16} color="#f97316" />
+                    <Clock size={16} color="#2563EB" />
                     <div>
                       <span className={styles.metricLabel}>Total Lectures</span>
                       <strong className={styles.metricVal}>{batch.lectures}</strong>
                     </div>
                   </div>
                   <div className={styles.metricItem}>
-                    <Calendar size={16} color="#f97316" />
+                    <Calendar size={16} color="#2563EB" />
                     <div>
                       <span className={styles.metricLabel}>Session Duration</span>
                       <strong className={styles.metricVal}>{batch.duration}</strong>
@@ -321,7 +321,7 @@ export default function CourseNEET() {
         {/* Features & Call to action */}
         <div className={styles.bottomBar}>
           <div className={styles.bottomNote}>
-            <Info size={20} color="#f97316" style={{ flexShrink: 0 }} />
+            <Info size={20} color="#2563EB" style={{ flexShrink: 0 }} />
             <p>
               <strong>Note:</strong> All NEET programs are NCERT-focused with emphasis on conceptual clarity. Lecture counts include live doubt sessions, mock test reviews, and personalized feedback. Individual mentor selection based on subject specialization happens after free consultation.
             </p>

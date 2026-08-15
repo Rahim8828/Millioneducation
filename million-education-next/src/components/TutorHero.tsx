@@ -46,7 +46,7 @@ export default function TutorHero() {
           <div className={styles.text}>
             <div className={styles.earnBadge}>
               <Award size={16} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />
-              High-Earning Mentorship Opportunities
+              High-Earning Coaching Opportunities
             </div>
             <h1>
               Find 1-on-1 Tuition Jobs<br />
@@ -54,7 +54,7 @@ export default function TutorHero() {
               <span>Teach Smart. Inspire Ranks.</span>
             </h1>
             <p>
-              Connect with high-aspiring Science stream students looking for dedicated 1-on-1 Home Tuitions & Online Mentorship in Physics, Chemistry, Maths & Biology.
+              Connect with high-aspiring Science stream students looking for dedicated 1-on-1 Home Tuitions & Online Coaching in Physics, Chemistry, Maths & Biology.
             </p>
             <div className={styles.chips}>
               <div className={styles.chip}><CheckCircle2 size={16} color="#22c55e" /> Quick Onboarding</div>

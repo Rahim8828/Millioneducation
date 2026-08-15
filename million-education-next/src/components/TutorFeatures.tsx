@@ -25,7 +25,7 @@ export default function TutorFeatures() {
             return (
               <div key={f.title} className={styles.card}>
                 <div className={styles.icon}>
-                  <IconComponent size={24} color="#f97316" />
+                  <IconComponent size={24} color="#2563EB" />
                 </div>
                 <h3>{f.title}</h3>
                 <p>{f.desc}</p>

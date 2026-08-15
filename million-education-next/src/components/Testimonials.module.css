@@ -4,9 +4,9 @@
 }
 .title { color: var(--white) !important; }
 .sub { color: var(--gray-400) !important; }
-.orangeBadge {
+.blueBadge {
   display: inline-block;
-  background: rgba(249,115,22,.2);
+  background: rgba(37, 99, 235, 0.2);
   color: var(--primary);
   font-size: .75rem;
   font-weight: 600;

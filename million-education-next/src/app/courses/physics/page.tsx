@@ -25,14 +25,14 @@ export default function PhysicsPage() {
         <div className="container">
           <div style={{
             display: 'inline-block',
-            background: 'rgba(249, 115, 22, 0.15)',
+            background: 'rgba(37, 99, 235, 0.15)',
             color: 'var(--primary)',
             fontSize: '0.85rem',
             fontWeight: 600,
             padding: '6px 16px',
             borderRadius: '100px',
             marginBottom: '20px',
-            border: '1px solid rgba(249, 115, 22, 0.3)',
+            border: '1px solid rgba(37, 99, 235, 0.3)',
           }}>
             <GraduationCap size={16} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />
             Physics Specialist Course
@@ -41,7 +41,7 @@ export default function PhysicsPage() {
             Master Physics for Boards & Competitive Exams
           </h1>
           <p style={{ fontSize: '1.1rem', color: 'var(--gray-300)', maxWidth: '680px', margin: '0 auto', lineHeight: 1.6 }}>
-            Comprehensive Physics tuition covering Class 11 & 12 NCERT, JEE Main/Advanced concepts, and NEET Physics with dedicated 1-on-1 mentorship.
+            Comprehensive Physics tuition covering Class 11 & 12 NCERT, JEE Main/Advanced concepts, and NEET Physics with dedicated 1-on-1 personal coaching.
           </p>
         </div>
       </section>

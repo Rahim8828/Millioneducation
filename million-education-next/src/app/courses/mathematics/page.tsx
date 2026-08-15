@@ -41,7 +41,7 @@ export default function MathematicsPage() {
             Build Strong Math Foundations for JEE & Boards
           </h1>
           <p style={{ fontSize: '1.1rem', color: 'var(--gray-300)', maxWidth: '680px', margin: '0 auto', lineHeight: 1.6 }}>
-            Comprehensive Mathematics mentorship covering Calculus, Algebra, Coordinate Geometry & Trigonometry for Class 11, 12 & JEE preparation.
+            Comprehensive Mathematics coaching covering Calculus, Algebra, Coordinate Geometry & Trigonometry for Class 11, 12 & JEE preparation.
           </p>
         </div>
       </section>

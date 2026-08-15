@@ -12,8 +12,8 @@ interface StatItem {
 
 const stats: StatItem[] = [
   { num: '10,000+', rawNum: 10000, suffix: '+', label: 'Happy Students' },
-  { num: '26,000+', rawNum: 26000, suffix: '+', label: 'Verified Tutors' },
-  { num: '2,000+', rawNum: 2000, suffix: '+', label: 'Locations Covered' },
+  { num: '1,500+', rawNum: 1500, suffix: '+', label: 'Verified Tutors' },
+  { num: '500+', rawNum: 500, suffix: '+', label: 'Locations Covered' },
   { num: '8+', rawNum: 8, suffix: '+', label: 'Years of Excellence' },
 ];
 
@@ -57,7 +57,7 @@ export default function StatsBar({ dark = false }: { dark?: boolean }) {
   }, []);
 
   return (
-    <div className={`${styles.bar} ${dark ? styles.dark : styles.orange}`} ref={ref}>
+    <div className={`${styles.bar} ${dark ? styles.dark : styles.blue}`} ref={ref}>
       <div className="container">
         <div className={styles.grid}>
           {stats.map((s) => (

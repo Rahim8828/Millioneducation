@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { MessageCircle } from 'lucide-react';
 
 // WhatsApp SVG Icon Component
 function WhatsAppIcon({ size = 18 }: { size?: number }) {

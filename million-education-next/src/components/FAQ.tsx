@@ -7,8 +7,8 @@ import styles from './FAQ.module.css';
 interface FAQItem { q: string; a: string; }
 
 const studentFaqs: FAQItem[] = [
-  // Mentorship & How it Works
-  { q: 'How does 1-on-1 mentorship for 11th, 12th, NEET & JEE work?', a: 'You submit your target course (Class 11/12 Science, NEET or JEE). We match you with an expert subject specialist (IITians/Medical faculty). You get a FREE live demo session before finalizing your schedule. Classes can be conducted at your home (Home Tuition) or online (Live 1-on-1) based on your preference.' },
+  // Personal Coaching Program & How it Works
+  { q: 'How does the 1-on-1 personal coaching program for 11th, 12th, NEET & JEE work?', a: 'You submit your target course (Class 11/12 Science, NEET or JEE). We match you with an expert subject specialist (IITians/Medical faculty). You get a FREE live demo session before finalizing your schedule. Classes can be conducted at your home (Home Tuition) or online (Live 1-on-1) based on your preference.' },
   { q: 'What is included in the complete PCM/PCB course?', a: 'The complete course includes: Complete Physics, Chemistry, Maths/Biology coverage based on your stream, Weekly assessment tests, NCERT line-by-line mastery, 15+ years of Previous Year Questions (PYQs), Unlimited doubt solving support, Digital PDF notes and study material, Performance tracking dashboards, and Monthly parent-teacher review meetings.' },
   { q: 'How are the tutors/faculty selected and verified?', a: 'All our faculty members go through a rigorous 5-step verification process: (1) Document verification of qualifications, (2) Subject knowledge assessment, (3) Teaching demonstration, (4) Background check, and (5) Student feedback during trial period. We only onboard IITians, M.Sc/M.Tech degree holders, MBBS doctors, and experienced competitive exam mentors.' },
   { q: 'Can I opt for single-subject or chapter-wise tuition?', a: 'Yes! We offer complete flexibility. You can choose: Single subject tuition (e.g., only Physics for JEE), Combo packages (PCM or PCB), or Chapter-wise intensive modules for specific weak areas. Pricing varies based on the package selected.' },

@@ -7,7 +7,7 @@ import { BookOpen, GraduationCap, CheckCircle2, Calendar, MessageCircle, ArrowLe
 
 export const metadata: Metadata = {
   title: 'PCB Combo Course — 1-on-1 Home & Online Tuition for 11th, 12th & NEET UG',
-  description: 'Complete Physics, Chemistry & Biology combo course for Class 11, 12 & NEET. Expert MBBS & IITian faculty, comprehensive coverage & personalized mentorship.',
+  description: 'Complete Physics, Chemistry & Biology combo course for Class 11, 12 & NEET. Expert MBBS & IITian faculty, comprehensive coverage & personal coaching program.',
 };
 
 export default function PcbPage() {
@@ -41,7 +41,7 @@ export default function PcbPage() {
             Complete PCB Preparation for NEET & Boards
           </h1>
           <p style={{ fontSize: '1.1rem', color: 'var(--gray-300)', maxWidth: '680px', margin: '0 auto', lineHeight: 1.6 }}>
-            Master Physics, Chemistry & Biology together with expert MBBS and M.Sc faculty. Comprehensive 1-on-1 mentorship for Class 11, 12 & NEET UG success.
+            Master Physics, Chemistry & Biology together with expert MBBS and M.Sc faculty. Comprehensive 1-on-1 personal coaching for Class 11, 12 & NEET UG success.
           </p>
         </div>
       </section>

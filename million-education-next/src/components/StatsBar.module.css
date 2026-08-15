@@ -1,6 +1,6 @@
 .bar { padding: 28px 0; }
 .dark { background: var(--secondary); }
-.orange { background: linear-gradient(135deg, var(--primary) 0%, #fb923c 100%); }
+.blue { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); }
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

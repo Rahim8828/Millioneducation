@@ -18,7 +18,7 @@ import {
 import styles from './Categories.module.css';
 
 const categories = [
-  { icon: Atom, name: 'Physics Mentorship', sub: '11th, 12th, JEE & NEET' },
+  { icon: Atom, name: 'Physics Coaching Program', sub: '11th, 12th, JEE & NEET' },
   { icon: FlaskConical, name: 'Chemistry Specialization', sub: 'Organic, Inorganic & Physical' },
   { icon: Calculator, name: 'Mathematics Coaching', sub: 'Calculus, Algebra & Coordinate' },
   { icon: Dna, name: 'Biology NCERT Mastery', sub: 'Botany & Zoology for NEET' },
@@ -54,7 +54,7 @@ export default function Categories() {
         </div>
         <h2 className="sectionTitle">Exclusively Focused on 11th, 12th, NEET & JEE</h2>
         <p className="sectionSub">
-          Personalized mentorship tailored specifically for Science stream excellence and top entrance exam ranks.
+          Personal coaching program tailored specifically for Science stream excellence and top entrance exam ranks.
         </p>
         <div className={styles.grid} ref={cardsRef}>
           {categories.map((c) => {
@@ -62,7 +62,7 @@ export default function Categories() {
             return (
               <div key={c.name} className={`${styles.card} animateEl`} data-card>
                 <span className={styles.icon}>
-                  <IconComponent size={28} color="#f97316" />
+                  <IconComponent size={28} color="#2563EB" />
                 </span>
                 <div className={styles.name}>{c.name}</div>
                 <div className={styles.sub}>{c.sub}</div>

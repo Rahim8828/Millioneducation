@@ -8,7 +8,7 @@ export default function CityLinks() {
     'Biology Specialist',
     'Class 11 Science Tutor',
     'Class 12 Science Tutor',
-    'NEET Mentorship Tutor',
+    'NEET Coaching Tutor',
     'JEE Main & Advanced Tutor',
     'PCM Combo Specialist',
     'PCB Combo Specialist',
@@ -30,7 +30,7 @@ export default function CityLinks() {
     <section className="sectionPadding" style={{ background: 'var(--white)' }}>
       <div className="container">
         <h2 className="sectionTitle">Home & Online Tuitions Across Mumbai</h2>
-        <p className="sectionSub">1-on-1 Personalized Mentorship for 11th, 12th, NEET & JEE in all major Mumbai locations.</p>
+        <p className="sectionSub">1-on-1 Personalized Coaching Program for 11th, 12th, NEET & JEE in all major Mumbai locations.</p>
         
         {mumbaiRegions.map((regionName) => (
           <div key={regionName} style={{ marginBottom: 32 }}>

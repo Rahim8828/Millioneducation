@@ -7,7 +7,7 @@ import { BookOpen, GraduationCap, CheckCircle2, Calendar, MessageCircle, ArrowLe
 
 export const metadata: Metadata = {
   title: 'PCM Combo Course — 1-on-1 Home & Online Tuition for 11th, 12th, JEE Main & Advanced',
-  description: 'Complete Physics, Chemistry & Mathematics combo course for Class 11, 12, JEE Main & Advanced. Expert IITian faculty, comprehensive coverage & personalized mentorship.',
+  description: 'Complete Physics, Chemistry & Mathematics combo course for Class 11, 12, JEE Main & Advanced. Expert IITian faculty, comprehensive coverage & personal coaching program.',
 };
 
 export default function PcmPage() {
@@ -41,7 +41,7 @@ export default function PcmPage() {
             Complete PCM Preparation for JEE & Boards
           </h1>
           <p style={{ fontSize: '1.1rem', color: 'var(--gray-300)', maxWidth: '680px', margin: '0 auto', lineHeight: 1.6 }}>
-            Master Physics, Chemistry & Mathematics together with expert IITian faculty. Comprehensive 1-on-1 mentorship for Class 11, 12, JEE Main & Advanced success.
+            Master Physics, Chemistry & Mathematics together with expert IITian faculty. Comprehensive 1-on-1 personal coaching for Class 11, 12, JEE Main & Advanced success.
           </p>
         </div>
       </section>

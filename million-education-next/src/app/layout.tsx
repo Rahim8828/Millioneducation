@@ -18,7 +18,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: {
     template: '%s | Million Education Mumbai',
-    default: 'Million Education — 1-on-1 Mentorship for 11th, 12th, NEET & JEE in Mumbai',
+    default: 'Million Education — 1-on-1 Personal Coaching Program for 11th, 12th, NEET & JEE in Mumbai',
   },
   description:
     'Million Education connects Science stream students in Mumbai with verified 1-on-1 home tutors and live online mentors for Class 11, 12, NEET UG, and JEE Main & Advanced.',

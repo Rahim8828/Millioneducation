@@ -150,21 +150,21 @@ export default function Courses() {
         {/* Delivery Modes Highlight */}
         <div className={styles.modesContainer}>
           <div className={styles.modeBadge}>
-            <Laptop size={18} color="#f97316" />
+            <Laptop size={18} color="#2563EB" />
             <div>
               <strong>Single Subject — Online</strong>
               <span>Live 1-on-1 Interactive</span>
             </div>
           </div>
           <div className={styles.modeBadge}>
-            <Home size={18} color="#f97316" />
+            <Home size={18} color="#2563EB" />
             <div>
               <strong>Single Subject — Offline</strong>
               <span>At-Home Tutor Visit</span>
             </div>
           </div>
           <div className={styles.modeBadge}>
-            <UserCheck size={18} color="#f97316" />
+            <UserCheck size={18} color="#2563EB" />
             <div>
               <strong>Complete (3-Subj Bundle)</strong>
               <span>Physics + Chemistry + Math/Bio</span>
@@ -239,14 +239,14 @@ export default function Courses() {
 
                 <div className={styles.metricsRow}>
                   <div className={styles.metricItem}>
-                    <Clock size={16} color="#f97316" />
+                    <Clock size={16} color="#2563EB" />
                     <div>
                       <span className={styles.metricLabel}>Total Lectures</span>
                       <strong className={styles.metricVal}>{batch.lectures}</strong>
                     </div>
                   </div>
                   <div className={styles.metricItem}>
-                    <Calendar size={16} color="#f97316" />
+                    <Calendar size={16} color="#2563EB" />
                     <div>
                       <span className={styles.metricLabel}>Session Duration</span>
                       <strong className={styles.metricVal}>{batch.duration}</strong>
@@ -336,7 +336,7 @@ export default function Courses() {
         {/* Features & Call to action */}
         <div className={styles.bottomBar}>
           <div className={styles.bottomNote}>
-            <Info size={20} color="#f97316" style={{ flexShrink: 0 }} />
+            <Info size={20} color="#2563EB" style={{ flexShrink: 0 }} />
             <p>
               <strong>Note:</strong> Lecture counts and subject structures apply uniformly across Physics, Chemistry, Mathematics & Biology. Schedule timings and personalized learning plans are configured after a free 1-on-1 assessment.
             </p>

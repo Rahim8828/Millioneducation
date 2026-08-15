@@ -24,8 +24,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(249,115,22,.2);
-  border: 1px solid rgba(249,115,22,.4);
+  background: rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(37, 99, 235, 0.4);
   border-radius: 100px;
   padding: 8px 18px;
   color: var(--primary);
@@ -87,7 +87,7 @@
 .group input:focus, .group select:focus {
   border-color: var(--primary);
   background: var(--white);
-  box-shadow: 0 0 0 3px rgba(249,115,22,.1);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .checkGroup {
@@ -107,7 +107,7 @@
   font-size: 1rem;
   font-weight: 700;
   transition: var(--transition);
-  box-shadow: var(--shadow-orange);
+  box-shadow: var(--shadow-primary);
   cursor: pointer;
   border: none;
 }

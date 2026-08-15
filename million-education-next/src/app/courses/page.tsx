@@ -7,7 +7,7 @@ import { BookOpen, GraduationCap, Stethoscope, Cpu, CheckCircle2, ShieldCheck, U
 import styles from './courses.module.css';
 
 export const metadata: Metadata = {
-  title: 'Courses — 11th, 12th, NEET & JEE 1-on-1 Mentorship',
+  title: 'Courses — 11th, 12th, NEET & JEE 1-on-1 Personal Coaching Program',
   description: 'Explore specialized 1-on-1 home & online tuition courses for Class 11th Science, 12th Science, NEET UG, and JEE Main & Advanced.',
 };
 
@@ -23,7 +23,7 @@ export default function CoursesPage() {
             <GraduationCap size={16} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />
             Specialized Academic Programs
           </div>
-          <h1>11th, 12th, NEET & JEE Mentorship</h1>
+          <h1>11th, 12th, NEET & JEE Personal Coaching Program</h1>
           <p className={styles.heroSub}>
             Comprehensive 1-on-1 Home Tuitions & Online Coaching in Physics, Chemistry, Mathematics & Biology tailored for Board success & Top entrance ranks.
           </p>
@@ -41,25 +41,25 @@ export default function CoursesPage() {
 
           <div className={styles.featureGrid}>
             <div className={styles.featureCard}>
-              <div className={styles.iconBox}><BookOpen size={24} color="#f97316" /></div>
+              <div className={styles.iconBox}><BookOpen size={24} color="#2563EB" /></div>
               <h3>NCERT & PYQ Mastery</h3>
               <p>Special focus on NCERT line-by-line coverage and 15+ years of Previous Year Questions for NEET and JEE.</p>
             </div>
 
             <div className={styles.featureCard}>
-              <div className={styles.iconBox}><Calendar size={24} color="#f97316" /></div>
+              <div className={styles.iconBox}><Calendar size={24} color="#2563EB" /></div>
               <h3>Weekly Assessment Tests</h3>
               <p>Regular chapter-wise and cumulative mock tests designed on the latest NTA / Board examination patterns.</p>
             </div>
 
             <div className={styles.featureCard}>
-              <div className={styles.iconBox}><MessageCircle size={24} color="#f97316" /></div>
+              <div className={styles.iconBox}><MessageCircle size={24} color="#2563EB" /></div>
               <h3>Unlimited Doubt Support</h3>
               <p>Direct access to your dedicated faculty mentor for instant doubt resolution during and after class hours.</p>
             </div>
 
             <div className={styles.featureCard}>
-              <div className={styles.iconBox}><UserCheck size={24} color="#f97316" /></div>
+              <div className={styles.iconBox}><UserCheck size={24} color="#2563EB" /></div>
               <h3>Monthly Parent Meetings</h3>
               <p>Transparent monthly progress reporting and feedback sessions to ensure steady academic growth.</p>
             </div>
