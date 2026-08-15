@@ -228,7 +228,7 @@ export default function CourseNEET() {
         <div className={styles.classBanner}>
           <div>
             <h3>🏥 NEET UG — Physics, Chemistry & Biology (Medical)</h3>
-            <p>Comprehensive NEET preparation with doctor-level expertise. Every session focuses on high-frequency NEET topics, mock test strategies, and doubt resolution for All India Medical entrance success.</p>
+            <p>Comprehensive NEET preparation with doctor-level expertise from MBBS specialists and medical faculty. Every session focuses on high-frequency NEET topics, clinical reasoning, and doubt resolution for All India Medical entrance success. Our Chemistry and Biology mentors hold MBBS/MD degrees for premium medical insights.</p>
           </div>
         </div>
 
