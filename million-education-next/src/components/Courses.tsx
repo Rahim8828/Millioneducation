@@ -10,14 +10,10 @@ import {
   CheckCircle2, 
   XCircle,
   Clock,
-  Sparkles,
   Zap,
   Calendar,
-  Layers,
   Table as TableIcon,
   Grid as GridIcon,
-  ShieldCheck,
-  ArrowRight,
   Info
 } from 'lucide-react';
 import styles from './Courses.module.css';
@@ -141,16 +137,6 @@ export default function Courses() {
   const [expandedBatches, setExpandedBatches] = useState<Set<string>>(
     new Set(['full-year', 'semester', 'crash-3mo'])
   );
-
-  const toggleBatchExpand = (id: string) => {
-    const newExpanded = new Set(expandedBatches);
-    if (newExpanded.has(id)) {
-      newExpanded.delete(id);
-    } else {
-      newExpanded.add(id);
-    }
-    setExpandedBatches(newExpanded);
-  };
 
   return (
     <section className={`${styles.section} sectionPadding`} id="courses">

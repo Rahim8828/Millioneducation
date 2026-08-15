@@ -10,14 +10,10 @@ import {
   CheckCircle2, 
   XCircle,
   Clock,
-  Sparkles,
   Zap,
   Calendar,
-  Layers,
   Table as TableIcon,
   Grid as GridIcon,
-  ShieldCheck,
-  ArrowRight,
   Info,
   Stethoscope
 } from 'lucide-react';
@@ -152,16 +148,6 @@ export default function CourseNEET() {
   const [expandedBatches, setExpandedBatches] = useState<Set<string>>(
     new Set(['full-year-neet', 'semester-neet', 'crash-3mo-neet'])
   );
-
-  const toggleBatchExpand = (id: string) => {
-    const newExpanded = new Set(expandedBatches);
-    if (newExpanded.has(id)) {
-      newExpanded.delete(id);
-    } else {
-      newExpanded.add(id);
-    }
-    setExpandedBatches(newExpanded);
-  };
 
   return (
     <section className={`${styles.section} sectionPadding`} id="neet-courses">

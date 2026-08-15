@@ -2,22 +2,16 @@
 
 import { useState } from 'react';
 import { 
-  BookOpen, 
-  GraduationCap, 
   Home, 
   Laptop, 
   UserCheck, 
   CheckCircle2, 
   XCircle,
   Clock,
-  Sparkles,
   Zap,
   Calendar,
-  Layers,
   Table as TableIcon,
   Grid as GridIcon,
-  ShieldCheck,
-  ArrowRight,
   Info,
   Lightbulb
 } from 'lucide-react';
@@ -167,16 +161,6 @@ export default function CourseJEE() {
     new Set(['full-year-jee', 'semester-jee', 'mains-intensive-jee'])
   );
 
-  const toggleBatchExpand = (id: string) => {
-    const newExpanded = new Set(expandedBatches);
-    if (newExpanded.has(id)) {
-      newExpanded.delete(id);
-    } else {
-      newExpanded.add(id);
-    }
-    setExpandedBatches(newExpanded);
-  };
-
   return (
     <section className={`${styles.section} sectionPadding`} id="jee-courses">
       <div className="container">
@@ -242,7 +226,7 @@ export default function CourseJEE() {
         <div className={styles.classBanner}>
           <div>
             <h3>🔬 JEE Main & Advanced — Physics, Chemistry & Mathematics</h3>
-            <p>Expert-led preparation for India's toughest engineering entrance. Advanced problem-solving techniques, multi-concept questions, derivation mastery, and IIT-level competitive strategies for both JEE Mains (90+ percentile) and Advanced (top AIR ranking).</p>
+            <p>Expert-led preparation for India&apos;s toughest engineering entrance. Advanced problem-solving techniques, multi-concept questions, derivation mastery, and IIT-level competitive strategies for both JEE Mains (90+ percentile) and Advanced (top AIR ranking).</p>
           </div>
         </div>
 
