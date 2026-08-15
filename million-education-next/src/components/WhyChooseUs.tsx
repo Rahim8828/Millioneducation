@@ -2,11 +2,11 @@ import { UserCheck, Target, ShieldCheck, Globe, RefreshCw, Lock } from 'lucide-r
 import styles from './WhyChooseUs.module.css';
 
 const reasons = [
-  { icon: UserCheck, title: 'Expert Faculty', desc: 'Subject specialists experienced in CBSE/State Boards, NEET, and JEE coaching.' },
+  { icon: UserCheck, title: 'Expert Faculty', desc: 'Subject specialists experienced in CBSE/State Boards, NEET, and JEE coaching.', featured: true },
   { icon: Target, title: 'Focused Coaching', desc: 'Customized learning strategy focused on concept building, PYQs, and rank improvement.' },
   { icon: ShieldCheck, title: 'Verified Tutors', desc: 'All tutors undergo rigorous academic & background checks before mentoring students.' },
   { icon: Globe, title: 'Home & Live Online', desc: 'Choose 1-on-1 home tuition at your residence or interactive live online sessions.' },
-  { icon: RefreshCw, title: 'Tutor Replacement', desc: 'Seamless faculty replacement at no extra cost if you feel the compatibility isn\'t perfect.' },
+  { icon: RefreshCw, title: 'Tutor Replacement', desc: 'Seamless faculty replacement at no extra cost if you feel the compatibility isn\'t perfect.', featured: true },
   { icon: Lock, title: 'Progress Tracking', desc: 'Regular mock test analysis, weekly assignments, and monthly parent feedback sessions.' },
 ];
 
@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
           {reasons.map((r) => {
             const IconComponent = r.icon;
             return (
-              <div key={r.title} className={styles.card}>
+              <div key={r.title} className={`${styles.card} ${r.featured ? styles.cardFeatured : ''}`}>
                 <div className={styles.icon}>
                   <IconComponent size={24} color="#2563EB" />
                 </div>
