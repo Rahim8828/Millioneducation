@@ -30,6 +30,7 @@ interface NEETBatchOption {
   duration: string;
   bonus?: string;
   description: string;
+  descriptionBullets?: string[];
   singleOnline: boolean;
   singleOffline: boolean;
   completeBundle: boolean;
@@ -45,6 +46,7 @@ const neetBatchData: NEETBatchOption[] = [
     duration: '1.5 Hours / Session',
     badge: 'Most Popular',
     description: 'Complete NEET preparation covering Physics, Chemistry & Biology with emphasis on NCERT mastery, concept clarity, and PYQ (Previous Year Questions) solving. Designed for students starting early with comprehensive foundation building.',
+    descriptionBullets: ['NCERT mastery & clarity', 'Previous year questions', 'Foundation building'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -57,6 +59,7 @@ const neetBatchData: NEETBatchOption[] = [
     duration: '2.0 Hours / Session',
     bonus: '+10% Depth & Rigor',
     description: 'Accelerated semester-wise NEET curriculum structured for faster coverage. Ideal for students who want to complete syllabus quickly while maintaining concept depth and topic-wise practice tests.',
+    descriptionBullets: ['Faster syllabus coverage', 'Concept depth maintained', 'Topic-wise practice tests'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -70,6 +73,7 @@ const neetBatchData: NEETBatchOption[] = [
     bonus: '+20% Intensive Focus',
     badge: 'Exam Special',
     description: 'Intensive 90-day NEET revision program focusing on high-weightage topics, important chapters, derivative-based questions, and comprehensive mock test solving sessions.',
+    descriptionBullets: ['High-weightage topics', 'Mock test solving', 'Derivative questions'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -82,6 +86,7 @@ const neetBatchData: NEETBatchOption[] = [
     duration: '2.0 Hours / Session',
     bonus: '+20% Rapid Sprint',
     description: 'Last-minute 30-day NEET sprint covering most critical topics, formula-based questions, and final mock test reviews with doubt clearing sessions.',
+    descriptionBullets: ['Critical topics focus', 'Formula-based questions', 'Doubt clearing'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -94,6 +99,7 @@ const neetBatchData: NEETBatchOption[] = [
     duration: '1.5 Hours / Session',
     bonus: '+10% Advanced Analysis',
     description: 'Specialized full-year batch for NEET droppers and previous attempt repeaters. Includes weak-area identification, advanced problem-solving techniques, and personalized strategy sessions.',
+    descriptionBullets: ['Weak-area identification', 'Advanced problem-solving', 'Strategy sessions'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -106,6 +112,7 @@ const neetBatchData: NEETBatchOption[] = [
     duration: '2.0 Hours / Session',
     bonus: '+15% Specialization',
     description: 'Focused single-subject NEET preparation (Biology, Chemistry, or Physics). Deep-dive into complex topics with high question frequency in NEET exams.',
+    descriptionBullets: ['Single subject focus', 'High-frequency topics', 'Deep concept dive'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: false,
@@ -118,6 +125,7 @@ const neetBatchData: NEETBatchOption[] = [
     duration: '1.5-2.0 Hours / Session',
     bonus: '~13% Value Top-up',
     description: 'Integrated program combining Class 12 CBSE/State board preparation with NEET-specific strategy. Perfect for students aiming for both board excellence and NEET success.',
+    descriptionBullets: ['Board + NEET integrated', 'Dual excellence focus', 'Strategic preparation'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -131,6 +139,7 @@ const neetBatchData: NEETBatchOption[] = [
     duration: '1.5 Hours / Session',
     bonus: 'Flexible Schedule',
     description: 'Weekend-only NEET preparation (Saturday & Sunday) for students balancing school, coaching, or other commitments. Maintains consistency without weekday pressure.',
+    descriptionBullets: ['Weekend-only schedule', 'Flexible timing', 'No weekday pressure'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -241,27 +250,13 @@ export default function CourseNEET() {
 
                 <p className={styles.description}>{batch.description}</p>
 
-                <div className={styles.deliveryModesBox}>
-                  <h4>Available Delivery Modes:</h4>
-                  <div className={styles.modeChecklist}>
-                    <div className={styles.modeCheck}>
-                      {batch.singleOnline ? <CheckCircle2 size={16} color="#22c55e" /> : <XCircle size={16} color="#94a3b8" />}
-                      <span>Single Subject — Online</span>
-                    </div>
-                    <div className={styles.modeCheck}>
-                      {batch.singleOffline ? <CheckCircle2 size={16} color="#22c55e" /> : <XCircle size={16} color="#94a3b8" />}
-                      <span>Single Subject — Offline</span>
-                    </div>
-                    <div className={styles.modeCheck}>
-                      {batch.completeBundle ? (
-                        <CheckCircle2 size={16} color="#22c55e" />
-                      ) : (
-                        <span className={styles.naTag}>Single Subject Only</span>
-                      )}
-                      <span>Complete (3-Subj Bundle)</span>
-                    </div>
-                  </div>
-                </div>
+                {batch.descriptionBullets && (
+                  <ul className={styles.bulletList}>
+                    {batch.descriptionBullets.map((bullet, idx) => (
+                      <li key={idx}>✓ {bullet}</li>
+                    ))}
+                  </ul>
+                )}
 
                 <div className={styles.recommendedBox}>
                   <strong>Ideal For:</strong> {batch.recommendedFor}

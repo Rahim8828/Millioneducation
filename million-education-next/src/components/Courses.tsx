@@ -29,6 +29,7 @@ interface BatchOption {
   duration: string;
   bonus?: string;
   description: string;
+  descriptionBullets?: string[];
   singleOnline: boolean;
   singleOffline: boolean;
   completeBundle: boolean;
@@ -45,6 +46,7 @@ const batchData: BatchOption[] = [
     duration: '1.5 Hours / Session',
     badge: 'Most Popular',
     description: 'Complete year-long curriculum coverage with step-by-step concept building, NCERT line-by-line discussion, and regular progress tests.',
+    descriptionBullets: ['Complete curriculum coverage', 'Step-by-step concept building', 'Regular progress tests'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -57,6 +59,7 @@ const batchData: BatchOption[] = [
     duration: '2.0 Hours / Session',
     bonus: '+10% Content Depth',
     description: 'Accelerated term-wise preparation structured to cover half-yearly and term exam modules rapidly with targeted problem solving.',
+    descriptionBullets: ['Term-wise focused modules', 'Rapid exam coverage', 'Targeted problem solving'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -70,6 +73,7 @@ const batchData: BatchOption[] = [
     bonus: '+20% Intensive Focus',
     badge: 'Exam Special',
     description: 'Intensive 90-day revision program focusing on high-weightage topics, key derivations, numericals, and sample paper solving.',
+    descriptionBullets: ['High-weightage topics', 'Key derivations & numericals', 'Sample paper solving'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -82,6 +86,7 @@ const batchData: BatchOption[] = [
     duration: '2.0 Hours / Session',
     bonus: '+20% Rapid Sprint',
     description: 'Fast-track 30-day emergency sprint covering essential formulas, quick concept summaries, and previous years board questions.',
+    descriptionBullets: ['Essential formulas & concepts', 'Quick summaries', 'Previous year questions'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -94,6 +99,7 @@ const batchData: BatchOption[] = [
     duration: '1.5 Hours / Session',
     bonus: '+10% In-Depth Analysis',
     description: 'Specialized full-year course for score improvement and repeaters focusing on weak-area rectifications and structured practice.',
+    descriptionBullets: ['Weak area identification', 'Score improvement focus', 'Structured practice'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -108,6 +114,7 @@ const batchData: BatchOption[] = [
     singleOnly: true,
     badge: 'Single Subject Only',
     description: 'High-priority single subject crash course designed exclusively to help students clear compartment / supplementary board exams.',
+    descriptionBullets: ['Single subject focus', 'Compartment exam prep', 'Quick clearance strategy'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: false,
@@ -120,6 +127,7 @@ const batchData: BatchOption[] = [
     duration: '1.5 Hours / Session',
     bonus: 'Standard Plan',
     description: 'Flexible weekend-only schedule (Saturday & Sunday) tailored for students with packed weekday school schedules.',
+    descriptionBullets: ['Weekend schedule only', 'Flexible timing', 'Packed weekday support'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -256,27 +264,13 @@ export default function Courses() {
 
                 <p className={styles.description}>{batch.description}</p>
 
-                <div className={styles.deliveryModesBox}>
-                  <h4>Available Delivery Modes:</h4>
-                  <div className={styles.modeChecklist}>
-                    <div className={styles.modeCheck}>
-                      {batch.singleOnline ? <CheckCircle2 size={16} color="#22c55e" /> : <XCircle size={16} color="#94a3b8" />}
-                      <span>Single Subj — Online</span>
-                    </div>
-                    <div className={styles.modeCheck}>
-                      {batch.singleOffline ? <CheckCircle2 size={16} color="#22c55e" /> : <XCircle size={16} color="#94a3b8" />}
-                      <span>Single Subj — Offline</span>
-                    </div>
-                    <div className={styles.modeCheck}>
-                      {batch.completeBundle ? (
-                        <CheckCircle2 size={16} color="#22c55e" />
-                      ) : (
-                        <span className={styles.naTag}>Single Subj Only</span>
-                      )}
-                      <span>Complete (3-Subj Bundle)</span>
-                    </div>
-                  </div>
-                </div>
+                {batch.descriptionBullets && (
+                  <ul className={styles.bulletList}>
+                    {batch.descriptionBullets.map((bullet, idx) => (
+                      <li key={idx}>✓ {bullet}</li>
+                    ))}
+                  </ul>
+                )}
 
                 <div className={styles.recommendedBox}>
                   <strong>Ideal For:</strong> {batch.recommendedFor}

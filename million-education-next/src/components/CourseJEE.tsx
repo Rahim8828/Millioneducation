@@ -30,6 +30,7 @@ interface JEEBatchOption {
   duration: string;
   bonus?: string;
   description: string;
+  descriptionBullets?: string[];
   singleOnline: boolean;
   singleOffline: boolean;
   completeBundle: boolean;
@@ -45,6 +46,7 @@ const jeeBatchData: JEEBatchOption[] = [
     duration: '1.5-2.0 Hours / Session',
     badge: 'Most Popular',
     description: 'Comprehensive JEE Main & Advanced preparation covering Physics, Chemistry & Mathematics. In-depth conceptual mastery, advanced problem-solving, derivation techniques, and competitive-level numericals with regular PYQ solving.',
+    descriptionBullets: ['Deep conceptual mastery', 'Advanced problem-solving', 'Competitive numericals'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -57,6 +59,7 @@ const jeeBatchData: JEEBatchOption[] = [
     duration: '2.0 Hours / Session',
     bonus: '+10% Advanced Topics',
     description: 'Accelerated semester-wise JEE curriculum structured for systematic coverage. Includes advanced derivations, tough problem-solving sessions, and regular mock tests aligned with JEE pattern.',
+    descriptionBullets: ['Accelerated coverage', 'Mock test aligned', 'Derivation mastery'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -70,6 +73,7 @@ const jeeBatchData: JEEBatchOption[] = [
     bonus: '+15% Mains Focus',
     badge: 'Exam Special',
     description: 'Targeted 90-day JEE Mains revision program focusing on frequently asked topics, high-scoring chapters, time-management strategies, and full-length mock test solving with performance analysis.',
+    descriptionBullets: ['High-scoring chapters', 'Time management focus', 'Mock test solving'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -83,6 +87,7 @@ const jeeBatchData: JEEBatchOption[] = [
     bonus: '+20% Advanced Focus',
     badge: 'For Advancees',
     description: 'Intensive 60-day program for students who have cleared JEE Mains and need Advanced-level preparation. Covers advanced topics, multi-concept problems, and IIT-level practice.',
+    descriptionBullets: ['Advanced topics focus', 'IIT-level practice', 'Multi-concept problems'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -95,6 +100,7 @@ const jeeBatchData: JEEBatchOption[] = [
     duration: '2.5 Hours / Session',
     bonus: '+20% High-Yield Topics',
     description: 'Last-minute 30-day JEE Mains sprint covering most critical topics, formula compilation, quick concept review, and final mock test strategy sessions.',
+    descriptionBullets: ['Critical topics only', 'Formula compilation', 'Quick review'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -107,6 +113,7 @@ const jeeBatchData: JEEBatchOption[] = [
     duration: '1.5-2.0 Hours / Session',
     bonus: '+10% Strategic Analysis',
     description: 'Specialized full-year program for JEE droppers and previous attempt repeaters. Includes weak-area deep-dive, advanced problem-solving, personalized strategy sessions, and performance tracking.',
+    descriptionBullets: ['Weak area identification', 'Strategic planning', 'Performance tracking'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -119,6 +126,7 @@ const jeeBatchData: JEEBatchOption[] = [
     duration: '2.0 Hours / Session',
     bonus: '+15% Deep Specialization',
     description: 'Focused single-subject JEE preparation (Physics, Chemistry, or Mathematics). Advanced topic mastery with high-frequency competitive questions and derivation-based problems.',
+    descriptionBullets: ['Single subject focus', 'Competitive questions', 'Derivation mastery'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: false,
@@ -132,6 +140,7 @@ const jeeBatchData: JEEBatchOption[] = [
     bonus: '~15% Value Integration',
     badge: 'Best Value',
     description: 'Integrated program balancing Class 12 CBSE/State board excellence with JEE Main preparation. Dual-focused personal coaching ensuring both 90%+ boards and strong JEE scores.',
+    descriptionBullets: ['Board + JEE integrated', 'Dual excellence focus', 'Strategic balance'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -144,6 +153,7 @@ const jeeBatchData: JEEBatchOption[] = [
     duration: '1.5-2.0 Hours / Session',
     bonus: 'Flexible Scheduling',
     description: 'Weekend-only JEE preparation (Saturday & Sunday) for students managing school, other coaching, or responsibilities. Structured yet flexible approach maintaining consistency.',
+    descriptionBullets: ['Weekend-only schedule', 'Flexible approach', 'Consistency maintained'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
@@ -254,27 +264,13 @@ export default function CourseJEE() {
 
                 <p className={styles.description}>{batch.description}</p>
 
-                <div className={styles.deliveryModesBox}>
-                  <h4>Available Delivery Modes:</h4>
-                  <div className={styles.modeChecklist}>
-                    <div className={styles.modeCheck}>
-                      {batch.singleOnline ? <CheckCircle2 size={16} color="#22c55e" /> : <XCircle size={16} color="#94a3b8" />}
-                      <span>Single Subject — Online</span>
-                    </div>
-                    <div className={styles.modeCheck}>
-                      {batch.singleOffline ? <CheckCircle2 size={16} color="#22c55e" /> : <XCircle size={16} color="#94a3b8" />}
-                      <span>Single Subject — Offline</span>
-                    </div>
-                    <div className={styles.modeCheck}>
-                      {batch.completeBundle ? (
-                        <CheckCircle2 size={16} color="#22c55e" />
-                      ) : (
-                        <span className={styles.naTag}>Single Subject Only</span>
-                      )}
-                      <span>Complete (3-Subj Bundle)</span>
-                    </div>
-                  </div>
-                </div>
+                {batch.descriptionBullets && (
+                  <ul className={styles.bulletList}>
+                    {batch.descriptionBullets.map((bullet, idx) => (
+                      <li key={idx}>✓ {bullet}</li>
+                    ))}
+                  </ul>
+                )}
 
                 <div className={styles.recommendedBox}>
                   <strong>Ideal For:</strong> {batch.recommendedFor}
