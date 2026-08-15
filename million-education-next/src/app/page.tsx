@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import StatsBar from '@/components/StatsBar';
 import Categories from '@/components/Categories';
+import VisualBreak from '@/components/VisualBreak';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import HowItWorks from '@/components/HowItWorks';
 import Testimonials from '@/components/Testimonials';
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <StatsBar dark={true} />
       <Categories />
+      <VisualBreak />
       <WhyChooseUs />
       <Courses />
       <CourseNEET />
