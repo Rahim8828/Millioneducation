@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import Navbar from '@/components/Navbar';
-import TutorHero from '@/components/TutorHero';
-import StatsBar from '@/components/StatsBar';
-import TutorFeatures from '@/components/TutorFeatures';
-import HowItWorks from '@/components/HowItWorks';
-import Testimonials from '@/components/Testimonials';
-import FAQ from '@/components/FAQ';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/layout/Navbar';
+import TutorHero from '@/components/sections/TutorHero';
+import StatsBar from '@/components/ui/StatsBar';
+import TutorFeatures from '@/components/ui/TutorFeatures';
+import HowItWorks from '@/components/ui/HowItWorks';
+import Testimonials from '@/components/ui/Testimonials';
+import FAQ from '@/components/ui/FAQ';
+import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Become a Tutor — Earn ₹20K–50K/Month | Million Education',

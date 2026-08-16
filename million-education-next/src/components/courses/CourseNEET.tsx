@@ -14,11 +14,12 @@ import {
   Calendar,
   Table as TableIcon,
   Grid as GridIcon,
-  Info
+  Info,
+  Stethoscope
 } from 'lucide-react';
 import styles from './Courses.module.css';
 
-interface BatchOption {
+interface NEETBatchOption {
   id: string;
   name: string;
   lectures: string;
@@ -29,129 +30,139 @@ interface BatchOption {
   singleOnline: boolean;
   singleOffline: boolean;
   completeBundle: boolean;
-  singleOnly?: boolean;
   badge?: string;
   recommendedFor: string;
 }
 
-const batchData: BatchOption[] = [
+const neetBatchData: NEETBatchOption[] = [
   {
-    id: 'full-year',
+    id: 'full-year-neet',
     name: 'Full Year Batch',
     lectures: '96 Lectures',
     duration: '1.5 Hours / Session',
     badge: 'Most Popular',
-    description: 'Complete year-long curriculum coverage with step-by-step concept building, NCERT line-by-line discussion, and regular progress tests.',
-    descriptionBullets: ['Complete curriculum coverage', 'Step-by-step concept building', 'Regular progress tests'],
+    description: 'Complete NEET preparation covering Physics, Chemistry & Biology with emphasis on NCERT mastery, concept clarity, and PYQ (Previous Year Questions) solving. Designed for students starting early with comprehensive foundation building.',
+    descriptionBullets: ['NCERT mastery & clarity', 'Previous year questions', 'Foundation building'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
-    recommendedFor: 'Early starters aiming for comprehensive 100% board preparation.',
+    recommendedFor: 'Early NEET aspirants targeting thorough concept mastery and high NEET ranking.',
   },
   {
-    id: 'semester',
+    id: 'semester-neet',
     name: 'Semester Batch',
     lectures: '48 Lectures',
     duration: '2.0 Hours / Session',
-    bonus: '+10% Content Depth',
-    description: 'Accelerated term-wise preparation structured to cover half-yearly and term exam modules rapidly with targeted problem solving.',
-    descriptionBullets: ['Term-wise focused modules', 'Rapid exam coverage', 'Targeted problem solving'],
+    bonus: '+10% Depth & Rigor',
+    description: 'Accelerated semester-wise NEET curriculum structured for faster coverage. Ideal for students who want to complete syllabus quickly while maintaining concept depth and topic-wise practice tests.',
+    descriptionBullets: ['Faster syllabus coverage', 'Concept depth maintained', 'Topic-wise practice tests'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
-    recommendedFor: 'Students seeking targeted semester-wise completion.',
+    recommendedFor: 'Mid-journey NEET aspirants seeking faster completion with rigorous practice.',
   },
   {
-    id: 'crash-3mo',
+    id: 'crash-3mo-neet',
     name: 'Crash Course (3 Months)',
     lectures: '24 Lectures',
     duration: '2.0 Hours / Session',
     bonus: '+20% Intensive Focus',
     badge: 'Exam Special',
-    description: 'Intensive 90-day revision program focusing on high-weightage topics, key derivations, numericals, and sample paper solving.',
-    descriptionBullets: ['High-weightage topics', 'Key derivations & numericals', 'Sample paper solving'],
+    description: 'Intensive 90-day NEET revision program focusing on high-weightage topics, important chapters, derivative-based questions, and comprehensive mock test solving sessions.',
+    descriptionBullets: ['High-weightage topics', 'Mock test solving', 'Derivative questions'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
-    recommendedFor: 'Final quarter exam revision and score enhancement.',
+    recommendedFor: 'Final quarter revision and strategy-based score maximization.',
   },
   {
-    id: 'ultra-crash',
+    id: 'ultra-crash-neet',
     name: 'Ultra Crash (30 Days)',
     lectures: '8 Lectures',
     duration: '2.0 Hours / Session',
     bonus: '+20% Rapid Sprint',
-    description: 'Fast-track 30-day emergency sprint covering essential formulas, quick concept summaries, and previous years board questions.',
-    descriptionBullets: ['Essential formulas & concepts', 'Quick summaries', 'Previous year questions'],
+    description: 'Last-minute 30-day NEET sprint covering most critical topics, formula-based questions, and final mock test reviews with doubt clearing sessions.',
+    descriptionBullets: ['Critical topics focus', 'Formula-based questions', 'Doubt clearing'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
-    recommendedFor: 'Last-minute 30-day exam preparation & confidence boost.',
+    recommendedFor: 'Emergency NEET preparation in final month with focus on high-scoring topics.',
   },
   {
-    id: 'board-repeater',
-    name: 'Board Repeater (Full Year)',
+    id: 'dropper-neet',
+    name: 'Dropper / NEET Repeater Batch',
     lectures: '96 Lectures',
     duration: '1.5 Hours / Session',
-    bonus: '+10% In-Depth Analysis',
-    description: 'Specialized full-year course for score improvement and repeaters focusing on weak-area rectifications and structured practice.',
-    descriptionBullets: ['Weak area identification', 'Score improvement focus', 'Structured practice'],
+    bonus: '+10% Advanced Analysis',
+    description: 'Specialized full-year batch for NEET droppers and previous attempt repeaters. Includes weak-area identification, advanced problem-solving techniques, and personalized strategy sessions.',
+    descriptionBullets: ['Weak-area identification', 'Advanced problem-solving', 'Strategy sessions'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
-    recommendedFor: 'Improvement candidates aiming for 90%+ in board exams.',
+    recommendedFor: 'NEET repeaters targeting significant score improvement and higher ranking.',
   },
   {
-    id: 'compartment-crash',
-    name: 'Compartment Crash',
-    lectures: '18 Lectures',
+    id: 'subject-specific-neet',
+    name: 'Subject-Specific (Single Subject)',
+    lectures: '48 Lectures',
     duration: '2.0 Hours / Session',
-    bonus: '+25% Target Resolution',
-    singleOnly: true,
-    badge: 'Single Subject Only',
-    description: 'High-priority single subject crash course designed exclusively to help students clear compartment / supplementary board exams.',
-    descriptionBullets: ['Single subject focus', 'Compartment exam prep', 'Quick clearance strategy'],
+    bonus: '+15% Specialization',
+    description: 'Focused single-subject NEET preparation (Biology, Chemistry, or Physics). Deep-dive into complex topics with high question frequency in NEET exams.',
+    descriptionBullets: ['Single subject focus', 'High-frequency topics', 'Deep concept dive'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: false,
-    recommendedFor: 'Students preparing for single-subject compartment board exams.',
+    recommendedFor: 'Students needing subject-specific strength building in weak areas.',
   },
   {
-    id: 'weekend',
-    name: 'Weekend / Part-Time',
-    lectures: '40 Lectures',
-    duration: '1.5 Hours / Session',
-    bonus: 'Standard Plan',
-    description: 'Flexible weekend-only schedule (Saturday & Sunday) tailored for students with packed weekday school schedules.',
-    descriptionBullets: ['Weekend schedule only', 'Flexible timing', 'Packed weekday support'],
+    id: 'combo-class12-neet',
+    name: 'Class 12 Board + NEET Combo',
+    lectures: '120 Lectures',
+    duration: '1.5-2.0 Hours / Session',
+    bonus: '~13% Value Top-up',
+    description: 'Integrated program combining Class 12 CBSE/State board preparation with NEET-specific strategy. Perfect for students aiming for both board excellence and NEET success.',
+    descriptionBullets: ['Board + NEET integrated', 'Dual excellence focus', 'Strategic preparation'],
     singleOnline: true,
     singleOffline: true,
     completeBundle: true,
-    recommendedFor: 'Students needing weekend-only focused 1-on-1 home/online tuition.',
+    badge: 'Best Value',
+    recommendedFor: 'Class 12 students targeting 90%+ boards and NEET selection simultaneously.',
+  },
+  {
+    id: 'weekend-neet',
+    name: 'Weekend / Part-Time',
+    lectures: '40 Lectures',
+    duration: '1.5 Hours / Session',
+    bonus: 'Flexible Schedule',
+    description: 'Weekend-only NEET preparation (Saturday & Sunday) for students balancing school, coaching, or other commitments. Maintains consistency without weekday pressure.',
+    descriptionBullets: ['Weekend-only schedule', 'Flexible timing', 'No weekday pressure'],
+    singleOnline: true,
+    singleOffline: true,
+    completeBundle: true,
+    recommendedFor: 'Working professionals or students with packed weekday schedules.',
   },
 ];
 
-export default function Courses() {
-  const [activeClass, setActiveClass] = useState<'class11' | 'class12'>('class11');
+export default function CourseNEET() {
   const [viewMode, setViewMode] = useState<'cards' | 'table'>('cards');
   const [expandedBatches, setExpandedBatches] = useState<Set<string>>(
-    new Set(['full-year', 'semester', 'crash-3mo'])
+    new Set()
   );
 
   return (
-    <section className={`${styles.section} sectionPadding`} id="courses">
+    <section className={`${styles.section} sectionPadding`} id="neet-courses">
       <div className="container">
         
         {/* Section Header */}
         <div style={{ textAlign: 'center' }}>
           <div className="badge">
-            <GraduationCap size={16} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />
-            Structured Academic Batches
+            <Stethoscope size={16} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />
+            NEET UG Preparation Programs
           </div>
         </div>
-        <h2 className="sectionTitle">Class 11th & 12th Academic Programs</h2>
+        <h2 className="sectionTitle">NEET UG 1-on-1 Personal Coaching Programs</h2>
         <p className="sectionSub">
-          Flexible, high-impact 1-on-1 tuition modules engineered for top board performance and concept mastery.
+          Science-focused, rank-engineered personal coaching for NEET aspirants. Expert guidance in Physics, Chemistry & Biology with emphasis on conceptual mastery and competitive exam strategy.
         </p>
 
         {/* Delivery Modes Highlight */}
@@ -159,46 +170,28 @@ export default function Courses() {
           <div className={styles.modeBadge}>
             <Laptop size={18} color="#2563EB" />
             <div>
-              <strong>Single Subject — Online</strong>
-              <span>Live 1-on-1 Interactive</span>
+              <strong>Online Interactive</strong>
+              <span>Live 1-on-1 Sessions</span>
             </div>
           </div>
           <div className={styles.modeBadge}>
             <Home size={18} color="#2563EB" />
             <div>
-              <strong>Single Subject — Offline</strong>
-              <span>At-Home Tutor Visit</span>
+              <strong>Home Coaching Program</strong>
+              <span>At-Residence Tutor</span>
             </div>
           </div>
           <div className={styles.modeBadge}>
             <UserCheck size={18} color="#2563EB" />
             <div>
-              <strong>Complete (3-Subj Bundle)</strong>
-              <span>Physics + Chemistry + Math/Bio</span>
+              <strong>Complete (3-Subject)</strong>
+              <span>Physics + Chemistry + Biology</span>
             </div>
           </div>
         </div>
 
-        {/* Class Selection Tabs */}
-        <div className={styles.classTabsWrapper}>
-          <div className={styles.classTabs}>
-            <button
-              className={`${styles.tabBtn} ${activeClass === 'class11' ? styles.tabActive : ''}`}
-              onClick={() => setActiveClass('class11')}
-            >
-              <BookOpen size={18} />
-              CLASS 11 (Physics + Chemistry + Math)
-            </button>
-            <button
-              className={`${styles.tabBtn} ${activeClass === 'class12' ? styles.tabActive : ''}`}
-              onClick={() => setActiveClass('class12')}
-            >
-              <GraduationCap size={18} />
-              CLASS 12 (Physics + Chemistry + Biology)
-            </button>
-          </div>
-
-          {/* View Mode Toggle Switcher */}
+        {/* View Mode Toggle Switcher */}
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '24px' }}>
           <div className={styles.viewSwitcher}>
             <button 
               className={`${styles.switchBtn} ${viewMode === 'cards' ? styles.switchActive : ''}`}
@@ -219,25 +212,18 @@ export default function Courses() {
 
         {/* Active Class Info Banner */}
         <div className={styles.classBanner}>
-          {activeClass === 'class11' ? (
-            <div>
-              <h3>📘 CLASS 11 — Physics, Chemistry & Mathematics</h3>
-              <p>Uniform structured tenure modules for Class 11th Science board & foundational preparation. Core concepts, problem solving, and chapter tests.</p>
-            </div>
-          ) : (
-            <div>
-              <h3>📗 CLASS 12 — Physics, Chemistry & Biology</h3>
-              <p>Board-focused excellence curriculum designed for maximum board scoring. (Same subject structure — Board-focused academic rigor).</p>
-            </div>
-          )}
+          <div>
+            <h3>🏥 NEET UG — Physics, Chemistry & Biology (Medical)</h3>
+            <p>Comprehensive NEET preparation with doctor-level expertise from MBBS specialists and medical faculty. Every session focuses on high-frequency NEET topics, clinical reasoning, and doubt resolution for All India Medical entrance success. Our Chemistry and Biology mentors hold MBBS/MD degrees for premium medical insights.</p>
+          </div>
         </div>
 
         {/* CARDS VIEW */}
         {viewMode === 'cards' && (
           <div className={styles.grid}>
-            {batchData.map((batch) => {
+            {neetBatchData.map((batch) => {
               const isExpanded = expandedBatches.has(batch.id);
-              const isHidden = batch.id !== 'full-year' && batch.id !== 'semester' && batch.id !== 'crash-3mo' && !isExpanded;
+              const isHidden = batch.id !== 'full-year-neet' && batch.id !== 'semester-neet' && batch.id !== 'crash-3mo-neet' && !isExpanded;
               
               return isHidden ? null : (
               <div key={batch.id} className={`${styles.card} ${batch.badge ? styles.cardFeatured : ''}`}>
@@ -285,14 +271,14 @@ export default function Courses() {
         )}
 
         {/* Show More Button */}
-        {viewMode === 'cards' && batchData.length > 3 && (
+        {viewMode === 'cards' && neetBatchData.length > 3 && (
           <div style={{ textAlign: 'center', marginBottom: '32px' }}>
             <button
               onClick={() => {
-                const allIds = new Set(batchData.map(b => b.id));
+                const allIds = new Set(neetBatchData.map(b => b.id));
                 if (expandedBatches.size === allIds.size) {
                   // Collapse to default
-                  setExpandedBatches(new Set(['full-year', 'semester', 'crash-3mo']));
+                  setExpandedBatches(new Set(['full-year-neet', 'semester-neet', 'crash-3mo-neet']));
                 } else {
                   // Expand all
                   setExpandedBatches(allIds);
@@ -312,7 +298,7 @@ export default function Courses() {
               onMouseOver={(e) => (e.currentTarget.style.background = '#1d4ed8')}
               onMouseOut={(e) => (e.currentTarget.style.background = '#2563EB')}
             >
-              {expandedBatches.size === batchData.length ? '▲ Show Less Options' : '▼ Show More Options'}
+              {expandedBatches.size === neetBatchData.length ? '▲ Show Less Options' : '▼ Show More Options'}
             </button>
           </div>
         )}
@@ -323,15 +309,15 @@ export default function Courses() {
             <table className={styles.matrixTable}>
               <thead>
                 <tr>
-                  <th>Tenure / Batch Program</th>
+                  <th>NEET Program / Tenure</th>
                   <th>Total Lectures & Duration</th>
                   <th>Single Subject — Online</th>
                   <th>Single Subject — Offline</th>
-                  <th>Complete (3-Subj Bundle)</th>
+                  <th>Complete (3-Subject)</th>
                 </tr>
               </thead>
               <tbody>
-                {batchData.map((batch) => (
+                {neetBatchData.map((batch) => (
                   <tr key={batch.id}>
                     <td>
                       <div className={styles.tableNameCell}>
@@ -369,13 +355,13 @@ export default function Courses() {
           <div className={styles.bottomNote}>
             <Info size={20} color="#2563EB" style={{ flexShrink: 0 }} />
             <p>
-              <strong>Note:</strong> Lecture counts and subject structures apply uniformly across Physics, Chemistry, Mathematics & Biology. Schedule timings and personalized learning plans are configured after a free 1-on-1 assessment.
+              <strong>Note:</strong> All NEET programs are NCERT-focused with emphasis on conceptual clarity. Lecture counts include live doubt sessions, mock test reviews, and personalized feedback. Individual mentor selection based on subject specialization happens after free consultation.
             </p>
           </div>
           
           <div className={styles.actionCta}>
             <a href="tel:+919004826378" className="btn btn-primary" style={{ padding: '14px 28px' }}>
-              📚 Book A Free Demo Class
+              🎯 Book NEET Consultation & Demo
             </a>
           </div>
         </div>

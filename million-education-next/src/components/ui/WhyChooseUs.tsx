@@ -22,10 +22,11 @@ export default function WhyChooseUs() {
         <div className={styles.grid}>
           {reasons.map((r) => {
             const IconComponent = r.icon;
+            const isFeatured = r.featured;
             return (
               <div key={r.title} className={`${styles.card} ${r.featured ? styles.cardFeatured : ''}`}>
                 <div className={styles.icon}>
-                  <IconComponent size={24} color="#2563EB" />
+                  <IconComponent size={24} color={isFeatured ? "white" : "var(--primary)"} />
                 </div>
                 <h3>{r.title}</h3>
                 <p>{r.desc}</p>

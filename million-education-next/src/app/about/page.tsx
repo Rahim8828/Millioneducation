@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import StatsBar from '@/components/StatsBar';
-import WhyChooseUs from '@/components/WhyChooseUs';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
+import StatsBar from '@/components/ui/StatsBar';
+import WhyChooseUs from '@/components/ui/WhyChooseUs';
 import { Target, Award, Users, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import styles from './about.module.css';
 

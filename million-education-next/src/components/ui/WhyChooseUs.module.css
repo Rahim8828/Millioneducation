@@ -26,18 +26,22 @@
 .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
 .card:hover::before { transform: scaleX(1); }
 .cardFeatured {
-  background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
-  border: 2px solid var(--primary);
-  grid-column: span auto;
+  background: linear-gradient(135deg, var(--primary-light) 0%, #f0f9ff 100%);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
 }
+
 .cardFeatured:hover {
-  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
 }
+
 .cardFeatured .icon {
-  background: var(--primary);
-  color: white;
+  background: var(--primary-light);
+  color: var(--primary);
 }
-.cardFeatured .icon svg { color: white; }
+
+.cardFeatured .icon svg { 
+  color: var(--primary) !important;
+}
 .icon {
   width: 56px; height: 56px;
   border-radius: var(--radius-md);

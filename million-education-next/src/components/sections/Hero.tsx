@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Sparkles, Star, CheckCircle2, BookOpen } from 'lucide-react';
-import BookDemoModal from './BookDemoModal';
+import BookDemoModal from '../modals/BookDemoModal';
 import styles from './Hero.module.css';
 
 const subjectTags = ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'PCM Combo', 'PCB Combo'];

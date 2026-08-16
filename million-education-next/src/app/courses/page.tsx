@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Courses from '@/components/Courses';
-import FAQ from '@/components/FAQ';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
+import Courses from '@/components/courses/Courses';
+import FAQ from '@/components/ui/FAQ';
 import { BookOpen, GraduationCap, Stethoscope, Cpu, CheckCircle2, ShieldCheck, UserCheck, Calendar, Zap, MessageCircle } from 'lucide-react';
 import styles from './courses.module.css';
 

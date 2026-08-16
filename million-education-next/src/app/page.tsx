@@ -1,17 +1,17 @@
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import StatsBar from '@/components/StatsBar';
-import Categories from '@/components/Categories';
-import VisualBreak from '@/components/VisualBreak';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import HowItWorks from '@/components/HowItWorks';
-import Testimonials from '@/components/Testimonials';
-import FAQ from '@/components/FAQ';
-import CityLinks from '@/components/CityLinks';
-import Footer from '@/components/Footer';
-import Courses from '@/components/Courses';
-import CourseNEET from '@/components/CourseNEET';
-import CourseJEE from '@/components/CourseJEE';
+import Navbar from '@/components/layout/Navbar';
+import Hero from '@/components/sections/Hero';
+import StatsBar from '@/components/ui/StatsBar';
+import Categories from '@/components/ui/Categories';
+import VisualBreak from '@/components/ui/VisualBreak';
+import WhyChooseUs from '@/components/ui/WhyChooseUs';
+import HowItWorks from '@/components/ui/HowItWorks';
+import Testimonials from '@/components/ui/Testimonials';
+import FAQ from '@/components/ui/FAQ';
+import CityLinks from '@/components/ui/CityLinks';
+import Footer from '@/components/layout/Footer';
+import Courses from '@/components/courses/Courses';
+import CourseNEET from '@/components/courses/CourseNEET';
+import CourseJEE from '@/components/courses/CourseJEE';
 
 export default function Home() {
   return (

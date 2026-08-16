@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
-import StickyContact from '@/components/StickyContact';
+import StickyContact from '@/components/layout/StickyContact';
 
 const inter = Inter({
   subsets: ['latin'],

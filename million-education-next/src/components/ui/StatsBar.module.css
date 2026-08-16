@@ -11,15 +11,13 @@
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 800;
+  color: var(--white);
 }
-.dark .num { color: var(--primary); }
-.orange .num { color: var(--white); }
 .label {
   font-size: .85rem;
   margin-top: 4px;
+  color: rgba(255, 255, 255, 0.85);
 }
-.dark .label { color: var(--gray-400); }
-.orange .label { color: rgba(255,255,255,.85); }
 
 @media (max-width: 640px) {
   .grid { grid-template-columns: repeat(2, 1fr); }

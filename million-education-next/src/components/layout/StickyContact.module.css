@@ -29,19 +29,19 @@
 }
 
 .callBtn {
-  background: linear-gradient(135deg, #2563EB 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
 }
 
 .callBtn:hover {
-  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #1e40af 100%);
 }
 
 .whatsappBtn {
-  background: linear-gradient(135deg, #25d366 0%, #20a853 100%);
+  background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
 }
 
 .whatsappBtn:hover {
-  background: linear-gradient(135deg, #20a853 0%, #1a8a44 100%);
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
 }
 
 .tooltip {

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // WhatsApp SVG Icon Component
 function WhatsAppIcon({ size = 18 }: { size?: number }) {
@@ -51,7 +52,13 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`} id="navbar">
       <div className={styles.navInner}>
         <Link href="/" className={styles.logo}>
-          <span>Million <span>Education</span></span>
+          <Image 
+            src="/logo.png" 
+            alt="Million Education Logo" 
+            width={180} 
+            height={50}
+            style={{ width: 'auto', height: 'auto' }}
+          />
         </Link>
 
         <div className={styles.navLinks}>

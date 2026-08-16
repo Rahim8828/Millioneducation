@@ -26,6 +26,12 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  text-decoration: none;
+}
+.logo img { 
+  height: auto;
+  width: auto;
+  max-width: 180px;
 }
 .logo span { color: var(--gray-900); }
 .navLinks {
@@ -49,10 +55,10 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #25D366;
+  background: var(--success);
   color: var(--white);
-  padding: 10px 16px;
-  border-radius: 100px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
   font-size: .9rem;
   font-weight: 600;
   transition: var(--transition);
@@ -61,8 +67,9 @@
   color: var(--white);
 }
 .whatsappBtn:hover {
-  background: #128C7E;
+  background: #059669;
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
 }
 .ctaBtn {
   display: inline-flex;
@@ -144,6 +151,10 @@
     flex-shrink: 0;
     line-height: 1;
     margin-right: auto;
+  }
+  .logo img {
+    max-width: 120px;
+    height: auto;
   }
   .navCta {
     flex-shrink: 0;

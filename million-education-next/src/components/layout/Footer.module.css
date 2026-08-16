@@ -18,6 +18,12 @@
   align-items: center;
   gap: 6px;
   margin-bottom: 16px;
+  text-decoration: none;
+}
+.brand .logo img {
+  height: auto;
+  width: auto;
+  max-width: 180px;
 }
 .brand .logo span { color: var(--white); }
 .brand p {

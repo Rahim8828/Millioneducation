@@ -158,7 +158,7 @@ const jeeBatchData: JEEBatchOption[] = [
 export default function CourseJEE() {
   const [viewMode, setViewMode] = useState<'cards' | 'table'>('cards');
   const [expandedBatches, setExpandedBatches] = useState<Set<string>>(
-    new Set(['full-year-jee', 'semester-jee', 'mains-intensive-jee'])
+    new Set()
   );
 
   return (
