@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1001;
   display: flex;
   align-items: center;
@@ -26,17 +26,6 @@
   overflow-y: auto;
   padding: 32px;
   animation: slideIn 0.3s ease;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -45%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
 }
 
 .closeBtn {
@@ -109,7 +98,7 @@
 .group input:focus,
 .group select:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
 .submitBtn {
@@ -118,7 +107,7 @@
   justify-content: center;
   gap: 8px;
   padding: 14px;
-  background: #25D366;
+  background: var(--success);
   color: var(--white);
   border: none;
   border-radius: var(--radius-md);
@@ -127,11 +116,13 @@
   cursor: pointer;
   transition: var(--transition);
   margin-top: 8px;
+  box-shadow: var(--shadow-success);
 }
 
 .submitBtn:hover {
-  background: #128C7E;
+  background: #059669;
   transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(16, 185, 129, 0.35);
 }
 
 .successBox {
@@ -145,7 +136,7 @@
 .successIcon {
   width: 60px;
   height: 60px;
-  background: #25D366;
+  background: var(--success);
   color: var(--white);
   border-radius: 50%;
   display: flex;
@@ -154,6 +145,7 @@
   font-size: 2rem;
   margin: 0 auto 16px;
   font-weight: bold;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 .successBox h3 {

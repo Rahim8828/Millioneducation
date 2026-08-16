@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { GraduationCap, Share2, Globe, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
 import styles from './Footer.module.css';
 
@@ -26,7 +27,13 @@ export default function Footer() {
         <div className={styles.top}>
           <div className={styles.brand}>
             <Link href="/" className={styles.logo}>
-              <span>Million <span>Education</span></span>
+              <Image 
+                src="/logo.png" 
+                alt="Million Education Logo" 
+                width={180} 
+                height={50}
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </Link>
             <p>
               Million Education is a premium coaching platform for Class 11th, 12th, NEET & JEE aspirants across India. Expert faculty, personalized 1-on-1 guidance, guaranteed rank improvement.

@@ -1,5 +1,5 @@
 /* =========================================
-   MY TUTOR — Global CSS (Next.js)
+   MILLION EDUCATION — Global CSS (Next.js)
    ========================================= */
 
 /* ---------- CSS Variables ---------- */
@@ -8,8 +8,11 @@
   --primary-dark: #1D4ED8;
   --primary-light: #DBEAFE;
   --secondary: #1E293B;
+  --secondary-light: #334155;
   --accent: #0EA5E9;
+  --accent-dark: #0284C7;
   --success: #10B981;
+  --success-light: #D1FAE5;
   --white: #ffffff;
   --gray-50: #F9FAFB;
   --gray-100: #F3F4F6;
@@ -21,6 +24,10 @@
   --gray-700: #374151;
   --gray-800: #1F2937;
   --gray-900: #111827;
+  --cta-success: #10B981;
+  --hover-bg: rgba(37, 99, 235, 0.08);
+  --active-bg: rgba(37, 99, 235, 0.12);
+  --focus-ring: rgba(37, 99, 235, 0.3);
   --font-main: 'Inter', sans-serif;
   --font-display: 'Poppins', sans-serif;
   --radius-sm: 6px;
@@ -31,7 +38,28 @@
   --shadow-md: 0 4px 16px rgba(0,0,0,.10);
   --shadow-lg: 0 10px 40px rgba(0,0,0,.13);
   --shadow-primary: 0 8px 24px rgba(37, 99, 235, 0.25);
+  --shadow-success: 0 8px 24px rgba(16, 185, 129, 0.25);
   --transition: all .25s cubic-bezier(.4,0,.2,1);
+
+  /* Hero & Section Gradients */
+  --hero-dark-gradient: linear-gradient(135deg, var(--gray-900) 0%, #0f172a 100%);
+  
+  /* Spacing Scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 40px;
+  --space-4xl: 48px;
+  --space-5xl: 60px;
+  --space-6xl: 80px;
+
+  /* Responsive Breakpoints */
+  --bp-mobile: 640px;
+  --bp-tablet: 900px;
+  --bp-desktop: 1200px;
 }
 
 /* ---------- Reset ---------- */
@@ -203,4 +231,56 @@ input, select, textarea { font-family: inherit; outline: none; border: none; }
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Media Queries - Standardized Breakpoints */
+@media (max-width: 640px) {
+  .hide-mobile { display: none !important; }
+  .container { padding: 0 16px; }
+}
+
+@media (max-width: 900px) {
+  .hide-tablet { display: none !important; }
+}
+
+@media (min-width: 1200px) {
+  .show-desktop-only { display: block !important; }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+  /* Add dark mode styles here when implemented */
 }
