@@ -28,10 +28,12 @@
 .cardFeatured {
   background: linear-gradient(135deg, var(--primary-light) 0%, #f0f9ff 100%);
   box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+  border: 1px solid var(--primary-light);
 }
 
 .cardFeatured:hover {
   box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
+  transform: translateY(-4px);
 }
 
 .cardFeatured .icon {

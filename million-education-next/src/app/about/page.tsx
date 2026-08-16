@@ -3,7 +3,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import StatsBar from '@/components/ui/StatsBar';
 import WhyChooseUs from '@/components/ui/WhyChooseUs';
-import { Target, Award, Users, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Target, Award, Users, ShieldCheck, CheckCircle2, Phone, Mail, MapPin } from 'lucide-react';
 import styles from './about.module.css';
 
 export const metadata: Metadata = {
@@ -63,16 +63,19 @@ export default function AboutPage() {
           <h2 className={styles.contactTitle}>Get in Touch</h2>
           <div className={styles.contactGrid}>
             <div className={styles.contactCard}>
-              <h3>📞 Call / WhatsApp</h3>
+              <Phone size={24} className={styles.contactIcon} />
+              <h3>Call / WhatsApp</h3>
               <p><a href="tel:+919004826378">+91 9004826378</a></p>
               <p><a href="tel:+919152152155">+91 9152152155</a></p>
             </div>
             <div className={styles.contactCard}>
-              <h3>📧 Email</h3>
+              <Mail size={24} className={styles.contactIcon} />
+              <h3>Email</h3>
               <p><a href="mailto:support@millioneducation.com">support@millioneducation.com</a></p>
             </div>
             <div className={styles.contactCard}>
-              <h3>📍 Address</h3>
+              <MapPin size={24} className={styles.contactIcon} />
+              <h3>Address</h3>
               <p>Pearl Majestic, Aqsa Masjid Rd, Shastri Nagar, Jogeshwari West, Mumbai, Maharashtra 400102</p>
             </div>
           </div>

@@ -18,7 +18,7 @@ export default function JoinFacultyPage() {
     <main>
       <Navbar tutorPage={true} />
       <TutorHero />
-      <StatsBar dark={false} />
+      <StatsBar dark={true} />
       <TutorFeatures />
       <HowItWorks variant="tutor" />
       <Testimonials variant="tutor" />
