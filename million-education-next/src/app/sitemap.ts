@@ -2,97 +2,101 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.millioneducation.com';
+  const currentDate = new Date();
 
-  const pages = [
+  const pages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date('2026-08-15'),
+      lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 1.0,
     },
     {
       url: `${baseUrl}/courses`,
-      lastModified: new Date('2026-08-15'),
+      lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
+    // Individual Courses
     {
       url: `${baseUrl}/courses/physics`,
-      lastModified: new Date('2026-08-15'),
+      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/courses/chemistry`,
-      lastModified: new Date('2026-08-15'),
+      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/courses/mathematics`,
-      lastModified: new Date('2026-08-15'),
+      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/courses/biology`,
-      lastModified: new Date('2026-08-15'),
+      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/courses/pcm`,
-      lastModified: new Date('2026-08-15'),
+      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/courses/pcb`,
-      lastModified: new Date('2026-08-15'),
+      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
+    // Information Pages
     {
-      url: `${baseUrl}/join-faculty`,
-      lastModified: new Date('2026-08-15'),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/for-tutors`,
-      lastModified: new Date('2026-08-15'),
+      url: `${baseUrl}/about`,
+      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date('2026-08-15'),
+      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/about`,
-      lastModified: new Date('2026-08-15'),
+      url: `${baseUrl}/for-tutors`,
+      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
-      priority: 0.6,
+      priority: 0.7,
     },
     {
+      url: `${baseUrl}/join-faculty`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    // Policy Pages
+    {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date('2026-08-15'),
+      lastModified: currentDate,
       changeFrequency: 'yearly' as const,
-      priority: 0.4,
+      priority: 0.5,
     },
     {
       url: `${baseUrl}/terms-of-service`,
-      lastModified: new Date('2026-08-15'),
+      lastModified: currentDate,
       changeFrequency: 'yearly' as const,
-      priority: 0.4,
+      priority: 0.5,
     },
     {
       url: `${baseUrl}/refund-policy`,
-      lastModified: new Date('2026-08-15'),
+      lastModified: currentDate,
       changeFrequency: 'yearly' as const,
-      priority: 0.4,
+      priority: 0.5,
     },
   ];
 

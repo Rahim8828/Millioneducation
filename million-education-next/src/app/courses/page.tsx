@@ -3,17 +3,62 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Courses from '@/components/courses/Courses';
 import FAQ from '@/components/ui/FAQ';
+import { breadcrumbSchema } from '@/lib/schema';
 import { BookOpen, GraduationCap, Stethoscope, Cpu, CheckCircle2, ShieldCheck, UserCheck, Calendar, Zap, MessageCircle } from 'lucide-react';
 import styles from './courses.module.css';
 
 export const metadata: Metadata = {
   title: 'Courses — 11th, 12th, NEET & JEE 1-on-1 Personal Coaching Program',
   description: 'Explore specialized 1-on-1 home & online tuition courses for Class 11th Science, 12th Science, NEET UG, and JEE Main & Advanced.',
+  keywords: [
+    'online courses',
+    'science tuition',
+    '11th 12th courses',
+    'NEET coaching courses',
+    'JEE courses',
+    'physics chemistry biology mathematics',
+    'PCM PCB courses',
+    'home tuition courses',
+  ],
+  openGraph: {
+    type: 'website',
+    title: 'Courses — 1-on-1 Coaching for 11th, 12th, NEET & JEE',
+    description: 'Specialized courses for Class 11th, 12th, NEET & JEE exam preparation',
+    url: 'https://www.millioneducation.com/courses',
+    siteName: 'Million Education',
+    images: [
+      {
+        url: 'https://www.millioneducation.com/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Million Education Courses',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Specialized Courses - Million Education',
+    description: 'Expert 1-on-1 coaching for Science subjects',
+    images: ['https://www.millioneducation.com/logo.png'],
+  },
+  alternates: {
+    canonical: 'https://www.millioneducation.com/courses',
+  },
 };
 
 export default function CoursesPage() {
+  const breadcrumbs = breadcrumbSchema([
+    { name: 'Home', url: 'https://www.millioneducation.com' },
+    { name: 'Courses', url: 'https://www.millioneducation.com/courses' },
+  ]);
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        suppressHydrationWarning
+      />
       <Navbar />
       
       {/* Header Banner */}

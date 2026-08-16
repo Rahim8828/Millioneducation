@@ -3,16 +3,80 @@ import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FAQ from '@/components/ui/FAQ';
+import { courseSchema, breadcrumbSchema } from '@/lib/schema';
 import { BookOpen, GraduationCap, CheckCircle2, Calendar, MessageCircle, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Physics Specialist — 1-on-1 Home & Online Tuition for 11th, 12th, NEET & JEE',
   description: 'Master Physics with expert IITian faculty. Comprehensive 1-on-1 tuition for Class 11, 12, NEET & JEE. NCERT coverage, PYQs, doubt solving & weekly tests.',
+  keywords: [
+    'Physics tutor Mumbai',
+    'Physics coaching Mumbai',
+    'Physics tuition online',
+    'NEET Physics',
+    'JEE Physics',
+    'Class 11 Physics',
+    'Class 12 Physics',
+    'Physics doubt solving',
+    'Physics home tutor',
+    'Physics exam preparation',
+  ],
+  openGraph: {
+    type: 'website',
+    title: 'Physics Specialist — 1-on-1 Home & Online Tuition for 11th, 12th, NEET & JEE',
+    description: 'Master Physics with expert IITian faculty. Comprehensive 1-on-1 tuition for Class 11, 12, NEET & JEE. NCERT coverage, PYQs, doubt solving & weekly tests.',
+    url: 'https://www.millioneducation.com/courses/physics',
+    siteName: 'Million Education',
+    images: [
+      {
+        url: 'https://www.millioneducation.com/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Physics Specialist Course - Million Education',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Physics Specialist — 1-on-1 Home & Online Tuition',
+    description: 'Master Physics with expert IITian faculty for Class 11, 12, NEET & JEE preparation.',
+    images: ['https://www.millioneducation.com/logo.png'],
+  },
+  alternates: {
+    canonical: 'https://www.millioneducation.com/courses/physics',
+  },
 };
 
 export default function PhysicsPage() {
+  // Course Schema
+  const courseData = courseSchema(
+    'Physics Specialist Course',
+    'Master Physics with expert IITian faculty. Comprehensive 1-on-1 tuition for Class 11, 12, NEET & JEE. NCERT coverage, PYQs, doubt solving & weekly tests.',
+    'https://www.millioneducation.com/logo.png',
+    'https://www.millioneducation.com/courses/physics'
+  );
+
+  // Breadcrumb Schema
+  const breadcrumbs = breadcrumbSchema([
+    { name: 'Home', url: 'https://www.millioneducation.com' },
+    { name: 'Courses', url: 'https://www.millioneducation.com/courses' },
+    { name: 'Physics', url: 'https://www.millioneducation.com/courses/physics' },
+  ]);
+
   return (
     <main>
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseData) }}
+        suppressHydrationWarning
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        suppressHydrationWarning
+      />
       <Navbar />
       
       {/* Header Banner */}
