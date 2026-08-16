@@ -4,12 +4,20 @@ import { GraduationCap, Share2, Globe, MessageCircle, Mail, Phone, MapPin } from
 import styles from './Footer.module.css';
 
 const subjectLinks = [
-  'Physics Specialist', 'Chemistry Specialist', 'Mathematics Specialist', 'Biology Specialist',
-  'PCM Combo Course', 'PCB Combo Course',
+  { label: 'Physics Specialist', href: '/courses/physics' },
+  { label: 'Chemistry Specialist', href: '/courses/chemistry' },
+  { label: 'Mathematics Specialist', href: '/courses/mathematics' },
+  { label: 'Biology Specialist', href: '/courses/biology' },
+  { label: 'PCM Combo Course', href: '/courses/pcm' },
+  { label: 'PCB Combo Course', href: '/courses/pcb' },
 ];
 const classLinks = [
-  'Class 11 Science', 'Class 12 Science', 'NEET UG Coaching',
-  'JEE Main Prep', 'JEE Advanced Prep', 'CBSE Board Prep',
+  { label: 'Class 11 Science', href: '/courses' },
+  { label: 'Class 12 Science', href: '/courses' },
+  { label: 'NEET UG Coaching', href: '/courses' },
+  { label: 'JEE Main Prep', href: '/courses' },
+  { label: 'JEE Advanced Prep', href: '/courses' },
+  { label: 'CBSE Board Prep', href: '/courses' },
 ];
 const companyLinks = [
   { label: 'Home', href: '/' },
@@ -63,7 +71,7 @@ export default function Footer() {
             <h4>Subjects</h4>
             <ul>
               {subjectLinks.map((s) => (
-                <li key={s}><Link href="/courses">{s}</Link></li>
+                <li key={s.label}><Link href={s.href}>{s.label}</Link></li>
               ))}
             </ul>
           </div>
@@ -72,7 +80,7 @@ export default function Footer() {
             <h4>Courses</h4>
             <ul>
               {classLinks.map((c) => (
-                <li key={c}><Link href="/courses">{c}</Link></li>
+                <li key={c.label}><Link href={c.href}>{c.label}</Link></li>
               ))}
             </ul>
           </div>

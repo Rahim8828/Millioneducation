@@ -148,8 +148,13 @@
 }
 
 .cardFeatured {
-  border: 2px solid #2563EB;
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+}
+
+.cardFeatured:hover {
+  border-color: #2563EB;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15);
 }
 
 .cardTag {

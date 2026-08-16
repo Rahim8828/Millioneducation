@@ -7,14 +7,14 @@
 
 .badge {
   display: inline-block;
-  background: rgba(37, 99, 235, 0.15);
-  color: var(--primary);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
   font-size: 0.85rem;
   font-weight: 600;
   padding: 6px 16px;
   border-radius: 100px;
   margin-bottom: 20px;
-  border: 1px solid rgba(37, 99, 235, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .heroSection h1 {

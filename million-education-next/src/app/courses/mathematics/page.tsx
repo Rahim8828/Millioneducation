@@ -3,16 +3,76 @@ import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FAQ from '@/components/ui/FAQ';
+import { courseSchema, breadcrumbSchema } from '@/lib/schema';
 import { BookOpen, GraduationCap, CheckCircle2, Calendar, MessageCircle, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Mathematics Specialist — 1-on-1 Home & Online Tuition for 11th, 12th & JEE',
-  description: 'Expert Mathematics tuition for Class 11, 12 & JEE Main/Advanced. Covers Calculus, Algebra, Coordinate Geometry & more with IITian faculty.',
+  description: 'Master Mathematics with expert IITian faculty. Comprehensive 1-on-1 tuition for Class 11, 12 & JEE Main/Advanced. Calculus, Algebra, Trigonometry & more.',
+  keywords: [
+    'Math tutor Mumbai',
+    'Mathematics coaching',
+    'Mathematics tuition online',
+    'JEE Mathematics',
+    'JEE Maths tuition',
+    'Class 11 Mathematics',
+    'Class 12 Mathematics',
+    'Calculus tutor',
+    'IITian mathematics tutor',
+    'Algebra geometry trigonometry',
+  ],
+  openGraph: {
+    type: 'website',
+    title: 'Mathematics Specialist — 1-on-1 Home & Online Tuition for 11th, 12th & JEE',
+    description: 'Master Mathematics with expert IITian faculty. Comprehensive 1-on-1 tuition for Class 11, 12 & JEE Main/Advanced.',
+    url: 'https://www.millioneducation.com/courses/mathematics',
+    siteName: 'Million Education',
+    images: [
+      {
+        url: 'https://www.millioneducation.com/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Mathematics Specialist Course - Million Education',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mathematics Specialist — 1-on-1 Tuition',
+    description: 'Expert Mathematics coaching for Class 11, 12 & JEE',
+    images: ['https://www.millioneducation.com/logo.png'],
+  },
+  alternates: {
+    canonical: 'https://www.millioneducation.com/courses/mathematics',
+  },
 };
 
 export default function MathematicsPage() {
+  const courseData = courseSchema(
+    'Mathematics Specialist Course',
+    'Master Mathematics with expert IITian faculty for Class 11, 12 & JEE Main/Advanced.',
+    'https://www.millioneducation.com/logo.png',
+    'https://www.millioneducation.com/courses/mathematics'
+  );
+
+  const breadcrumbs = breadcrumbSchema([
+    { name: 'Home', url: 'https://www.millioneducation.com' },
+    { name: 'Courses', url: 'https://www.millioneducation.com/courses' },
+    { name: 'Mathematics', url: 'https://www.millioneducation.com/courses/mathematics' },
+  ]);
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseData) }}
+        suppressHydrationWarning
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        suppressHydrationWarning
+      />
       <Navbar />
       
       {/* Header Banner */}
@@ -25,23 +85,23 @@ export default function MathematicsPage() {
         <div className="container">
           <div style={{
             display: 'inline-block',
-            background: 'rgba(249, 115, 22, 0.15)',
-            color: 'var(--primary)',
+            background: 'rgba(255, 255, 255, 0.12)',
+            color: 'var(--white)',
             fontSize: '0.85rem',
             fontWeight: 600,
             padding: '6px 16px',
             borderRadius: '100px',
             marginBottom: '20px',
-            border: '1px solid rgba(249, 115, 22, 0.3)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
           }}>
             <GraduationCap size={16} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />
             Mathematics Specialist Course
           </div>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, marginBottom: '16px' }}>
-            Build Strong Math Foundations for JEE & Boards
+            Master Mathematics for Boards & JEE
           </h1>
           <p style={{ fontSize: '1.1rem', color: 'var(--gray-300)', maxWidth: '680px', margin: '0 auto', lineHeight: 1.6 }}>
-            Comprehensive Mathematics coaching covering Calculus, Algebra, Coordinate Geometry & Trigonometry for Class 11, 12 & JEE preparation.
+            Comprehensive Mathematics tuition covering Class 11 & 12 NCERT, JEE Main/Advanced concepts with dedicated 1-on-1 personal coaching from expert IITian faculty.
           </p>
         </div>
       </section>
@@ -56,7 +116,7 @@ export default function MathematicsPage() {
                 About This Course
               </h2>
               <p style={{ color: 'var(--gray-600)', marginBottom: '20px', lineHeight: 1.7 }}>
-                Our Mathematics Specialist course is designed to transform your problem-solving skills and build strong conceptual foundations. Taught by expert IITian faculty, this course covers all essential topics for Board exams and JEE Main/Advanced with systematic practice and shortcut techniques.
+                Our Mathematics Specialist course is designed for students who want to master calculus, algebra, and trigonometry for both Board exams and JEE entrance exams. Our expert IITian faculty provide personalized attention to help you build strong conceptual foundations and develop problem-solving skills.
               </p>
               
               <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', color: 'var(--gray-900)', marginTop: '32px', marginBottom: '16px' }}>
@@ -64,15 +124,14 @@ export default function MathematicsPage() {
               </h3>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 {[
-                  'Complete NCERT coverage with advanced problem-solving',
-                  'Special focus on JEE-level tricky questions',
-                  'Shortcut techniques for faster calculations',
-                  'Step-by-step approach to complex problems',
-                  '15+ years of Previous Year Questions (PYQs)',
-                  'Weekly tests and mock examinations',
-                  'Unlimited doubt solving support',
-                  'Digital notes, formula sheets & practice sets',
-                  'Home Tuition or Online Live Classes available',
+                  'Complete NCERT coverage with in-depth concept explanations',
+                  'Advanced problem-solving techniques for JEE Main & Advanced',
+                  'Calculus, Algebra, Trigonometry & Coordinate Geometry mastery',
+                  'Weekly chapter-wise and cumulative assessment tests',
+                  'Unlimited doubt solving support via WhatsApp/Call',
+                  'Digital notes, formula sheets, and practice problems',
+                  'Monthly parent-teacher feedback meetings',
+                  'Flexible scheduling: Home Tuition or Online Live Classes',
                 ].map((feature, i) => (
                   <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '14px' }}>
                     <CheckCircle2 size={20} color="var(--primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
@@ -82,10 +141,10 @@ export default function MathematicsPage() {
               </ul>
 
               <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', color: 'var(--gray-900)', marginTop: '32px', marginBottom: '16px' }}>
-                What You'll Learn
+                What You&apos;ll Learn
               </h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '24px' }}>
-                {['Calculus (Differential & Integral)', 'Algebra & Complex Numbers', 'Coordinate Geometry', 'Trigonometry', 'Vectors & 3D Geometry', 'Probability & Statistics', 'Matrices & Determinants', 'Differential Equations'].map((topic, i) => (
+                {['Algebra & Sequences', 'Calculus', 'Trigonometry', 'Coordinate Geometry', 'Vectors & 3D', 'Probability & Stats'].map((topic, i) => (
                   <div key={i} style={{ background: 'var(--gray-50)', padding: '16px', borderRadius: 'var(--radius-md)', border: '1px solid var(--gray-200)' }}>
                     <span style={{ fontWeight: 600, color: 'var(--gray-800)' }}>{topic}</span>
                   </div>
@@ -96,7 +155,7 @@ export default function MathematicsPage() {
                 Suitable For
               </h3>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-                {['Class 11 Students', 'Class 12 Students', 'JEE Aspirants', 'Board Exam Prep', 'PCM Combo Students', 'Dropper Batch'].map((item, i) => (
+                {['Class 11 Students', 'Class 12 Students', 'JEE Main Aspirants', 'JEE Advanced Aspirants', 'Board Exam Prep', 'Dropper Batch'].map((item, i) => (
                   <li key={i} style={{ background: 'var(--primary-light)', color: 'var(--primary)', padding: '8px 16px', borderRadius: '100px', fontSize: '0.9rem', fontWeight: 600 }}>
                     {item}
                   </li>
@@ -124,7 +183,7 @@ export default function MathematicsPage() {
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
                     <span style={{ color: 'var(--gray-600)', fontSize: '0.9rem' }}>Classes</span>
-                    <span style={{ fontWeight: 600, color: 'var(--gray-800)' }}>3-4 sessions/week</span>
+                    <span style={{ fontWeight: 600, color: 'var(--gray-800)' }}>3 sessions/week</span>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
                     <span style={{ color: 'var(--gray-600)', fontSize: '0.9rem' }}>Mode</span>
@@ -132,7 +191,7 @@ export default function MathematicsPage() {
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--gray-600)', fontSize: '0.9rem' }}>Rating</span>
-                    <span style={{ fontWeight: 600, color: 'var(--primary)' }}>4.9 ⭐ (110+ reviews)</span>
+                    <span style={{ fontWeight: 600, color: 'var(--primary)' }}>4.9 ⭐ (120+ reviews)</span>
                   </div>
                 </div>
 
@@ -156,7 +215,7 @@ export default function MathematicsPage() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', maxWidth: '900px', margin: '0 auto' }}>
             {[
-              { title: 'Physics Specialist', href: '/courses/physics', desc: 'Mechanics, Thermodynamics & Electromagnetism' },
+              { title: 'Physics Specialist', href: '/courses/physics', desc: 'Mechanics, Waves & Modern Physics' },
               { title: 'Chemistry Specialist', href: '/courses/chemistry', desc: 'Organic, Inorganic & Physical Chemistry' },
               { title: 'PCM Combo Course', href: '/courses/pcm', desc: 'Physics, Chemistry & Math together' },
             ].map((course, i) => (

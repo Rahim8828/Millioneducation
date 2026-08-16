@@ -3,16 +3,76 @@ import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FAQ from '@/components/ui/FAQ';
+import { courseSchema, breadcrumbSchema } from '@/lib/schema';
 import { BookOpen, GraduationCap, CheckCircle2, Calendar, MessageCircle, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Biology Specialist — 1-on-1 Home & Online Tuition for 11th, 12th & NEET',
-  description: 'Expert Biology tuition for Class 11, 12 & NEET UG. Covers Botany & Zoology with MBBS faculty. NCERT mastery, diagrams & previous year questions.',
+  title: 'Biology Specialist — 1-on-1 Home & Online Tuition for Class 12 & NEET',
+  description: 'Master Biology with expert faculty. Comprehensive 1-on-1 tuition for Class 12 & NEET UG. Botany, Zoology, Human Physiology & more with PYQs & weekly tests.',
+  keywords: [
+    'Biology tutor Mumbai',
+    'Biology coaching online',
+    'NEET Biology',
+    'Biology tuition',
+    'Class 11 Biology',
+    'Class 12 Biology',
+    'Botany Zoology tutor',
+    'Biology exam preparation',
+    'NEET biology tuition',
+    'Biology home tutor',
+  ],
+  openGraph: {
+    type: 'website',
+    title: 'Biology Specialist — 1-on-1 Home & Online Tuition for Class 12 & NEET',
+    description: 'Master Biology with expert faculty for Class 12 & NEET UG preparation.',
+    url: 'https://www.millioneducation.com/courses/biology',
+    siteName: 'Million Education',
+    images: [
+      {
+        url: 'https://www.millioneducation.com/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Biology Specialist Course - Million Education',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Biology Specialist — 1-on-1 Tuition',
+    description: 'Expert Biology coaching for Class 12 & NEET preparation',
+    images: ['https://www.millioneducation.com/logo.png'],
+  },
+  alternates: {
+    canonical: 'https://www.millioneducation.com/courses/biology',
+  },
 };
 
 export default function BiologyPage() {
+  const courseData = courseSchema(
+    'Biology Specialist Course',
+    'Master Biology with expert faculty for Class 12 & NEET UG preparation.',
+    'https://www.millioneducation.com/logo.png',
+    'https://www.millioneducation.com/courses/biology'
+  );
+
+  const breadcrumbs = breadcrumbSchema([
+    { name: 'Home', url: 'https://www.millioneducation.com' },
+    { name: 'Courses', url: 'https://www.millioneducation.com/courses' },
+    { name: 'Biology', url: 'https://www.millioneducation.com/courses/biology' },
+  ]);
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseData) }}
+        suppressHydrationWarning
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        suppressHydrationWarning
+      />
       <Navbar />
       
       {/* Header Banner */}
@@ -25,23 +85,23 @@ export default function BiologyPage() {
         <div className="container">
           <div style={{
             display: 'inline-block',
-            background: 'rgba(249, 115, 22, 0.15)',
-            color: 'var(--primary)',
+            background: 'rgba(255, 255, 255, 0.12)',
+            color: 'var(--white)',
             fontSize: '0.85rem',
             fontWeight: 600,
             padding: '6px 16px',
             borderRadius: '100px',
             marginBottom: '20px',
-            border: '1px solid rgba(249, 115, 22, 0.3)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
           }}>
             <GraduationCap size={16} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />
             Biology Specialist Course
           </div>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, marginBottom: '16px' }}>
-            Master Biology for NEET & Board Excellence
+            Master Biology for Boards & NEET Exams
           </h1>
           <p style={{ fontSize: '1.1rem', color: 'var(--gray-300)', maxWidth: '680px', margin: '0 auto', lineHeight: 1.6 }}>
-            Comprehensive Biology tuition covering Botany & Zoology for Class 11, 12 & NEET. Taught by experienced MBBS and M.Sc faculty with NCERT mastery approach.
+            Comprehensive Biology tuition covering Class 11 & 12 NCERT, NEET concepts with dedicated 1-on-1 personal coaching from expert medical professionals and NEET specialists.
           </p>
         </div>
       </section>
@@ -56,7 +116,7 @@ export default function BiologyPage() {
                 About This Course
               </h2>
               <p style={{ color: 'var(--gray-600)', marginBottom: '20px', lineHeight: 1.7 }}>
-                Our Biology Specialist course offers in-depth coverage of both Botany and Zoology with a strong emphasis on NCERT understanding, diagram practice, and previous year NEET questions. Learn from MBBS doctors and experienced biology faculty who provide personalized attention to help you ace both Board exams and NEET UG.
+                Our Biology Specialist course is designed for students who want to master botany, zoology, and human physiology for both Board exams and NEET entrance exams. Our expert faculty including medical professionals provide personalized attention to help you understand biological processes, memorize key concepts, and achieve top scores.
               </p>
               
               <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', color: 'var(--gray-900)', marginTop: '32px', marginBottom: '16px' }}>
@@ -64,15 +124,14 @@ export default function BiologyPage() {
               </h3>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 {[
-                  'Complete NCERT line-by-line coverage with explanations',
-                  'Botany: Plant Physiology, Morphology & Genetics',
-                  'Zoology: Human Anatomy, Ecology & Evolution',
-                  'Detailed diagram practice and labeling techniques',
-                  '15+ years of NEET Previous Year Questions',
-                  'Weekly assessment tests and mock exams',
-                  'Unlimited doubt clearing support',
-                  'Digital notes, mind maps & flashcards',
-                  'Flexible schedule: Home Tuition or Online Classes',
+                  'Complete NCERT coverage with visual learning & concept clarity',
+                  'Botany, Zoology & Human Physiology specialized modules',
+                  '15+ years of NEET Previous Year Questions (PYQs) practice',
+                  'Weekly chapter-wise and cumulative assessment tests',
+                  'Unlimited doubt solving support via WhatsApp/Call',
+                  'Digital diagrams, notes, and practice problems',
+                  'Monthly parent-teacher feedback meetings',
+                  'Flexible scheduling: Home Tuition or Online Live Classes',
                 ].map((feature, i) => (
                   <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '14px' }}>
                     <CheckCircle2 size={20} color="var(--primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
@@ -82,10 +141,10 @@ export default function BiologyPage() {
               </ul>
 
               <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', color: 'var(--gray-900)', marginTop: '32px', marginBottom: '16px' }}>
-                What You'll Learn
+                What You&apos;ll Learn
               </h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '24px' }}>
-                {['Cell Biology & Structure', 'Plant Physiology', 'Human Physiology', 'Genetics & Evolution', 'Ecology & Environment', 'Reproduction in Plants', 'Biotechnology', 'Diversity of Life'].map((topic, i) => (
+                {['Cell Biology', 'Genetics & Evolution', 'Botany', 'Zoology', 'Human Physiology', 'Ecology & Environment'].map((topic, i) => (
                   <div key={i} style={{ background: 'var(--gray-50)', padding: '16px', borderRadius: 'var(--radius-md)', border: '1px solid var(--gray-200)' }}>
                     <span style={{ fontWeight: 600, color: 'var(--gray-800)' }}>{topic}</span>
                   </div>
@@ -96,7 +155,7 @@ export default function BiologyPage() {
                 Suitable For
               </h3>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-                {['Class 11 Students', 'Class 12 Students', 'NEET Aspirants', 'Board Exam Prep', 'PCB Combo Students', 'Dropper Batch'].map((item, i) => (
+                {['Class 11 Students', 'Class 12 Students', 'NEET Aspirants', 'Medical School Prep', 'Board Exam Prep', 'Dropper Batch'].map((item, i) => (
                   <li key={i} style={{ background: 'var(--primary-light)', color: 'var(--primary)', padding: '8px 16px', borderRadius: '100px', fontSize: '0.9rem', fontWeight: 600 }}>
                     {item}
                   </li>
@@ -132,7 +191,7 @@ export default function BiologyPage() {
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--gray-600)', fontSize: '0.9rem' }}>Rating</span>
-                    <span style={{ fontWeight: 600, color: 'var(--primary)' }}>4.9 ⭐ (95+ reviews)</span>
+                    <span style={{ fontWeight: 600, color: 'var(--primary)' }}>4.9 ⭐ (120+ reviews)</span>
                   </div>
                 </div>
 
@@ -156,7 +215,7 @@ export default function BiologyPage() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', maxWidth: '900px', margin: '0 auto' }}>
             {[
-              { title: 'Physics Specialist', href: '/courses/physics', desc: 'Mechanics, Thermodynamics & Electromagnetism' },
+              { title: 'Physics Specialist', href: '/courses/physics', desc: 'Mechanics, Waves & Modern Physics' },
               { title: 'Chemistry Specialist', href: '/courses/chemistry', desc: 'Organic, Inorganic & Physical Chemistry' },
               { title: 'PCB Combo Course', href: '/courses/pcb', desc: 'Physics, Chemistry & Biology together' },
             ].map((course, i) => (
