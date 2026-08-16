@@ -5,6 +5,13 @@
   overflow: hidden;
 }
 
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
 @media (max-width: 900px) {
   .hero {
     padding: 40px 0 40px;

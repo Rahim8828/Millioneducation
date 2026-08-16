@@ -1,8 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
-import { Sparkles, Star, CheckCircle2, BookOpen } from 'lucide-react';
+import { Sparkles, BookOpen } from 'lucide-react';
 import BookDemoModal from '../modals/BookDemoModal';
 import styles from './Hero.module.css';
 
@@ -22,7 +21,7 @@ export default function Hero() {
           <div className={styles.text}>
             <div className="badge">
               <Sparkles size={14} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />
-              Specialized 1-on-1 Personal Coaching Program & Tuitions
+              1-on-1 Home Tuitions & Online Coaching
             </div>
             <h1>
               Personal Coaching Program for<br />
@@ -89,48 +88,6 @@ export default function Hero() {
             <button onClick={() => setIsDemoModalOpen(true)} className={styles.cta}>
               <BookOpen size={18} /> Book a Free Demo Class
             </button>
-          </div>
-
-          {/* Visual Side */}
-          <div className={styles.visual}>
-            <div className={styles.imgGrid}>
-              {[
-                { src: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&q=80', alt: 'Physics tutoring session' },
-                { src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&q=80', alt: 'Chemistry class' },
-                { src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80', alt: 'Mathematics education' },
-                { src: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&q=80', alt: 'Biology coaching program' },
-              ].map((img, i) => (
-                <div key={i} className={`${styles.imgCard} ${i % 2 === 1 ? styles.imgCardOffset : ''}`}>
-                  <Image 
-                    src={img.src}
-                    alt={img.alt}
-                    width={200}
-                    height={150}
-                    loading="lazy"
-                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                  />
-                </div>
-              ))}
-            </div>
-
-            <div className={`${styles.floatCard} ${styles.floatCard1}`}>
-              <div className={styles.fcIcon}>
-                <Star size={20} color="#2563EB" fill="#2563EB" />
-              </div>
-              <div>
-                <div className={styles.fcLabel}>Avg. Rating</div>
-                <div className={styles.fcValue}>4.9 / 5.0</div>
-              </div>
-            </div>
-            <div className={`${styles.floatCard} ${styles.floatCard2}`}>
-              <div className={styles.fcIcon}>
-                <CheckCircle2 size={20} color="#22c55e" />
-              </div>
-              <div>
-                <div className={styles.fcLabel}>Top Faculty</div>
-                <div className={styles.fcValue}>Verified Mentors</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

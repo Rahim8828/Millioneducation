@@ -90,7 +90,7 @@ export default function Footer() {
         <hr className={styles.divider} />
 
         <div className={styles.bottom}>
-          <p>© 2026 Million Education. All rights reserved. Specialized 1-on-1 Personal Coaching.</p>
+          <p>© 2026 Million Education. All rights reserved. 1-on-1 Home Tuitions & Online Coaching.</p>
           <div className={styles.bottomLinks}>
             <Link href="/privacy-policy">Privacy Policy</Link>
             <Link href="/terms-of-service">Terms of Service</Link>
