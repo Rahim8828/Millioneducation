@@ -28,8 +28,8 @@ export default function Footer() {
           <div className={styles.brand}>
             <Link href="/" className={styles.logo}>
               <Image 
-                src="/logo.png" 
-                alt="Million Education Logo" 
+                src="/Footer Logo.png" 
+                alt="Million Education Footer Logo" 
                 width={180} 
                 height={50}
                 style={{ width: 'auto', height: 'auto' }}

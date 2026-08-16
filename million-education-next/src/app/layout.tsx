@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     'JEE Advanced tutor',
     'private tutor Mumbai',
   ],
+  icons: {
+    icon: '/Favicon.png',
+  },
 };
 
 export default function RootLayout({
