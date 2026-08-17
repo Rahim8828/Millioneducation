@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'www.millioneducation.com',
+        hostname: 'www.millioneducation.in',
         port: '',
         pathname: '/**',
       },
@@ -94,7 +94,7 @@ const nextConfig: NextConfig = {
 
   // Environment variables
   env: {
-    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.millioneducation.com',
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.millioneducation.in',
   },
 
   // Experimental features

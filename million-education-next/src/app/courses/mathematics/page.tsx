@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Mathematics Specialist — 1-on-1 Home & Online Tuition for 11th, 12th & JEE',
     description: 'Master Mathematics with expert IITian faculty. Comprehensive 1-on-1 tuition for Class 11, 12 & JEE Main/Advanced.',
-    url: 'https://www.millioneducation.com/courses/mathematics',
+    url: 'https://www.millioneducation.in/courses/mathematics',
     siteName: 'Million Education',
     images: [
       {
-        url: 'https://www.millioneducation.com/logo.png',
+        url: 'https://www.millioneducation.in/logo.png',
         width: 1200,
         height: 630,
         alt: 'Mathematics Specialist Course - Million Education',
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Mathematics Specialist — 1-on-1 Tuition',
     description: 'Expert Mathematics coaching for Class 11, 12 & JEE',
-    images: ['https://www.millioneducation.com/logo.png'],
+    images: ['https://www.millioneducation.in/logo.png'],
   },
   alternates: {
-    canonical: 'https://www.millioneducation.com/courses/mathematics',
+    canonical: 'https://www.millioneducation.in/courses/mathematics',
   },
 };
 
@@ -51,14 +51,14 @@ export default function MathematicsPage() {
   const courseData = courseSchema(
     'Mathematics Specialist Course',
     'Master Mathematics with expert IITian faculty for Class 11, 12 & JEE Main/Advanced.',
-    'https://www.millioneducation.com/logo.png',
-    'https://www.millioneducation.com/courses/mathematics'
+    'https://www.millioneducation.in/logo.png',
+    'https://www.millioneducation.in/courses/mathematics'
   );
 
   const breadcrumbs = breadcrumbSchema([
-    { name: 'Home', url: 'https://www.millioneducation.com' },
-    { name: 'Courses', url: 'https://www.millioneducation.com/courses' },
-    { name: 'Mathematics', url: 'https://www.millioneducation.com/courses/mathematics' },
+    { name: 'Home', url: 'https://www.millioneducation.in' },
+    { name: 'Courses', url: 'https://www.millioneducation.in/courses' },
+    { name: 'Mathematics', url: 'https://www.millioneducation.in/courses/mathematics' },
   ]);
 
   return (

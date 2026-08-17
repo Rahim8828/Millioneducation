@@ -3,15 +3,15 @@
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://www.millioneducation.com',
+  '@id': 'https://www.millioneducation.in',
   name: 'Million Education',
-  url: 'https://www.millioneducation.com',
-  logo: 'https://www.millioneducation.com/logo.png',
+  url: 'https://www.millioneducation.in',
+  logo: 'https://www.millioneducation.in/logo.png',
   description:
     'Million Education provides 1-on-1 home tutoring and online coaching for Class 11, 12, NEET, and JEE exam preparation in Mumbai.',
-  image: 'https://www.millioneducation.com/logo.png',
+  image: 'https://www.millioneducation.in/logo.png',
   telephone: '+91-XXXXXXXXXX', // Add actual number
-  email: 'contact@millioneducation.com',
+  email: 'contact@millioneducation.in',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Mumbai', // Add actual address
@@ -35,7 +35,7 @@ export const organizationSchema = {
     '@type': 'ContactPoint',
     contactType: 'Customer Service',
     telephone: '+91-XXXXXXXXXX',
-    email: 'contact@millioneducation.com',
+    email: 'contact@millioneducation.in',
   },
 };
 
@@ -54,8 +54,8 @@ export const courseSchema = (
   provider: {
     '@type': 'Organization',
     name: 'Million Education',
-    url: 'https://www.millioneducation.com',
-    logo: 'https://www.millioneducation.com/logo.png',
+    url: 'https://www.millioneducation.in',
+    logo: 'https://www.millioneducation.in/logo.png',
   },
   educationLevel: ['Class 11', 'Class 12', 'NEET', 'JEE'],
   inLanguage: 'en-IN',
@@ -102,11 +102,11 @@ export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'EducationalOrganization',
   name: 'Million Education',
-  url: 'https://www.millioneducation.com',
-  logo: 'https://www.millioneducation.com/logo.png',
+  url: 'https://www.millioneducation.in',
+  logo: 'https://www.millioneducation.in/logo.png',
   description:
     'Million Education is a premier online and home tutoring platform providing expert coaching for NEET, JEE, and academic excellence.',
-  image: 'https://www.millioneducation.com/logo.png',
+  image: 'https://www.millioneducation.in/logo.png',
   founded: '2020', // Update with actual founding year
   founders: [
     {
@@ -126,7 +126,7 @@ export const localBusinessSchema = {
     '@type': 'ContactPoint',
     contactType: 'Customer Service',
     telephone: '+91-XXXXXXXXXX',
-    email: 'contact@millioneducation.com',
+    email: 'contact@millioneducation.in',
   },
   sameAs: [
     'https://www.facebook.com/MillionEducation',
@@ -144,7 +144,7 @@ export const educationalOccupationalProgramSchema = (programName: string, progra
   provider: {
     '@type': 'EducationalOrganization',
     name: 'Million Education',
-    url: 'https://www.millioneducation.com',
+    url: 'https://www.millioneducation.in',
   },
   programType: 'Tutoring Program',
   occupationalCategory: 'Science Education',

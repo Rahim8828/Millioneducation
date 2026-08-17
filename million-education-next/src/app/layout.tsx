@@ -54,14 +54,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.millioneducation.com',
+    url: 'https://www.millioneducation.in',
     siteName: 'Million Education',
     title: 'Million Education — 1-on-1 Personal Coaching Program for 11th, 12th, NEET & JEE in Mumbai',
     description:
       'Million Education connects Science stream students in Mumbai with verified 1-on-1 home tutors and live online mentors for Class 11, 12, NEET UG, and JEE Main & Advanced.',
     images: [
       {
-        url: 'https://www.millioneducation.com/logo.png',
+        url: 'https://www.millioneducation.in/logo.png',
         width: 1200,
         height: 630,
         alt: 'Million Education - Online Tuition Platform',
@@ -75,13 +75,13 @@ export const metadata: Metadata = {
     title: 'Million Education — 1-on-1 Personal Coaching Program for 11th, 12th, NEET & JEE in Mumbai',
     description:
       'Million Education connects Science stream students in Mumbai with verified 1-on-1 home tutors and live online mentors for Class 11, 12, NEET UG, and JEE Main & Advanced.',
-    images: ['https://www.millioneducation.com/logo.png'],
+    images: ['https://www.millioneducation.in/logo.png'],
     creator: '@MillionEducation',
   },
   // Additional Meta Tags
-  metadataBase: new URL('https://www.millioneducation.com'),
+  metadataBase: new URL('https://www.millioneducation.in'),
   alternates: {
-    canonical: 'https://www.millioneducation.com',
+    canonical: 'https://www.millioneducation.in',
   },
   robots: {
     index: true,
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'Million Education',
-      url: 'https://www.millioneducation.com',
+      url: 'https://www.millioneducation.in',
     },
   ],
   creator: 'Million Education',

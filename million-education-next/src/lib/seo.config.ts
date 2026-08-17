@@ -1,7 +1,7 @@
 // SEO Configuration for Million Education
 
 export const siteConfig = {
-  baseUrl: 'https://www.millioneducation.com',
+  baseUrl: 'https://www.millioneducation.in',
   siteName: 'Million Education',
   description:
     'Million Education connects Science stream students in Mumbai with verified 1-on-1 home tutors and live online mentors for Class 11, 12, NEET UG, and JEE Main & Advanced.',
@@ -11,7 +11,7 @@ export const siteConfig = {
   // Contact Information
   contact: {
     phone: '+91-XXXXXXXXXX', // Update with actual number
-    email: 'contact@millioneducation.com',
+    email: 'contact@millioneducation.in',
     whatsapp: '+919004826378',
   },
 
@@ -85,7 +85,7 @@ export const siteConfig = {
 
   // Sitemap Configuration
   sitemap: {
-    baseUrl: 'https://www.millioneducation.com',
+    baseUrl: 'https://www.millioneducation.in',
     pages: [
       { url: '/', priority: 1.0, changeFrequency: 'weekly' },
       { url: '/courses', priority: 0.9, changeFrequency: 'weekly' },
@@ -117,15 +117,15 @@ export const siteConfig = {
     allow: '/',
     disallow: ['/private/', '/admin/', '/api/'],
     crawlDelay: 1,
-    sitemap: 'https://www.millioneducation.com/sitemap.xml',
+    sitemap: 'https://www.millioneducation.in/sitemap.xml',
   },
 
   // Structured Data Configuration
   structuredData: {
     organization: {
       name: 'Million Education',
-      logo: 'https://www.millioneducation.com/logo.png',
-      url: 'https://www.millioneducation.com',
+      logo: 'https://www.millioneducation.in/logo.png',
+      url: 'https://www.millioneducation.in',
       sameAs: [
         'https://www.facebook.com/MillionEducation',
         'https://www.instagram.com/MillionEducation',

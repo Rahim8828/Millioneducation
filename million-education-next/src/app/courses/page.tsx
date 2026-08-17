@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Courses — 1-on-1 Coaching for 11th, 12th, NEET & JEE',
     description: 'Specialized courses for Class 11th, 12th, NEET & JEE exam preparation',
-    url: 'https://www.millioneducation.com/courses',
+    url: 'https://www.millioneducation.in/courses',
     siteName: 'Million Education',
     images: [
       {
-        url: 'https://www.millioneducation.com/logo.png',
+        url: 'https://www.millioneducation.in/logo.png',
         width: 1200,
         height: 630,
         alt: 'Million Education Courses',
@@ -39,17 +39,17 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Specialized Courses - Million Education',
     description: 'Expert 1-on-1 coaching for Science subjects',
-    images: ['https://www.millioneducation.com/logo.png'],
+    images: ['https://www.millioneducation.in/logo.png'],
   },
   alternates: {
-    canonical: 'https://www.millioneducation.com/courses',
+    canonical: 'https://www.millioneducation.in/courses',
   },
 };
 
 export default function CoursesPage() {
   const breadcrumbs = breadcrumbSchema([
-    { name: 'Home', url: 'https://www.millioneducation.com' },
-    { name: 'Courses', url: 'https://www.millioneducation.com/courses' },
+    { name: 'Home', url: 'https://www.millioneducation.in' },
+    { name: 'Courses', url: 'https://www.millioneducation.in/courses' },
   ]);
 
   return (

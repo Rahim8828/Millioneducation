@@ -62,7 +62,7 @@ export default function Footer() {
             <div className={styles.socialLinks}>
               <a href="/" aria-label="Website" className={styles.socialBtn}><Globe size={16} /></a>
               <a href="https://wa.me/919004826378" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className={styles.socialBtn}><MessageCircle size={16} /></a>
-              <a href="mailto:support@millioneducation.com" aria-label="Mail" className={styles.socialBtn}><Mail size={16} /></a>
+              <a href="mailto:support@millioneducation.in" aria-label="Mail" className={styles.socialBtn}><Mail size={16} /></a>
               <a href="https://wa.me/919004826378?text=I%20want%20to%20share%20Million%20Education" target="_blank" rel="noopener noreferrer" aria-label="Share" className={styles.socialBtn}><Share2 size={16} /></a>
             </div>
           </div>

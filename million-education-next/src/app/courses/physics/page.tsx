@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Physics Specialist — 1-on-1 Home & Online Tuition for 11th, 12th, NEET & JEE',
     description: 'Master Physics with expert IITian faculty. Comprehensive 1-on-1 tuition for Class 11, 12, NEET & JEE. NCERT coverage, PYQs, doubt solving & weekly tests.',
-    url: 'https://www.millioneducation.com/courses/physics',
+    url: 'https://www.millioneducation.in/courses/physics',
     siteName: 'Million Education',
     images: [
       {
-        url: 'https://www.millioneducation.com/logo.png',
+        url: 'https://www.millioneducation.in/logo.png',
         width: 1200,
         height: 630,
         alt: 'Physics Specialist Course - Million Education',
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Physics Specialist — 1-on-1 Home & Online Tuition',
     description: 'Master Physics with expert IITian faculty for Class 11, 12, NEET & JEE preparation.',
-    images: ['https://www.millioneducation.com/logo.png'],
+    images: ['https://www.millioneducation.in/logo.png'],
   },
   alternates: {
-    canonical: 'https://www.millioneducation.com/courses/physics',
+    canonical: 'https://www.millioneducation.in/courses/physics',
   },
 };
 
@@ -53,15 +53,15 @@ export default function PhysicsPage() {
   const courseData = courseSchema(
     'Physics Specialist Course',
     'Master Physics with expert IITian faculty. Comprehensive 1-on-1 tuition for Class 11, 12, NEET & JEE. NCERT coverage, PYQs, doubt solving & weekly tests.',
-    'https://www.millioneducation.com/logo.png',
-    'https://www.millioneducation.com/courses/physics'
+    'https://www.millioneducation.in/logo.png',
+    'https://www.millioneducation.in/courses/physics'
   );
 
   // Breadcrumb Schema
   const breadcrumbs = breadcrumbSchema([
-    { name: 'Home', url: 'https://www.millioneducation.com' },
-    { name: 'Courses', url: 'https://www.millioneducation.com/courses' },
-    { name: 'Physics', url: 'https://www.millioneducation.com/courses/physics' },
+    { name: 'Home', url: 'https://www.millioneducation.in' },
+    { name: 'Courses', url: 'https://www.millioneducation.in/courses' },
+    { name: 'Physics', url: 'https://www.millioneducation.in/courses/physics' },
   ]);
 
   return (

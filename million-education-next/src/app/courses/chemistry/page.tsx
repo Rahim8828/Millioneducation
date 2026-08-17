@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Chemistry Specialist — 1-on-1 Home & Online Tuition for 11th, 12th, NEET & JEE',
     description: 'Master Chemistry with expert faculty. Comprehensive 1-on-1 tuition for Class 11, 12, NEET & JEE. Organic, Inorganic & Physical Chemistry with PYQs & weekly tests.',
-    url: 'https://www.millioneducation.com/courses/chemistry',
+    url: 'https://www.millioneducation.in/courses/chemistry',
     siteName: 'Million Education',
     images: [
       {
-        url: 'https://www.millioneducation.com/logo.png',
+        url: 'https://www.millioneducation.in/logo.png',
         width: 1200,
         height: 630,
         alt: 'Chemistry Specialist Course - Million Education',
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Chemistry Specialist — 1-on-1 Home & Online Tuition',
     description: 'Master Chemistry with expert faculty for Class 11, 12, NEET & JEE preparation.',
-    images: ['https://www.millioneducation.com/logo.png'],
+    images: ['https://www.millioneducation.in/logo.png'],
   },
   alternates: {
-    canonical: 'https://www.millioneducation.com/courses/chemistry',
+    canonical: 'https://www.millioneducation.in/courses/chemistry',
   },
 };
 
@@ -53,15 +53,15 @@ export default function ChemistryPage() {
   const courseData = courseSchema(
     'Chemistry Specialist Course',
     'Master Chemistry with expert faculty. Comprehensive 1-on-1 tuition for Class 11, 12, NEET & JEE. Organic, Inorganic & Physical Chemistry with PYQs & weekly tests.',
-    'https://www.millioneducation.com/logo.png',
-    'https://www.millioneducation.com/courses/chemistry'
+    'https://www.millioneducation.in/logo.png',
+    'https://www.millioneducation.in/courses/chemistry'
   );
 
   // Breadcrumb Schema
   const breadcrumbs = breadcrumbSchema([
-    { name: 'Home', url: 'https://www.millioneducation.com' },
-    { name: 'Courses', url: 'https://www.millioneducation.com/courses' },
-    { name: 'Chemistry', url: 'https://www.millioneducation.com/courses/chemistry' },
+    { name: 'Home', url: 'https://www.millioneducation.in' },
+    { name: 'Courses', url: 'https://www.millioneducation.in/courses' },
+    { name: 'Chemistry', url: 'https://www.millioneducation.in/courses/chemistry' },
   ]);
 
   return (
