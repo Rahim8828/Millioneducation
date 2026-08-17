@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Biology Specialist — 1-on-1 Home & Online Tuition for Class 12 & NEET',
     description: 'Master Biology with expert faculty for Class 12 & NEET UG preparation.',
-    url: 'https://www.millioneducation.com/courses/biology',
+    url: 'https://www.millioneducation.in/courses/biology',
     siteName: 'Million Education',
     images: [
       {
-        url: 'https://www.millioneducation.com/logo.png',
+        url: 'https://www.millioneducation.in/logo.png',
         width: 1200,
         height: 630,
         alt: 'Biology Specialist Course - Million Education',
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Biology Specialist — 1-on-1 Tuition',
     description: 'Expert Biology coaching for Class 12 & NEET preparation',
-    images: ['https://www.millioneducation.com/logo.png'],
+    images: ['https://www.millioneducation.in/logo.png'],
   },
   alternates: {
-    canonical: 'https://www.millioneducation.com/courses/biology',
+    canonical: 'https://www.millioneducation.in/courses/biology',
   },
 };
 
@@ -51,14 +51,14 @@ export default function BiologyPage() {
   const courseData = courseSchema(
     'Biology Specialist Course',
     'Master Biology with expert faculty for Class 12 & NEET UG preparation.',
-    'https://www.millioneducation.com/logo.png',
-    'https://www.millioneducation.com/courses/biology'
+    'https://www.millioneducation.in/logo.png',
+    'https://www.millioneducation.in/courses/biology'
   );
 
   const breadcrumbs = breadcrumbSchema([
-    { name: 'Home', url: 'https://www.millioneducation.com' },
-    { name: 'Courses', url: 'https://www.millioneducation.com/courses' },
-    { name: 'Biology', url: 'https://www.millioneducation.com/courses/biology' },
+    { name: 'Home', url: 'https://www.millioneducation.in' },
+    { name: 'Courses', url: 'https://www.millioneducation.in/courses' },
+    { name: 'Biology', url: 'https://www.millioneducation.in/courses/biology' },
   ]);
 
   return (

@@ -93,7 +93,7 @@ export default function PrivacyPolicyPage() {
               If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
             </p>
             <div className={styles.contactInfo}>
-              <p><strong>Email:</strong> support@millioneducation.com</p>
+              <p><strong>Email:</strong> support@millioneducation.in</p>
               <p><strong>Phone:</strong> +91 9004826378</p>
               <p><strong>Address:</strong> Pearl Majestic, Aqsa Masjid Rd, Shastri Nagar, Jogeshwari West, Mumbai, Maharashtra 400102</p>
             </div>

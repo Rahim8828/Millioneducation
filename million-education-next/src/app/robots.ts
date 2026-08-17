@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/', '/admin/', '/api/'],
     },
-    sitemap: 'https://www.millioneducation.com/sitemap.xml',
+    sitemap: 'https://www.millioneducation.in/sitemap.xml',
   };
 }

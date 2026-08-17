@@ -48,7 +48,7 @@ export default function RefundPolicyPage() {
               To request a refund:
             </p>
             <ol>
-              <li>Contact our support team at support@millioneducation.com with your enrollment details.</li>
+              <li>Contact our support team at support@millioneducation.in with your enrollment details.</li>
               <li>Provide a reason for your refund request.</li>
               <li>Our team will review your request within 3-5 business days.</li>
               <li>If approved, refunds will be processed to your original payment method within 7-10 business days.</li>
@@ -107,7 +107,7 @@ export default function RefundPolicyPage() {
               For any refund-related inquiries or to initiate a refund request:
             </p>
             <div className={styles.contactInfo}>
-              <p><strong>Email:</strong> support@millioneducation.com</p>
+              <p><strong>Email:</strong> support@millioneducation.in</p>
               <p><strong>Phone:</strong> +91 9004826378</p>
               <p><strong>Address:</strong> Pearl Majestic, Aqsa Masjid Rd, Shastri Nagar, Jogeshwari West, Mumbai, Maharashtra 400102</p>
             </div>

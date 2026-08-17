@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.millioneducation.com';
+  const baseUrl = 'https://www.millioneducation.in';
   const currentDate = new Date();
 
   const pages: MetadataRoute.Sitemap = [
