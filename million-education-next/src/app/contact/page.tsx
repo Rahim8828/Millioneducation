@@ -81,7 +81,7 @@ export default function ContactPage() {
                   <div className={styles.iconBox}><Mail size={20} color="#2563EB" /></div>
                   <div>
                     <h4>Email Support</h4>
-                    <p>support@millioneducation.in</p>
+                    <p><a href="mailto:support@millioneducation.in">support@millioneducation.in</a></p>
                   </div>
                 </div>
 

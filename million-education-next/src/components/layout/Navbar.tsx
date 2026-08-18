@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import BookDemoModal from '../modals/BookDemoModal';
 
 // WhatsApp SVG Icon Component
 function WhatsAppIcon({ size = 18 }: { size?: number }) {
@@ -23,6 +24,7 @@ import styles from './Navbar.module.css';
 export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -77,7 +79,7 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
           {tutorPage ? (
             <Link href="/courses" className={styles.ctaBtn}>Explore Courses</Link>
           ) : (
-            <Link href="/join-faculty" className={styles.ctaBtn}>Join as Faculty</Link>
+            <button onClick={() => setIsDemoModalOpen(true)} className={styles.ctaBtn}>Book Free Demo</button>
           )}
         </div>
 
@@ -102,10 +104,12 @@ export default function Navbar({ tutorPage = false }: { tutorPage?: boolean }) {
           {tutorPage ? (
             <Link href="/" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>Find a Tutor</Link>
           ) : (
-            <Link href="/for-tutors" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>Join as Faculty</Link>
+            <button onClick={() => { setIsDemoModalOpen(true); setMenuOpen(false); }} className={styles.ctaBtn}>Book Free Demo</button>
           )}
         </div>
       )}
+      
+      <BookDemoModal isOpen={isDemoModalOpen} onClose={() => setIsDemoModalOpen(false)} />
     </nav>
   );
 }
