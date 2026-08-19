@@ -37,13 +37,12 @@ export default function Hero() {
               <div className={styles.tagLabel}>Subjects</div>
               <div className={styles.tags}>
                 {subjectTags.map((t) => (
-                  <button
+                  <div
                     key={t}
-                    className={`${styles.tag} ${activeSubject === t ? styles.active : ''}`}
-                    onClick={() => setActiveSubject(t)}
+                    className={`${styles.tagStatic} ${activeSubject === t ? styles.active : ''}`}
                   >
                     {t}
-                  </button>
+                  </div>
                 ))}
               </div>
             </div>
