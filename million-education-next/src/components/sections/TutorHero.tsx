@@ -25,6 +25,11 @@ export default function TutorHero() {
 
     setStatus('submitting');
     setTimeout(() => {
+      // Create WhatsApp message with form details
+      const message = `Hi! I want to join as a Faculty Mentor at Million Education.\n\nName: ${formData.fullName}\nPhone: ${formData.phone}\nCity: ${formData.city}\nLocation: ${formData.location}\nQualification: ${formData.qualification}\nTarget Subject: ${formData.fees}`;
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/919004826378?text=${encodedMessage}`;
+
       setStatus('success');
       setFormData({
         fullName: '',
@@ -35,7 +40,12 @@ export default function TutorHero() {
         fees: '',
         notify: true,
       });
-      setTimeout(() => setStatus('idle'), 4000);
+      
+      setTimeout(() => {
+        // Redirect to WhatsApp
+        window.open(whatsappUrl, '_blank');
+        setStatus('idle');
+      }, 1500);
     }, 1500);
   };
 
